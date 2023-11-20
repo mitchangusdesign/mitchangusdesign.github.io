@@ -1,80 +1,213 @@
-/*
-  1. Use a more-intuitive box-sizing model.
-*/
-*, *::before, *::after {
-    box-sizing: border-box;
-  }
-  /*
-    2. Remove default margin
-  */
-  * {
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap"); /* import font */
+
+*{
     margin: 0;
-  }
-  /*
-    Typographic tweaks!
-    3. Add accessible line-height
-    4. Improve text rendering
-  */
-  body {
-    font-family: 'Poppins', sans-serif;
-    line-height: 1.5;
-    -webkit-font-smoothing: antialiased;
-  }
-  /*
-    5. Improve media defaults
-  */
-  img, picture, video, canvas, svg {
-    display: block;
-    max-width: 100%;
-  }
-  /*
-    6. Remove built-in form typography styles
-  */
-  input, button, textarea, select {
-    font: inherit;
-  }
-  /*
-    7. Avoid text overflows
-  */
-  p, h1, h2, h3, h4, h5, h6 {
-    overflow-wrap: break-word;
-  }
-  /*
-    8. Create a root stacking context
-  */
-  #root, #__next {
-    isolation: isolate;
-  }
-
-
-.outline {
-    -webkit-text-stroke-color: #0c2144;
-    -webkit-text-stroke-width: 1px;
-    color: rgba(0, 0, 0, 0);
+    padding: 0;
+    box-sizing: border-box;
 }
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+header {
     display: flex;
+}
+
+                    /* Header */
+
+.branding {
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    border: 1px solid #0c2144;
+    width: 100%;
+    height: 40vh;
+    background-color: #ffffff;
+    transition: all .2s ease-out;
 }
 
-header #imgLogo{
-    border:"0"; 
-    width:80px;
-    height:80x;
+.logo {
+    width: 80px;
+    height: 80px;
 }
-header h1{
+
+                    /* Nav menu */
+.nav{
+    width: 100%;
+    height: 100%;
+    position: sticky;
+    background-color: #0c2144;
+    overflow: hidden;
+
+}
+.menu {
     text-align: center;
-    font-family: 'Poppins', sans-serif;
-    color:#0c2144;
-    font-size: 2.5em;
+
+}
+.menu a{
+    display: block;
+    padding: 30px;
+    color: #fafafa;
+}
+.menu a:hover{
+    background-color: #0c2144;
+}
+.nav{
+    max-height: 0;
+    top:90px;
+    transition: max-height .5s ease-out;
 }
 
-header li{
-    display:inline;
-    padding: 0 10px 0 10px;
+                /* Menu Icon */
+.hamb{
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    padding: 40px 20px;
+    transition: all .2s ease-out;
+}
+
+                /* Style label tag */
+.hamb-line {
+    background: #0c2144;
+    display: block;
+    height: 3px;
+    position: relative;
+    width: 24px;
+    border: solid, outset 3px #fafafa;
+
+} 
+
+                /* Style span tag */
+.hamb-line::before,
+.hamb-line::after{
+    background: #0c2144;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+.hamb-line::before{
+    top: 10px;
+}
+.hamb-line::after{
+    top: -10px;
+}
+
+.side-menu {
+    display: none;
+} /* Hide checkbox */
+
+/* Toggle menu icon */
+.side-menu:checked ~ .branding {
+    background-color: #0c2144;
+}
+.side-menu:checked ~ nav {
+    max-height: 100%;
+}
+.side-menu:checked ~ .hamb .hamb-line {
+    background: transparent;
+}
+.side-menu:checked ~ .hamb .hamb-line::before {
+    transform: rotate(-45deg);
+    background: #ffff00;
+    top:0;
+}
+.side-menu:checked ~ .hamb .hamb-line::after {
+    transform: rotate(45deg);
+    background: #ffff00;
+    top:0;
+}
+
+
+li {
+    font-size: 1.5em;
+}
+
+#logo-wrapper {
+    margin-top: 90px;
+    margin-bottom: 0px;
+}
+
+#wordmark {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #0C2144;
+}
+
+#hero-mobile {
+    display: flex;
+    flex-direction:column;
+    width: 100%;
+    height: 60vh;
+    padding: 20px;
+    justify-content: space-around;
+    font-size: 3em;
+    font-weight: bolder;
+    color: #0c1244;
+    background-image: linear-gradient(white,#f8f9ff);
+    /*border: solid 1px #0c2144;*/
+}
+
+.text-outline {
+    -webkit-text-stroke: 1.5px #0c2144;
+    color: #ffffff;
+}
+
+#work-mobile {
+    margin-top: 10px;
+}
+
+.buddon {
+    position:absolute;
+    top: 10px;
+    right: 10px;
+    width: 50px;
+    height: 50px;
+    background: #0c2144;
+    z-index:3;
+    overflow: hidden;
+    transition: all .5s ease-in-out;
+}
+
+.buddon:hover {
+    width:100%;
+    height:100%;
+    
+    z-index:1;
+}
+
+.buddoff {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 50px;
+    height:50px;
+    background: red;
+    z-index:2;
+}
+
+.work-mobile-thumb {
+    width:100%;
+    height:200px;
+    margin-bottom: 50px;
+    color: #3f535f;
+}
+
+.mobile-thumb-title {
+    margin-top: 10px;
+    margin-left: 10px;
+    line-height: 1em;
+    
 }
