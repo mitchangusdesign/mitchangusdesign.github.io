@@ -2,99 +2,47 @@
 <html>
     <head>
        <meta charset="utf-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
        <meta name="description" content="Affordable and professional web design">
 	      <meta name="keywords" content="web design, affordable web design, professional web design">
   	    <meta name="author" content="Mitchell Angus">
         <title>Mitchell Angus Design | Welcome</title>
         <link rel="stylesheet" href="./css/style.css">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins: 100,300,400,500,600,700,800">
+        <!--<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins: 100,300,400,500,600,700,800"> -->
         <link rel="icon" href="img/favicon.png">
     </head>
 <body>
-    <header>   
+    <!-- Navigation Bar -->
+    <header class="header">   
+        <!-- Logo -->  
+        <a href="index.html"><img src="/img/logo-white.svg" alt="M Logo" class="header-logo"></a>
+                         
+        <span id="wordmark">Mitchell Angus</span>
+         <!-- Hamburger icon -->  
         <input class="side-menu" type="checkbox" id="side-menu"/>
         <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>          
-        <div class="branding">                   
-            <div id="logo-wrapper"><a href="#"><img src="img/logo.svg" alt="M Logo" class="logo"></a>
-            </div>
-            <div id="wordmark">
-                <span>Mitchell Angus</span>
-            </div>
-        </div>
-        <!--<div class="buddon">
-            <span class="hamb-line"></span>
+        <!-- Menu -->
+        <nav class="nav">         
             <ul class="menu">
-                <li><a href="#"> </a></li>
-                <li><a href="#work-mobile">work</a></li>
-                <li><a href="#">services</a></li>
-                <li><a href="#">about</a></li>
-                <li><a href="#">contact</a></li>
-            </ul>
-        </div>
-        <div class="buddoff"></div> -->
-        <!-- NAVIGATION -->
-       <nav class="nav">
-            <ul class="menu">
-                <li><a href="#work-mobile">work</a></li>
+                <li><a href="#">work</a></li>
                 <li><a href="#">services</a></li>
                 <li><a href="#">about</a></li>
                 <li><a href="#">contact</a></li>
             </ul>
         </nav> 
     </header>
-    <div id="hero-mobile">
-        <div>
-            <span>Design</span></br>
-        </div>
-        <div style="text-align:right">
-            <span class="text-outline">Outside</span>
-        </div>
-        <div>
-            <span>The Box</span>
-        </div>
-    </div>
-    <div id="work-mobile">
-        <h2 style="margin-left: 10px; color:#0c2144">WORK</h2>
-        
-            
-        
-        
-        <div class="work-mobile-thumb">
-            <div style="width:100%; height:100%; background-color:orange; background-image:linear-gradient(#ff2b89,#ff5e00)">   
+    <main>
+        <div id="hero-mobile">
+            <div>
+                <span>Design</span></br>
             </div>
-            <div class="mobile-thumb-title"><h3>Lift Off Energy</h3>
+            <div style="text-align:right">
+                <span class="text-outline">Outside</span>
+            </div>
+            <div>
+                <span>The Box</span>
             </div>
         </div>
-        <div class="work-mobile-thumb">
-            <div style="width:100%; height:100%; background-color:orange; background-image:linear-gradient(#f0f0f0,#808080)">    
-            </div>
-            <div class="mobile-thumb-title"><h3>The Birdie Workshop</h3>
-            </div>
-        </div>
-        <div class="work-mobile-thumb">
-            <div style="width:100%; height:100%; background-color:orange; background-image:linear-gradient(#f0f0f0,#570ea7)">
-            </div>
-            <div class="mobile-thumb-title"><h3>Sharon Angus Technical Srvc</h3>
-            </div>
-        </div>
-        <div class="work-mobile-thumb">
-            <div style="width:100%; height:100%; background-color:orange; background-image:linear-gradient(#F8Bf52,#081c2f)">
-            </div>
-            <div class="mobile-thumb-title"><h3>Tiny Haus</h3>
-            </div>
-        </div>
-            <div class="work-mobile-thumb">
-            <div style="width:100%; height:100%; background-color:orange; background-image:linear-gradient(#f0f0f0,#570ea7)">
-            </div>
-            <div class="mobile-thumb-title"><h3>Heavy Wallbanger</h3>
-            </div>
-        </div>
-        <div class="work-mobile-thumb">
-            <div style="width:100%; height:100%; background-color:orange; background-image:linear-gradient(#f0f0f0,#570ea7)">
-            </div>
-            <div class="mobile-thumb-title"><h3>Matterwall Climbing Gym</h3>
-            </div>
-        </div>   
-    </div>
+    </main>
 </body>
 </html>
