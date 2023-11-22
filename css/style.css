@@ -163,13 +163,13 @@ li {
 }
 
 #hero-mobile {
-    display: flex;
     width: 100%;
-    height: 60vh;
+    height: 70vh;
     padding: 20px;
     font-size: 1.2em;
     color: #ffffff;
     background: #0e6ece;
+    animation: heroheight 5s ease-in-out;
     /*border: solid 1px #0c2144;*/
 }
 
@@ -266,6 +266,15 @@ li {
   100% {filter: blur(10px)};
 }
 
+@keyframes heroheight {
+    0% {height:100vh;}
+    80%{height:100vh;}
+    100%{height:70vh;}
+}
+
+#scroll-down {
+    margin: 30px auto 30px auto;
+}
 
 .preview ul {
     display: grid;
