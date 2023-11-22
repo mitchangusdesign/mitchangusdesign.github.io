@@ -80,8 +80,11 @@ main {
     background-color: #3f535f;
 }
 
+.current-page{
+    color: #fccb06 !important;
+}
 
-                /* Menu Icon */
+/* Menu Icon */
 .hamb{
     cursor: pointer;
     float: right;
