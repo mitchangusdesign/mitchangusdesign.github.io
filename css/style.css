@@ -19,10 +19,13 @@ ul{
     list-style: none;
 }
 
+h1 {
+    font-weight: 600;
+}
+
                     /* Header */
 
 .header {
-    display: flex;
     background-color: #0C2144;
     position:sticky;
     top: 0;
@@ -30,9 +33,9 @@ ul{
 }
 
 .header-logo {
-    margin: 20px 10px 20px 15px;
-    width: 60px;
-    height: 60px;
+    margin: 20px 10px 20px 20px;
+    width: 50px;
+    height: 50px;
 }
 
                     /* Nav menu */
@@ -44,28 +47,29 @@ ul{
     overflow: hidden;
 
 }
-.menu {
-    text-align: center;
-
-}
-.menu a{
-    display: block;
-    padding: 30px;
-    color: #fafafa;
-}
-.menu a:hover{
-    background-color: #3f535f;
-}
 .nav{
     max-height: 0;
     transition: max-height .5s ease-out;
 }
+.menu {
+    text-align: center;
+}
+.menu a{
+    display: block;
+    padding: 20px;
+    color: #fafafa;
+    transition: padding .5s ease-out;
+}
+.menu a:hover{
+    background-color: #3f535f;
+}
+
 
                 /* Menu Icon */
 .hamb{
     cursor: pointer;
     float: right;
-    padding: 30px 20px;
+    padding: 40px 20px;
     transition: all .2s ease-out;
 }
 
@@ -103,6 +107,7 @@ ul{
 
 /* Toggle menu icon */
 
+
 .side-menu:checked ~ nav {
     max-height: 100%;
 }
@@ -119,19 +124,19 @@ ul{
     background: #ffff00;
     top:0;
 }
+.side-menu:checked ~ .menu a{
+    padding: 20px;
+}
 
 
 li {
-    font-size: 1.5em;
+    font-size: 1em;
 }
 
-#logo-wrapper {
-    margin-top: 10px;
-    margin-bottom: 0px;
-}
 
 #wordmark {
     margin: auto;
+    text-align: left;
     font-size: 2em;
     font-weight: 500;
     line-height:1em;
@@ -140,15 +145,12 @@ li {
 
 #hero-mobile {
     display: flex;
-    flex-direction:column;
     width: 100%;
     height: 60vh;
     padding: 20px;
-    justify-content: space-around;
-    font-size: 3em;
-    font-weight: bolder;
-    color: #0c1244;
-    background-image: linear-gradient(white,#f8f9ff);
+    font-size: 1.2em;
+    color: #ffffff;
+    background: #0e6ece;
     /*border: solid 1px #0c2144;*/
 }
 
@@ -178,6 +180,13 @@ li {
 
     .hamb{
         display: none;
+    }
+    #hero-mobile {
+        max-width: 1000px;
+        margin-left:auto;
+        margin-right:auto;
+        padding-top: 30px;
+        padding-left: 50px;
     }
 }
 
