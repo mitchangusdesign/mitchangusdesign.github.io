@@ -23,6 +23,13 @@ h1 {
     font-weight: 600;
 }
 
+main {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
                     /* Header */
 
 .header {
@@ -49,17 +56,19 @@ h1 {
 }
 .nav{
     max-height: 0;
-    transition: max-height .5s ease-out;
+    transition: max-height .3s ease-out;
 }
 .menu {
     text-align: center;
 }
 .menu a{
     display: block;
-    padding: 20px;
+    padding: 0px;
     color: #fafafa;
-    transition: padding .5s ease-out;
+    transition: padding .2s ease-out;
+
 }
+
 .menu a:hover{
     background-color: #3f535f;
 }
@@ -70,7 +79,7 @@ h1 {
     cursor: pointer;
     float: right;
     padding: 40px 20px;
-    transition: all .2s ease-out;
+    /*transition: all .2s ease-out;*/
 }
 
                 /* Style label tag */
@@ -107,12 +116,14 @@ h1 {
 
 /* Toggle menu icon */
 
-
 .side-menu:checked ~ nav {
     max-height: 100%;
 }
 .side-menu:checked ~ .hamb .hamb-line {
     background: transparent;
+}
+.side-menu:checked ~ .nav .menu a{
+    padding: 20px;
 }
 .side-menu:checked ~ .hamb .hamb-line::before {
     transform: rotate(-45deg);
@@ -123,9 +134,6 @@ h1 {
     transform: rotate(45deg);
     background: #ffff00;
     top:0;
-}
-.side-menu:checked ~ .menu a{
-    padding: 20px;
 }
 
 
@@ -171,6 +179,9 @@ li {
     }
     .menu li{
         float: left;
+    }
+    .menu a {
+        padding: 30px 25px 25px 25px;
     }
     .menu a:hover{
         background-color: transparent;
