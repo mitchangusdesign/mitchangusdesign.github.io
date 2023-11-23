@@ -190,8 +190,8 @@ li {
     display: block;
     max-width: 100%; 
     padding:30px;
-    margin: 80px auto 20px auto;
-    font-size: 1.5em;
+    margin: 50px auto 20px auto;
+    font-size: 2.5em;
     font-weight:bold;
     opacity:0;
     animation: tagline-blur 1.5s ease-out 3s, tagline-fade 3.5s forwards; 
@@ -218,7 +218,7 @@ li {
 }
 
 #blurb {
-    margin-top: 80px;
+    margin-top: 90px;
     display: flex;
     width:100%;
     animation: blurbappear 5s forwards, blurbfadein 1.7s ease-out 4s;
