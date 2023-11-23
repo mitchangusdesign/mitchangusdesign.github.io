@@ -352,7 +352,11 @@ li {
 .preview > ul > li > figure > figcaption {
     position: absolute;
     bottom: 0;
-    background-color: rgba(0,0,0,.7);
+    background: linear-gradient(
+      rgba(255, 255, 255, 0.3),
+      rgba(160, 160, 160, .2) 2%
+      );
+    backdrop-filter: blur(2px); 
     width: 100%;
 }
 
@@ -360,6 +364,7 @@ li {
     color: white;
     padding: .75rem;
     font-size: 1.25rem;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, .7);
 }
 
 .preview > ul > li > p {
