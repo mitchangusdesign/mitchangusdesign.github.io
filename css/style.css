@@ -46,6 +46,7 @@ main {
     height: 50px;
     scale:100%;
     transition: scale .2s ease-out;
+    -webkit-transition: scale .2s ease-out;
 }
 
 .header-logo:hover {
@@ -64,6 +65,7 @@ main {
 .nav{
     max-height: 0;
     transition: max-height .3s ease-out;
+    -webkit-transition: max-height .3s ease-out;
 }
 .menu {
     text-align: center;
@@ -73,6 +75,7 @@ main {
     padding: 0px;
     color: #fafafa;
     transition: padding .2s ease-out;
+    -webkit-transition: padding .2s ease-out;
 
 }
 
@@ -111,6 +114,7 @@ main {
     height: 100%;
     position: absolute;
     transition: all .2s ease-out;
+    -webkit-transition: all .2s ease-out;
     width: 100%;
 }
 .hamb-line::before{
@@ -138,11 +142,13 @@ main {
 }
 .side-menu:checked ~ .hamb .hamb-line::before {
     transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
     background: #ffff00;
     top:0;
 }
 .side-menu:checked ~ .hamb .hamb-line::after {
     transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
     background: #ffff00;
     top:0;
 }
@@ -169,7 +175,7 @@ li {
     padding: 20px;
     font-size: 1.2em;
     color: #ffffff;
-    background-image: linear-gradient(#0e6ece,0d6dcd);
+    background-image: linear-gradient(#0957a4,#0e6ece);
     background: #0e6ece;
     animation: heroheight 6s ease-in-out;
     /*border: solid 1px #0c2144;*/
@@ -178,40 +184,6 @@ li {
 .text-outline {
     -webkit-text-stroke: 1px #ffffff;
     color: #0e6ece;
-}
-
-/* Responsiveness */
-@media (min-width: 768px) {
-    .nav{
-        max-height: none;
-        top: 0;
-        position: relative;
-        float: right;
-        width: fit-content;
-        background-color: transparent;
-    }
-    .menu li{
-        float: left;
-    }
-    .menu a {
-        padding: 30px 25px 25px 25px;
-    }
-    .menu a:hover{
-        background-color: transparent;
-        color: #768f9f;
-
-    }
-
-    .hamb{
-        display: none;
-    }
-    #hero-mobile {
-        max-width: 1000px;
-        margin-left:auto;
-        margin-right:auto;
-        padding-top: 30px;
-        padding-left: 50px;
-    }
 }
 
 #tagline {
@@ -251,6 +223,54 @@ li {
     width:100%;
     animation: blurbappear 5s forwards, blurbfadein 1.7s ease-out 4s;
 }
+
+/* Responsiveness */
+@media (min-width: 768px) {
+    .nav{
+        max-height: none;
+        top: 0;
+        position: relative;
+        float: right;
+        width: fit-content;
+        background-color: transparent;
+    }
+    .menu li{
+        float: left;
+    }
+    .menu a {
+        padding: 30px 25px 25px 25px;
+    }
+    .menu a:hover{
+        background-color: transparent;
+        color: #768f9f;
+
+    }
+
+    .hamb{
+        display: none;
+    }
+    #hero-mobile {
+        max-width: 1000px;
+        margin-left:auto;
+        margin-right:auto;
+        padding-top: 30px;
+        padding-left: 50px;
+    }
+    #tagline {
+        max-width: 50%;
+        margin-top: 40px;
+        font-size: 3em;
+    }
+    #blurb {
+        max-width: 60%;
+        margin: 50px auto;
+        font-size: 1.5em;
+    }
+}
+
+@media (-webkit-animation) {
+    /* CSS to use if -webkit- prefixed animations are supported AND the browser supports prefixed properties as media queries */
+  }
 
 @keyframes tagline-in-f-r {
     100% {margin-left: 0px;}
