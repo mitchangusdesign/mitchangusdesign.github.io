@@ -340,8 +340,6 @@ li {
 .preview > ul > li > figure {
     max-height: 220px;
     overflow: hidden;
-    border-top-left-radius: .5rem;
-    border-top-right-radius: .5rem;
     position: relative;
 }
 
