@@ -24,7 +24,7 @@ h1 {
 }
 
 main {
-    max-width: 1000px;
+    max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -32,16 +32,19 @@ main {
 
                     /* Header */
 
-.header {
+#header {
+    display: block;
     background-color: #0C2144;
-    position:sticky;
-    top: 0;
+    position: fixed; /* Make it stick/fixed */
+  top: 0; /* Stay on top */
+  width: 100%; /* Full width */
+  transition: top 0.3s, opacity 0.3s; /* Transition effect when sliding down (and up) */
     width:  100%;
     z-index: 1;
 }
 
 .header-logo {
-    margin: 20px 10px 20px 20px;
+    margin: 20px 10px 20px 40px;
     width: 50px;
     height: 50px;
     scale:100%;
@@ -88,7 +91,7 @@ main {
 }
 
 /* Menu Icon */
-.hamb{
+.hamb {
     cursor: pointer;
     float: right;
     padding: 40px 20px;
@@ -107,7 +110,7 @@ main {
 
                 /* Style span tag */
 .hamb-line::before,
-.hamb-line::after{
+.hamb-line::after {
     background: #ffffff;
     content: '';
     display: block;
@@ -117,10 +120,10 @@ main {
     -webkit-transition: all .2s ease-out;
     width: 100%;
 }
-.hamb-line::before{
+.hamb-line::before {
     top: 10px;
 }
-.hamb-line::after{
+.hamb-line::after {
     top: -10px;
 }
 
@@ -137,7 +140,7 @@ main {
 .side-menu:checked ~ .hamb .hamb-line {
     background: transparent;
 }
-.side-menu:checked ~ .nav .menu a{
+.side-menu:checked ~ .nav .menu a {
     padding: 20px;
 }
 .side-menu:checked ~ .hamb .hamb-line::before {
@@ -168,27 +171,40 @@ li {
     color: #ffffff;
 }
 
+#my-intro {
+    padding: 20px;
+}
 #hero-mobile {
 
     width: 100%;
     height: 70vh;
-    padding: 20px;
+    margin-top: 100px;
     font-size: 1.2em;
-    color: #ffffff;
-    background-image: linear-gradient(#0957a4,#0e6ece);
-    background: #0e6ece;
+    color: #0C2144;
+    /*background-image: linear-gradient(#0957a4,#0e6ece);*/
+    background: #ffffff;
     animation: heroheight 6s ease-in-out;
     /*border: solid 1px #0c2144;*/
 }
 
+#page-head {
+    width: 100%;
+    margin: 100px 0 30px 0;
+    font-size: 1.2em;
+    color: #0C2144;
+    /*background-image: linear-gradient(#0957a4,#0e6ece);*/
+    background: #ffffff;
+    /*border: solid 1px #0c2144;*/
+}
+
 .text-outline {
-    -webkit-text-stroke: 1px #ffffff;
-    color: #0e6ece;
+    -webkit-text-stroke: 1px #0C2144;
+    color: #ffffff;
 }
 
 #tagline {
     display: block;
-    max-width: 100%; 
+    max-width: 60%; 
     padding:30px;
     margin: 80px auto 20px auto;
     font-size: 1.5em;
@@ -218,55 +234,14 @@ li {
 }
 
 #blurb {
-    margin-top: 80px;
+    margin-top: 40px;
     display: flex;
     width:100%;
+    padding: 20px;
     animation: blurbappear 5s forwards, blurbfadein 1.7s ease-out 4s;
 }
 
-/* Responsiveness */
-@media (min-width: 768px) {
-    .nav{
-        max-height: none;
-        top: 0;
-        position: relative;
-        float: right;
-        width: fit-content;
-        background-color: transparent;
-    }
-    .menu li{
-        float: left;
-    }
-    .menu a {
-        padding: 30px 25px 25px 25px;
-    }
-    .menu a:hover{
-        background-color: transparent;
-        color: #768f9f;
 
-    }
-
-    .hamb{
-        display: none;
-    }
-    #hero-mobile {
-        max-width: 1000px;
-        margin-left:auto;
-        margin-right:auto;
-        padding-top: 30px;
-        padding-left: 50px;
-    }
-    #tagline {
-        max-width: 50%;
-        margin-top: 40px;
-        font-size: 3em;
-    }
-    #blurb {
-        max-width: 60%;
-        margin: 50px auto;
-        font-size: 1.5em;
-    }
-}
 
 @media (-webkit-animation) {
     /* CSS to use if -webkit- prefixed animations are supported AND the browser supports prefixed properties as media queries */
@@ -329,19 +304,16 @@ li {
 .preview ul {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    grid-gap: 1rem;
+    grid-gap: .5rem;
 }
 
-.preview ul li {
-    
-    border-radius: .5rem;
-}
 
 .preview > ul > li > figure {
-    max-height: 220px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    aspect-ratio: 16/9;
     overflow: hidden;
-    border-top-left-radius: .5rem;
-    border-top-right-radius: .5rem;
     position: relative;
 }
 
@@ -372,4 +344,152 @@ li {
 .preview > ul > li > a {
     padding: .5rem 1rem;
     margin: .5rem;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 60px 0 60px 0;
+} 
+.social-links > ul {
+    display: flex;
+    flex-direction: row;
+}
+.social-links > ul > li {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+}
+.social-links > ul > li > a > svg {
+    fill:#65747d;
+    height: 35px;
+    opacity: 1;
+    width:35px;
+}
+.social-links > ul > li > a > svg:hover {
+    fill:#0C2144;
+    height: 35px;
+    opacity: 1;
+    width:35px;
+}
+.footer-text {
+    color: #3f535f;
+    font-size: .8em;
+}
+/* Responsiveness */
+@media (min-width: 768px) {
+    .nav{
+        max-height: none;
+        top: 0;
+        position: relative;
+        float: right;
+        width: fit-content;
+        background-color: transparent;
+    }
+    .menu li{
+        float: left;
+    }
+    .menu a {
+        padding: 30px 25px 25px 25px;
+    }
+    .menu a:hover{
+        background-color: transparent;
+        color: #768f9f;
+
+    }
+
+    .hamb{
+        display: none;
+    }
+
+    #my-intro {
+        padding: 0px;
+    }
+    #hero-mobile {
+        /*max-width: 1000px;*/
+        margin-top: 100px;
+        margin-left:auto;
+        margin-right:auto;
+        padding-top: 30px;
+        /*padding-left: 50px;*/
+    }
+    #tagline {
+        max-width: 40%;
+        margin-top: 40px;
+        font-size: 3em;
+    }
+    #blurb {
+        max-width: 60%;
+        margin: 50px auto;
+        font-size: 1.5em;
+    }
+
+    #page-head {
+        width: 100%;
+        margin: 120px 0 30px 0;
+        font-size: 1.2em;
+        color: #0C2144;
+        /*background-image: linear-gradient(#0957a4,#0e6ece);*/
+        background: #ffffff;
+        /*border: solid 1px #0c2144;*/
+    }
+    
+    
+    .preview > ul > li > figure {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        aspect-ratio: 16/9;
+        border-radius: .5rem;        
+        position: relative;
+    }
+    
+    .preview > ul > li > figure > img {
+        width: 100%;
+        transition: filter 0.5s ease-in-out, transform 1s ease-out;
+    }
+
+    .preview > ul > li > figure:hover img{
+        filter: brightness(50%);
+        transform: scale(108%);
+    }
+    
+    .preview > ul > li > figure > figcaption {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: transparent;
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+    }
+
+    .preview > ul > li > figure:hover figcaption {
+        opacity: 1;
+    }
+    
+    .preview > ul > li > figure > figcaption > h3 {
+        color: white;
+        font-size: 1.3rem;
+        line-height: .5rem;
+        letter-spacing: .03em;
+    }
+    
+    /*.preview > ul > li > p {
+        font-size: 1rem;
+        line-height: 1.5;
+        padding: 1rem .75rem;
+        color: #666666;
+    }*/
+    
+    .preview > ul > li > a {
+        padding: .5rem 1rem;
+        margin: .5rem;
+    }
 }
