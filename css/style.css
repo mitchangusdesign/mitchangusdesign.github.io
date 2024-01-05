@@ -206,8 +206,8 @@ li {
     display: block;
     max-width: 60%; 
     padding:30px;
-    margin: 80px auto 20px auto;
-    font-size: 1.5em;
+    margin: 50px auto 20px auto;
+    font-size: 2.5em;
     font-weight:bold;
     opacity:0;
     animation: tagline-blur 1.5s ease-out 3s, tagline-fade 3.5s forwards; 
@@ -323,8 +323,15 @@ li {
 
 .preview > ul > li > figure > figcaption {
     position: absolute;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    height: 5rem;
     bottom: 0;
-    background-color: rgba(0,0,0,.7);
+    background: linear-gradient(
+      rgba( 0, 0, 0, 0),
+      rgba(20, 20, 20, .4)
+      );
     width: 100%;
 }
 
@@ -332,6 +339,7 @@ li {
     color: white;
     padding: .75rem;
     font-size: 1.25rem;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, .7);
 }
 
 .preview > ul > li > p {
