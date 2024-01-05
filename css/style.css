@@ -204,7 +204,7 @@ li {
 
 #tagline {
     display: block;
-    max-width: 60%; 
+    max-width: 100%; 
     padding:30px;
     margin: 50px auto 20px auto;
     font-size: 2.5em;
