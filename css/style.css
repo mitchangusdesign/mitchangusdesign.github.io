@@ -214,21 +214,21 @@ li {
 }
 
 #line1 {
-    margin-left:400px;
+    margin-left:100px;
     opacity: 0;
     animation: tagline-in-f-r .2s ease-out forwards 1s, linefade .2s ease-out forwards 1s;
 }
 
 #line2 {
     text-align:right;
-    margin-right:400px;
+    margin-right:100px;
     opacity: 0;
     animation: tagline-in-f-l .2s ease-out forwards 1.5s, linefade .2s ease-out forwards 1.5s;
 }
 
 #line3 {
     white-space: nowrap;
-    margin-left:400px;
+    margin-left:100px;
     opacity: 0;
     animation: tagline-in-f-r .2s ease-out forwards 2s, linefade .2s ease-out forwards 2s;
 }
