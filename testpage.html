@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <meta charset="utf-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <meta http-equiv="X-UA-Compatible" content="IE=edge">
+       <style>
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap"); /* import font */
+
+        @media (min-width: 801px) {
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+        }
+
+        a{
+            text-decoration: none;
+        }
+
+        ul{
+            list-style: none;
+        }
+
+        h1 {
+            font-weight: 600;
+        }
+
+        main {
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        #my-intro {
+            padding: 0px;
+        }
+        #hero-mobile {
+            /*max-width: 1000px;*/
+            margin-top: 100px;
+            margin-left:auto;
+            margin-right:auto;
+            padding-top: 30px;
+            /*padding-left: 50px;*/
+        }
+     
+        #page-head {
+            width: 100%;
+            margin: 100px 0 30px 0;
+            font-size: 1.2em;
+            color: #0C2144;
+            /*background-image: linear-gradient(#0957a4,#0e6ece);*/
+            background: #ffffff;
+            /*border: solid 1px #0c2144;*/
+        }
+
+        .text-outline {
+            -webkit-text-stroke: 1px #0C2144;
+            color: #ffffff;
+        }
+
+          /* ---- ChatGPT recommended fix ---- */
+        
+        #tagline {
+            display: block;
+            max-width: 300px;
+            padding: 30px;
+            margin: 50px auto 20px auto;
+            font-size: 3em;
+            font-weight: bold;
+            opacity: 0;
+            -webkit-animation: tagline-blur 1.5s ease-out 3s, tagline-fade 3.5s forwards;
+            animation: tagline-blur 1.5s ease-out 3s, tagline-fade 3.5s forwards;
+        }
+       /* Original css */
+       /*
+        #tagline {
+            display: block;
+            max-width: 300px; 
+            padding:30px;
+            margin: 50px auto 20px auto;
+            font-size: 3em;
+            font-weight:bold;
+            opacity:0;
+            -webkit-animation: tagline-blur 1.5s ease-out 3s, tagline-fade 3.5s forwards; 
+            animation: tagline-blur 1.5s ease-out 3s, tagline-fade 3.5s forwards; 
+        }
+        */
+        #line1 {
+            margin-left:100px;
+            opacity: 0;
+            -webkit-animation: tagline-in-f-r .2s ease-out forwards 1s, linefade .2s ease-out forwards 1s;
+            animation: tagline-in-f-r .2s ease-out forwards 1s, linefade .2s ease-out forwards 1s;
+        }
+
+        #line2 {
+            text-align:right;
+            margin-right:100px;
+            opacity: 0;
+            -webkit-animation: tagline-in-f-l .2s ease-out forwards 1.5s, linefade .2s ease-out forwards 1.5s;
+            animation: tagline-in-f-l .2s ease-out forwards 1.5s, linefade .2s ease-out forwards 1.5s;
+        }
+
+        #line3 {
+            white-space: nowrap;
+            margin-left:100px;
+            opacity: 0;
+            -webkit-animation: tagline-in-f-r .2s ease-out forwards 2s, linefade .2s ease-out forwards 2s;
+            animation: tagline-in-f-r .2s ease-out forwards 2s, linefade .2s ease-out forwards 2s;
+        }
+
+      
+        /* ---- Chatgpt recommended fix ---- */
+        #blurb {
+            margin: 50px auto;
+            display: flex;
+            max-width: 60%;
+            padding: 20px;
+            font-size: 1.5rem;
+            opacity: 0;
+            -webkit-animation: blurbappear 5s forwards, blurbfadein 1.7s ease-out 4s;
+            animation: blurbappear 5s forwards, blurbfadein 1.7s ease-out forwards 4s;
+        }
+
+        /* Original CSS */
+        /*
+        #blurb {
+            margin: 50px auto;
+            display: flex;
+            max-width:60%;
+            padding: 20px;
+            font-size: 1.5em;
+            -webkit-animation: blurbappear 5s forwards, blurbfadein 1.7s ease-out 4s;
+            animation: blurbappear 5s forwards, blurbfadein 1.7s ease-out 4s;
+
+        }
+        */
+
+
+        @-webkit-keyframes tagline-in-f-r {
+            100% {margin-left: 0px;}
+        }
+
+        @-webkit-keyframes tagline-in-f-l {
+            100% {margin-right: 0px;}
+        }
+
+        @-webkit-keyframes linefade {
+
+            100% {opacity: 1;}
+        }
+
+        @-webkit-keyframes tagline-fade {
+            0% {opacity:1;}
+            75% {opacity:1;}
+            100% {opacity:0;}
+        }
+
+        @-webkit-keyframes tagline-blur { 
+        100% {filter: blur(10px)};
+        }
+
+        @-webkit-keyframes heroheight {
+            0% {height:100vh;}
+            80%{height:100vh;}
+            100%{height:70vh;}
+        }
+
+        @-webkit-keyframes blurbfadein {
+            0% {opacity:0;}
+            100% {opacity:1;}
+        }
+
+        @-webkit-keyframes blurbappear {
+            0% {display:none;}
+            80% {display:none;}
+            81% {display:block;}
+            100% {display:block;} 
+            
+        }
+
+        @-webkit-keyframes taglinedisplay {
+            0% {display:none;}
+            1% {display:block;}
+            99% {display:block;}
+            100% {display:none;}
+        }
+        /* ----------------------End Webkit---------------------*/
+        @keyframes tagline-in-f-r {
+            100% {margin-left: 0px;}
+        }
+
+        @keyframes tagline-in-f-l {
+            100% {margin-right: 0px;}
+        }
+
+        @keyframes linefade {
+
+            100% {opacity: 1;}
+        }
+
+        @keyframes tagline-fade {
+            0% {opacity:1;}
+            75% {opacity:1;}
+            100% {opacity:0;}
+        }
+
+        @keyframes tagline-blur { 
+        100% {filter: blur(10px)};
+        }
+
+        @keyframes heroheight {
+            0% {height:100vh;}
+            80%{height:100vh;}
+            100%{height:70vh;}
+        }
+
+        @keyframes blurbfadein {
+            0% {opacity:0;}
+            100% {opacity:1;}
+        }
+
+        @keyframes blurbappear {
+            0% {display:none;}
+            80% {display:none;}
+            81% {display:block;}
+            100% {display:block;} 
+            
+        }
+
+        @keyframes taglinedisplay {
+            0% {display:none;}
+            1% {display:block;}
+            99% {display:block;}
+            100% {display:none;}
+        }
+    }
+       </style>
+    </head>
+    <body>
+        <main>
+            <div id="hero-mobile">           
+                <div id="blurb"><p>On Chrome (windows and android os) this blurb should fade in after the tagline: line1 line2 line3 slides into place and fades out. However on Chrome (ios) it appears first + above the tagline animation. </p>
+                </div>
+                <div id="tagline">
+                    <div id="line1">
+                        <span>Line 1</span>
+                    </div>
+                    <div id="line2">
+                        <span class="text-outline">Line 2</span>
+                    </div>
+                    <div id="line3">
+                        <span>Line 3</span>
+                    </div>
+                </div>
+            </div>  
+        </main>
+    </body>
+</html>
