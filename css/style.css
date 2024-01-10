@@ -173,9 +173,11 @@ li {
 
 #my-intro {
     padding: 20px;
+    width: 100%;
 }
 #hero-mobile {
-
+    display: flex;
+    justify-content: center;
     width: 100%;
     height: 70vh;
     margin-top: 100px;
@@ -204,14 +206,15 @@ li {
 
 #tagline {
     display: block;
-    max-width: 100%; 
-    padding:30px;
-    margin: 50px auto 20px auto;
+    position: absolute;
+    width: 400px;
+    padding: 30px;
+    margin: 110px auto 20px auto;
     font-size: 2.5em;
-    font-weight:bold;
-    opacity:0;
-    -webkit-animation: tagline-blur 1.5s ease-out 3s, tagline-fade 3.5s forwards; 
-    animation: tagline-blur 1.5s ease-out 3s, tagline-fade 3.5s forwards; 
+    font-weight: bold;
+    opacity: 0;
+    -webkit-animation: tagline-blur 1.5s ease-out 3s, tagline-fade 3.5s forwards;
+    animation: tagline-blur 1.5s ease-out 3s, tagline-fade 3.5s forwards;
 }
 
 #line1 {
@@ -238,13 +241,15 @@ li {
 }
 
 #blurb {
-    margin-top: 40px;
-    display: flex;
-    width:100%;
+    margin: 140px auto;
+    display: block;
+    position: absolute;
+    max-width: 100%;
     padding: 20px;
-    -webkit-animation: blurbappear 5s forwards, blurbfadein 1.7s ease-out 4s;
-    animation: blurbappear 5s forwards, blurbfadein 1.7s ease-out 4s;
-
+    font-size: 1.3rem;
+    opacity: 0;
+    -webkit-animation: blurbappear 5s forwards, blurbfadein 1.7s ease-out forwards 4s;
+    animation: blurbappear 5s forwards, blurbfadein 1.7s ease-out forwards 4s;
 }
 
 
@@ -561,20 +566,22 @@ form > p {
     }
     #hero-mobile {
         /*max-width: 1000px;*/
+        display: flex;
+        justify-content: center;
         margin-top: 100px;
         margin-left:auto;
         margin-right:auto;
         padding-top: 30px;
         /*padding-left: 50px;*/
-    }
+    }    
     #tagline {
         max-width: 40%;
-        margin-top: 40px;
+        margin-top: 100px;
         font-size: 3em;
     }
     #blurb {
         max-width: 60%;
-        margin: 50px auto;
+        margin: 120px auto;
         font-size: 1.5em;
     }
 
@@ -582,6 +589,7 @@ form > p {
         width: 100%;
         margin: 120px 0 30px 0;
         font-size: 1.2em;
+        text-align: left;
         color: #0C2144;
         /*background-image: linear-gradient(#0957a4,#0e6ece);*/
         background: #ffffff;
