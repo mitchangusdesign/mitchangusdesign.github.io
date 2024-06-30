@@ -181,8 +181,8 @@ li {
 .mitchangus {
     font-size: 1.2em;
     letter-spacing:1px;
-    -webkit-animation: letterspace 3s ease-in-out;
-    animation: letterspace 3s ease-in-out;
+    -webkit-animation: letterspace 2s ease-in-out;
+    animation: letterspace 2s ease-in-out;
 }
 
 @-webkit-keyframes letterspace {
