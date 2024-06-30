@@ -177,6 +177,23 @@ li {
     padding: 20px;
     width: 100%;
 }
+
+.mitchangus {
+    font-size: 1.2em;
+    letter-spacing:1px;
+    -webkit-animation: letterspace 3s ease-in-out;
+    animation: letterspace 3s ease-in-out;
+}
+
+@-webkit-keyframes letterspace {
+  0%   { letter-spacing: 0px; }
+  100% { letter-spacing:1px; }
+}
+@keyframes letterspace {
+  0%   { letter-spacing: 0px; }
+  100% { letter-spacing:1px; }
+}
+
 #hero-mobile {
     display: flex;
     justify-content: center;
@@ -566,6 +583,9 @@ form > p {
     #my-intro {
         padding: 0px;
     }
+
+
+
     #hero-mobile {
         /*max-width: 1000px;*/
         display: flex;
