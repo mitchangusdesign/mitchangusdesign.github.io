@@ -408,7 +408,7 @@ li {
     position: relative;
 }
 
-.preview > ul > li > figure > img {
+.preview > ul > li > figure > a > img {
     width: 100%;
 }
 
@@ -641,12 +641,12 @@ form > p {
         position: relative;
     }
     
-    .preview > ul > li > figure > img {
+    .preview > ul > li > figure > a > img {
         width: 100%;
         transition: filter 0.5s ease-in-out, transform 1s ease-out;
     }
 
-    .preview > ul > li > figure:hover img{
+    .preview > ul > li > figure > a:hover img{
         filter: brightness(50%);
         transform: scale(108%);
     }
