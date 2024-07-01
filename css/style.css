@@ -178,21 +178,29 @@ li {
     width: 100%;
 }
 
-.mitchangus {
-    font-size: 1.2em;
-    letter-spacing:1px;
-    -webkit-animation: letterspace 2s ease-in-out;
-    animation: letterspace 2s ease-in-out;
+.page-title {
+    letter-spacing:-2px;
+    opacity: 1;
+    -webkit-animation: letterspace 2s ease-in-out, fadein 2s ease-in-out;
+    animation: letterspace 2s ease-in-out, fadein 2s ease-in-out;
 }
 
 @-webkit-keyframes letterspace {
-  0%   { letter-spacing: 0px; }
-  100% { letter-spacing:1px; }
+  0%   { letter-spacing: 1px; }
+  100% { letter-spacing:-2px; }
 }
 @keyframes letterspace {
-  0%   { letter-spacing: 0px; }
-  100% { letter-spacing:1px; }
+  0%   { letter-spacing: 1px; }
+  100% { letter-spacing:-2px; }
 }
+@-webkit-keyframes fadein {
+    0%   { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  @keyframes fadein {
+    0%   { opacity: 0; }
+    100% { opacity: 1; }
+  }
 
 #hero-mobile {
     display: flex;
