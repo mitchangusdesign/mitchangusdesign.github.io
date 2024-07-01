@@ -178,6 +178,11 @@ li {
     width: 100%;
 }
 
+.mitchangus {
+    font-size: 1.2em;
+    letter-spacing: 1px;
+}
+
 .page-title {
     letter-spacing:-2px;
     opacity: 1;
