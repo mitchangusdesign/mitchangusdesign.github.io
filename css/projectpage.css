@@ -47,8 +47,9 @@
     margin: 0 auto 0 auto;
 }
 
-.project div img {
+.project img {
     width: 100%;
+    margin-top: 20px;
 }
 
 #slideshow {
@@ -129,6 +130,9 @@
     .project h2 {
         max-width: 100%;
         font-size: 1.2em;
+    }
+    .project img {
+        margin-top: 0px;
     }
 }
   
