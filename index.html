@@ -25,7 +25,7 @@
         <input class="side-menu" type="checkbox" id="side-menu"/>
         <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>          
         <!-- Menu -->
-        <nav class="nav">         
+        <nav class="nav">   
             <ul class="menu">
                 <li><a href="work">work</a></li>
                 <li><a href="services">services</a></li>
@@ -205,6 +205,14 @@
               }
               prevScrollpos = currentScrollPos;
             }
+    </script>
+    <script>
+      document.querySelectorAll(".menu li a").forEach(function(elem) {
+      elem.addEventListener('click', function(ev) {
+      document.getElementById("side-menu").checked = false;
+      });
+
+      })
     </script>
 </body>
 </html>
