@@ -42,24 +42,21 @@
       </div>
       <section class="project">
         <div>
-          <img src="../img/sharon_preview1600w.webp" alt="Hand holding smartphone with Sharon Angus logo on the screen.">
+          <img src="../img/sharon_preview1600w.webp" onclick="openModal();currentSlide(1)" alt="Hand holding smartphone with Sharon Angus logo on the screen.">
         </div>
         <div>
           <h2>Sharon's Logo</h2>
           <p>Her requirements were that it incorporate the two flags of her heritage (Thunderchild First Nation and the Iroquois Confederacy/Hiawatha Belt), and the nature of her services. The center of the completed design features the Thunderchild First Nation flag [heiroglyph man], stylized to look like a wi-fi icon, while also emphasizing the "person" at the core of the business. The rectangles and purple/white color scheme were inspired by the Iroquois Confederacy/Hiawatha Belt flag. Elements from each flag are visible separately but also create one cohesive logo, much like the two cultures that form the individual in Sharon.</p>
         </div>
         <div>
-          <img src="../img/Sharon_Social_Media2900w.webp" alt="Images of social media posts arranged in 3d space like album covers.">
+          <img src="../img/Sharon_Social_Media2900w.webp" onclick="openModal();currentSlide(2)" alt="Images of social media posts arranged in 3d space like album covers.">
         </div>
         <div>
           <h2>Sharon's Social Media</h2>
           <p>As most of Sharon's clients come from social media and word of mouth, I made attention-grabbing visuals for her to intersperse with her regular, self-promotional text posts.</p>
         </div>
         <div>
-          <video width="100%" controls>
-            <source src="../img/sharonreel.webm" type="video/webm">
-            Your browser does not support webm video.
-          </video>
+          <img src="../img/Sharon_Demo_Reel2900w.webp" onclick="openModal();currentSlide(3)" alt="Cover image of play button over a film strip" style="cursor: pointer;">
         </div>
         <div>
           <h2>Sharon's Demo Reel</h2>
@@ -70,7 +67,7 @@
   </main>
   <footer class="footer" data-hover-hint="footer">
     <wrapper id="footer-nav-buttons">
-      <a href="./lift-off.html">
+      <a href="./lift-off">
         <button class="back-next-button">Back</button>
       </a>
       <a href="./heavy-wallbanger">
@@ -150,7 +147,6 @@
   </footer>
   <script>
     /* ---- new js to hide nav and accomodate ios scroll bounce ---- */
-    /*
     var prevScrollpos = window.pageYOffset;
       window.onscroll = function() {
         var currentScrollPos = window.pageYOffset;
@@ -162,9 +158,9 @@
           document.getElementById("header").style.opacity = "0";
         }
         prevScrollpos = currentScrollPos;
-        } */
+        }
         /* ---- old js to hide header on scroll (ios don't like)*/
-    var prevScrollpos = window.pageYOffset;
+    /* var prevScrollpos = window.pageYOffset;
         window.onscroll = function() {
           var currentScrollPos = window.pageYOffset;
           if (prevScrollpos > currentScrollPos) {
@@ -175,8 +171,93 @@
             document.getElementById("header").style.opacity = "0";
           }
           prevScrollpos = currentScrollPos;
-        }
+        } */
   </script>
   <script src="../js/closeMobileMenu.js"></script>
+
+<!-- Start Modal Test HTML -->
+  <div id="myModal" class="modal">
+    <span class="close cursor" onclick="closeModal()">&times;</span>
+    <div class="modal-content">
+      
+      <div class="mySlides">
+        <div class="numbertext">1 / 3</div>
+        <img src="../img/sharon_preview1600w.webp" style="width:100%">
+      </div>
+  
+      <div class="mySlides">
+        <div class="numbertext">2 / 3</div>
+        <img src="../img/Sharon_Social_Media2900w.webp" style="width:100%">
+      </div>
+  
+      <div class="mySlides">
+        <div class="numbertext">3 / 3</div>
+        <!-- <img src="img_mountains_wide.jpg" style="width:100%"> -->
+        <video width="100%" controls onclick="openModal();currentSlide(3)">
+          <source src="../img/sharonreel.webm" type="video/webm">
+          Your browser does not support webm video.
+        </video>
+      </div>
+      
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  
+      <div class="caption-container">
+        <p id="caption"></p>
+      </div>
+  
+  
+      <div class="column">
+        <img class="demo" style="display: none;" onclick="currentSlide(1)" alt="Hand holding smartphone with Sharon Angus logo on the screen.">
+      </div>
+      <div class="column">
+        <img class="demo" style="display: none;" onclick="currentSlide(2)" alt="Images of social media posts arranged in 3d space like album covers.">
+      </div>
+      <div class="column">
+        <img class="demo" style="display: none;" onclick="currentSlide(3)" alt="30s Demo Reel">
+      </div>
+    
+    </div>
+  </div>
+
+  <script>
+    function openModal() {
+      document.getElementById("myModal").style.display = "block";
+    }
+    
+    function closeModal() {
+      document.getElementById("myModal").style.display = "none";
+    }
+    
+    var slideIndex = 1;
+    showSlides(slideIndex);
+    
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+    
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+    
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("demo");
+      var captionText = document.getElementById("caption");
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active";
+      captionText.innerHTML = dots[slideIndex-1].alt;
+    }
+    </script>
+
 </body>
 </html>
