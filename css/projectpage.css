@@ -156,14 +156,7 @@
     width: 90%;
     max-width: 900px;
   }
-  .modal-content > figure {
-    position: relative;
-    background-color: #fefefe;
-    margin: auto;
-    padding: 0;
-    width: 90%;
-    max-width: 900px;
-  }
+
 
   /* The Close Button */
   .close {
