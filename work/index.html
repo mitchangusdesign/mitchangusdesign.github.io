@@ -167,34 +167,7 @@
       Copyright Mitchell Angus 2024
     </div>
   </footer>
-  <script>
-      /* ---- new js to hide nav and accomodate ios scroll bounce ---- */
-  var prevScrollpos = window.pageYOffset;
-    window.onscroll = function() {
-      var currentScrollPos = window.pageYOffset;
-      if (prevScrollpos > currentScrollPos ||  window.pageYOffset < 50) {
-        document.getElementById("NavBar").style.top = "0";
-        document.getElementById("header").style.opacity = "1";
-      } else {
-        document.getElementById("NavBar").style.top = "-150px";
-        document.getElementById("header").style.opacity = "0";
-      }
-      prevScrollpos = currentScrollPos;
-      }
-      /* ---- old js to hide header on scroll (ios don't like)*/
-  /* var prevScrollpos = window.pageYOffset;
-      window.onscroll = function() {
-        var currentScrollPos = window.pageYOffset;
-        if (prevScrollpos > currentScrollPos) {
-          document.getElementById("header").style.top = "0";
-          document.getElementById("header").style.opacity = "1";
-        } else {
-          document.getElementById("header").style.top = "-100px";
-          document.getElementById("header").style.opacity = "0";
-        }
-        prevScrollpos = currentScrollPos;
-      } */
-  </script>
+  <script src="../js/hideNavOnScroll.js"></script>
   <script src="../js/closeMobileMenu.js"></script>
 </body>
 </html>

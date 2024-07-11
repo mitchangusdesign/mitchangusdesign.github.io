@@ -38,9 +38,9 @@ main {
     display: block;
     background-color: #0C2144;
     position: fixed; /* Make it stick/fixed */
-  top: 0; /* Stay on top */
-  width: 100%; /* Full width */
-  transition: top 0.3s, opacity 0.3s; /* Transition effect when sliding down (and up) */
+    top: 0; /* Stay on top */
+    width: 100%; /* Full width */
+    transition: top 0.3s, opacity 0.5s; /* Transition effect when sliding down (and up) */
     width:  100%;
     z-index: 1;
 }
