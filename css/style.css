@@ -241,7 +241,7 @@ li {
 #tagline {
     display: block;
     position: absolute;
-    width: 360px;
+    width: 380px;
     padding: 30px;
     margin: 110px auto 20px auto;
     font-size: 2.5em;
@@ -282,7 +282,6 @@ li {
     padding: 20px;
     font-size: 1.3rem;
     opacity: 0;
-    border: 1px solid red;
     -webkit-animation: blurbappear 5s forwards, blurbfadein 1.7s ease-out forwards 4s;
     animation: blurbappear 5s forwards, blurbfadein 1.7s ease-out forwards 4s;
 }
