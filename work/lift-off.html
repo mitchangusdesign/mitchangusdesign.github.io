@@ -196,7 +196,7 @@
   
       <div class="mySlides">
         <div class="numbertext">2 / 4</div>
-        <img src="../img/liftofffirstdraft2800.webp" style="width:100%">
+        <img src="../img/liftofffirstdraft2800.webp" style="width:80%">
       </div>
 
       <div class="mySlides">
@@ -205,12 +205,11 @@
       </div>
   
       <div class="mySlides">
-        <div class="numbertext">4 / 4</div>
+        
         <!-- <img src="img_mountains_wide.jpg" style="width:100%"> -->
-        <!--<div class="slideshow">-->
           <img id="slide1" src="../img/liftoffFinalA1600w.webp" style="width: 100%;">
           <img id="slide2" src="../img/liftoffFinalB1600w.webp" style="width: 100%;">
-        <!--</div>-->
+          <div class="numbertext">4 / 4</div>
       </div>
       
       <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
@@ -270,7 +269,7 @@
       for (i = 0; i < dots.length; i++) {
           dots[i].className = dots[i].className.replace(" active", "");
       }
-      slides[slideIndex-1].style.display = "block";
+      slides[slideIndex-1].style.display = "flex";
       dots[slideIndex-1].className += " active";
       captionText.innerHTML = dots[slideIndex-1].alt;
     }
