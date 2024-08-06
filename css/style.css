@@ -42,7 +42,7 @@ main {
     width: 100%; /* Full width */
     transition: top 0.3s, opacity 0.5s; /* Transition effect when sliding down (and up) */
     width:  100%;
-    z-index: 1;
+    z-index: 500;
 }
 
 .header-logo {
