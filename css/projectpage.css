@@ -138,7 +138,7 @@
     display: none;
     position: fixed;
     z-index: 20;
-    padding-top: 40px;
+    padding-top: 10vh;
     left: 0;
     top: 0;
     width: 100%;
@@ -155,7 +155,7 @@
     position: relative;
     margin: auto;
     padding: 0;
-    width: 90%;
+    width: 100%;
     max-width: 900px;
     background-color: rgba(0, 0, 0, 0.8);
   }
@@ -327,6 +327,9 @@
     }
     .card-container:not(:nth-child(1)) > img:hover, .card-container:not(:nth-child(1)) > img:focus-within {
         transform:translateX(3rem) rotate(10deg) scale(105%) ;
+    }
+    .modal {
+        padding-top: 40px;
     }
 }
   
