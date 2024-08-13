@@ -137,6 +137,7 @@
 .modal {
     display: none;
     position: fixed;
+    touch-action: none;
     z-index: 20;
     padding-top: 10vh;
     left: 0;
