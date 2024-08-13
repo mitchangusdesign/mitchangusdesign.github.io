@@ -38,11 +38,13 @@
 
 .project p {
     max-width: 90%;
-    margin: 10px auto 0 auto;
-    font-size: .9em;
+    margin: 0 auto;
+    font-size: 1em;
+    line-height: 1.3em;
 }
 
 .project h2 {
+    font-size: 2em;
     max-width: 90%;
     margin: 0 auto 0 auto;
 }

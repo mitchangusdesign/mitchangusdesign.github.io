@@ -611,11 +611,11 @@ form > p {
     background-color: #0071e2;
 }
 #front-page-button {
-    border: 2px solid #0c2144;
+    border: 0px solid #0c2144;
     background-color: #0c2144;
     border-radius: 0.9em;
     padding: 0.8em 2.2em 0.8em 2em;
-    margin: 1em 0;
+    margin: 1.3em 0;
     transition: all ease-in-out 0.2s;
     font-size: 16px;
     font-weight: 600;
@@ -623,6 +623,7 @@ form > p {
 }
 #front-page-button:hover {
     background-color: #24b4fb;
+    border: 0px solid #0c2144;
     transform: scale(1.05);
 }
 
@@ -737,15 +738,34 @@ form > p {
         margin: auto;
         height: fit-content;
         width: 100%;
+        transform: translateY(-30px);
     }
     .blog-words h2 {
+        color: #0C2144;
         font-size: 2rem;
         font-weight: 700;
     }
     .blog-words p {
         width: 80%;
-        margin: 1em auto auto auto;
+        font-size: 1em;
+        line-height: 1.3em;
+        margin: 0.5rem auto auto auto;
+    }
 
+    .service-list {
+        width: 50%;
+        margin-left: 5%;
+    }
+    .service-list h2 {
+        color: #0C2144;
+        font-size: 2rem;
+        font-weight: 700;
+        margin-top: 1em;
+    }
+    .service-list p {
+        font-size: 1em;
+        line-height: 1.3em;
+        margin: 0.5rem auto auto auto;
     }
 
     .preview > ul > li > figure {
