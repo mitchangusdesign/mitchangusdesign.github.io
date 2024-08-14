@@ -405,6 +405,46 @@ li {
     margin-bottom: 2em;
 }
 
+.blog-words {
+    display: flex;
+    width: 100%;
+    text-align: center;
+
+}
+.blog-words div {
+    display: block;
+    margin: auto;
+    height: fit-content;
+    width: 100%;
+}
+.blog-words h2 {
+    color: #0C2144;
+    font-size: 2rem;
+    font-weight: 700;
+}
+.blog-words p {
+    width: 80%;
+    font-size: 1em;
+    line-height: 1.3em;
+    margin: 0.5rem auto auto auto;
+}
+
+.service-list {
+    width: 90%;
+    margin:auto;
+}
+.service-list h2 {
+    color: #0C2144;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-top: 1em;
+}
+.service-list p {
+    font-size: 1em;
+    line-height: 1.3em;
+    margin: 0.5rem auto auto auto;
+}
+
 .preview ul {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
