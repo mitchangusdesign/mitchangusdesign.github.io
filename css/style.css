@@ -409,7 +409,6 @@ li {
     display: flex;
     width: 100%;
     text-align: center;
-
 }
 .blog-words div {
     display: block;
@@ -429,20 +428,33 @@ li {
     margin: 0.5rem auto auto auto;
 }
 
+.services {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+    grid-auto-rows: 1fr;
+    max-width: 90%;
+    margin: auto;
+}
+
 .service-list {
-    width: 90%;
+    width: 100%;
     margin:auto;
 }
 .service-list h2 {
     color: #0C2144;
-    font-size: 2rem;
-    font-weight: 700;
+    font-size: 1.5rem;
+    font-weight: 600;
     margin-top: 1em;
 }
 .service-list p {
     font-size: 1em;
     line-height: 1.3em;
     margin: 0.5rem auto auto auto;
+}
+
+.service-video{
+    display: none;
 }
 
 .preview ul {
@@ -681,6 +693,15 @@ form > p {
     font-size: 1.2rem;
 }
 
+.banner {
+    height: 250px;
+    background-image: url(../img/services_banner1600w.webp);
+    background-size: cover;
+    background-position: 30% 50%; 
+}
+.banner img {
+    opacity: 0;
+}
 
 
                                         /* Responsiveness */
@@ -766,6 +787,7 @@ form > p {
     }
     #blog img {
         width: 100%;
+        animation: fadein 0.2s ease    ;
     }
     .blog-words {
         display: flex;
@@ -793,19 +815,28 @@ form > p {
     }
 
     .service-list {
-        width: 50%;
-        margin-left: 5%;
+        width: 100%;
     }
     .service-list h2 {
         color: #0C2144;
         font-size: 2rem;
-        font-weight: 700;
+        font-weight: 650;
         margin-top: 1em;
     }
     .service-list p {
         font-size: 1em;
         line-height: 1.3em;
         margin: 0.5rem auto auto auto;
+    }
+
+    .service-video{
+        display: flex;
+        width: 100%;
+        align-items: center;
+    }
+    .service-video video {
+        width: 60%;
+        margin: 2.5em auto auto auto;
     }
 
     .preview > ul > li > figure {
@@ -1033,5 +1064,14 @@ form > p {
         font-size: 1.2rem;
     }
 
-    
+    .banner {
+        width: 100%;
+        height: 300px;
+        /* aspect-ratio: 1584/396; */
+        background-image: url(../img/services_banner1600w.webp);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        
+    }
 }

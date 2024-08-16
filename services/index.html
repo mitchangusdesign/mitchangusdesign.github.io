@@ -38,6 +38,9 @@
               <span class="mitchangus">Mitchell Angus Portfolio</span>
               <h1 class="page-title">Services</h1>
           </div>
+      </div>
+      <div class="banner">
+        <img src="../img/services_banner1600w.webp">
       </div>    
       
       <section id="services" class="services">
@@ -54,7 +57,12 @@
             <p>Layout is the arrangement of visual elements on a page or screen in graphic design.</p>
             <h2>Motion Grapics</h2>
             <p>Motion graphics is a type of animated graphic design that uses visual aids to convey information, tell a story, or enhance the visual appeal of a multimedia project.</p>
-            
+          </div>
+          <div class="service-video">
+            <video controls playsinline autoplay muted src="../img/10s_Reel.mp4">
+              <!-- <source src="../img/10s_Reel.mp4" type="video/webm"> -->
+              Your browser does not support webm video.
+            </video>
           </div>
       </section>
   </main>
@@ -127,5 +135,42 @@
   </footer>
   <script src="../js/hideNavOnScroll.js"></script>
   <script src="../js/closeMobileMenu.js"></script>
+  <script>
+    
+    function playPauseVideo() {
+                let videos = document.querySelectorAll("video");
+                videos.forEach((video) => {
+                    // We can only control playback without insteraction if video is mute
+                    video.muted = true;
+                    // Play is a promise so we need to check we have it
+                    let playPromise = video.play();
+                    if (playPromise !== undefined) {
+                        playPromise.then((_) => {
+                            let observer = new IntersectionObserver(
+                                (entries) => {
+                                    entries.forEach((entry) => {
+                                        if (
+                                            entry.intersectionRatio !== 1 &&
+                                            !video.paused
+                                        ) {
+                                            video.pause();
+                                        } else if (video.paused) {
+                                            video.play();
+                                        }
+                                    });
+                                },
+                                { threshold: 1 }
+                            );
+                            observer.observe(video);
+                        });
+                    }
+                });
+            }
+
+            // And you would kick this off where appropriate with:
+            playPauseVideo();
+        
+  </script>
+  
 </body>
 </html>
