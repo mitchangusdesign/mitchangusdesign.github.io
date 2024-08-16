@@ -21,7 +21,7 @@ ul{
 
 h1 {
     font-weight: 650;
-    /*line-height: 2em;*/
+    line-height: 1.3em;
     letter-spacing: -2px;
 }
 
@@ -701,6 +701,7 @@ form > p {
 }
 .banner img {
     opacity: 0;
+    width: 100%;
 }
 
 

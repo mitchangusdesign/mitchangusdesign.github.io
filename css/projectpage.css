@@ -44,9 +44,11 @@
 }
 
 .project h2 {
-    font-size: 2em;
+    font-size: 1.5em;
+    line-height: 1.3em;
+    font-weight: 600;
     max-width: 90%;
-    margin: 0 auto 0 auto;
+    margin: 0 auto .5em auto;
 }
 
 .project img {
