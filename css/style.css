@@ -788,7 +788,8 @@ form > p {
     }
     #blog img {
         width: 100%;
-        animation: fadein 0.2s ease    ;
+        animation: fadein 0.2s ease;
+        border-radius: 10px;
     }
     .blog-words {
         display: flex;
@@ -838,6 +839,7 @@ form > p {
     .service-video video {
         width: 60%;
         margin: 2.5em auto auto auto;
+        border-radius: 10px;
     }
 
     .preview > ul > li > figure {
