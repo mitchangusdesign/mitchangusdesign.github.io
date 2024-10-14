@@ -704,6 +704,16 @@ form > p {
     width: 100%;
 }
 
+.button-container {
+    display: flex;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    align-content: center;
+    text-align: center;
+}
 
                                         /* Responsiveness */
 @media (min-width: 801px) {
