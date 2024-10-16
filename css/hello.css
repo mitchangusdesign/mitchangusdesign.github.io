@@ -270,6 +270,7 @@ li {
     background-image: url("/img/card-box-bg-1000w.webp") ;
     background-position: center;
     background-size: cover;
+    filter: brightness(1.5);
   }
   #card-content {
     display: flex;
