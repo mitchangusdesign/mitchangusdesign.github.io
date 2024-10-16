@@ -733,8 +733,40 @@ form > p {
     text-align: center;
 }
 
+#page-404 {
+    display: flex;
+    margin-top: 100px;
+    height: 75dvh;
+    align-items: center;
+}
+#container-404 {
+    text-align: center;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+#error-404 {
+    font-size: 10em;
+    font-weight: 100;
+    line-height: 1em;
+    color: #383838;
+}
+#title-404 {
+    font-size: 3em;
+    color: #383838;
+}
+#message-404 {
+    font-size: large;
+    color: #383838;
+}
+
                                         /* Responsiveness */
 @media (min-width: 801px) {
+    #container-404 {
+        text-align: left;
+    }
     .header-logo {
         margin: 20px 10px 20px 40px;
     }
