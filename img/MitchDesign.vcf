@@ -1,0 +1,18 @@
+BEGIN:VCARD
+VERSION:3.0
+FN:Mitchell Angus
+N:Angus;Mitchell;;;
+EMAIL;TYPE=INTERNET;TYPE=WORK:mitchell@mitchangus.design
+TEL;TYPE=CELL:‪(602) 730-4308
+item1.ADR:;;;Phoenix;AZ;;US;Phoenix\, AZ\nUS
+item1.X-ABLabel:
+item2.ORG:Mitchell Angus Design
+item2.X-ABLabel:
+item3.TITLE:Graphic Designer
+item3.X-ABLabel:
+item4.URL:https\://mitchangus.design
+item4.X-ABLabel:homePage
+PHOTO:https://lh3.googleusercontent.com/contacts/ABsqplt6aXy1ZhgX0r4mH8jD2y
+ 1o8huWvflqBbXgWcv5EZ6Xuk7khm6X
+CATEGORIES:myContacts
+END:VCARD

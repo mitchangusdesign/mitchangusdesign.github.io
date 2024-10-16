@@ -233,6 +233,21 @@ li {
     /*border: solid 1px #0c2144;*/
 }
 
+.profile-intro-container {
+    width: 100%;
+    margin: 140px 0 30px 0;
+    font-size: 1.2em;
+    color: #0C2144;
+    /*background-image: linear-gradient(#0957a4,#0e6ece);*/
+    background: #ffffff;
+    /*border: solid 1px #0c2144;*/
+}
+.profile-intro {
+    display: block;
+    width: fit-content;
+    margin: auto;
+}
+
 .text-outline {
     -webkit-text-stroke: 1px #0C2144;
     color: #ffffff;
@@ -704,6 +719,9 @@ form > p {
     width: 100%;
 }
 
+.letsa-go {
+    display: flex;
+}
 .button-container {
     display: flex;
     width: fit-content;
