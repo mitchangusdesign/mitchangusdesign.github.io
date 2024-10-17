@@ -748,9 +748,9 @@ form > p {
     padding-right: 5%;
 }
 #error-404 {
-    font-size: 10em;
+    font-size: 6em;
     font-weight: 100;
-    line-height: 1em;
+    line-height: 1.6em;
     color: #383838;
 }
 #title-404 {
@@ -766,6 +766,10 @@ form > p {
 @media (min-width: 801px) {
     #container-404 {
         text-align: left;
+    }
+    #error-404 {
+        font-size: 10em;
+        line-height: 1.3em;
     }
     .header-logo {
         margin: 20px 10px 20px 40px;
