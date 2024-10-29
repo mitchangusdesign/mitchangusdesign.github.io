@@ -188,10 +188,122 @@ main {
 
 }
 
+#save-contact {
+  display: flex;
+  position: relative;
+  width: 300px;
+  height: fit-content;
+  vertical-align: bottom;
+  margin-top: 60px;
+  margin-left: auto;
+  margin-right: auto;
+}
+#bg-block {
+  position: absolute;
+  right: 5%;
+  bottom: -5px;
+  width: 90%;
+  height: 150px;
+  border: 5px #0c2144 solid;
+  background-color: #0c2144;
+  background-image: url("/img/card-box-bg-1000w.webp") ;
+  background-position: center;
+  background-size: cover;
+  border-radius: 1em;
+}
+#phone-popup {
+  display: flex;
+  position: relative;
+  height: 280px;
+  width: 65%;
+  vertical-align: bottom;
+  z-index: 1;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+
+}
+#logo-and-button {
+  display: flex;
+  position: relative;
+  align-items: end;
+  width: 100%;
+
+}
+#contact-dl {
+ display: inline-block;
+ transform: scale(0%);
+ margin: 0 auto 40px auto;
+ padding: 10px 15px 10px 15px;
+ font-family: 'Poppins';
+ font-weight: 600;
+ font-size: 12px;
+ border: 0px;
+ border-radius: 12px;
+ color: #707070;
+ background-image: radial-gradient(ellipse at center, #ffffff, #f0f0f0 );
+ box-shadow: 0px 3px 5px rgba(0, 0, 0, .3);
+ -webkit-animation: popin .5s ease-in-out forwards 2.6s;
+ animation: popin .5s ease-in-out forwards 2.6s;
+}
+#contact-dl:active {
+  scale: 90%;
+}
+
+#smartphone {
+  position: absolute;
+  top: 100%;
+  -webkit-animation: move .5s ease-in-out forwards 2s ;
+  animation: move .5s ease-in-out forwards 2s;
+}
+
+#logo-pop {
+  transform: scale(0%);
+  width: 45%;
+  position: absolute;
+  top: 30%;
+  left: 0; right: 0; margin: 0 auto;
+  -webkit-animation: popin .5s ease-in-out forwards 2.3s;
+  animation: popin .5s ease-in-out forwards 2.3s;
+}
+
+
+@-webkit-keyframes move {
+ 0% { transform: translateY(0px); }
+ 60% { transform: translateY(-270px); }
+ 100% { transform: translateY(-250px); }
+}
+@keyframes move {
+ 0% { transform: translateY(0px); }
+ 60% { transform: translateY(-270px); }
+ 100% { transform: translateY(-250px); }
+}
+@-webkit-keyframes popin {
+  0% { transform: scale(0%); opacity: 0%;}
+  60% { transform: scale(110%); opacity: 100%;}
+  100% { transform: scale(100%); opacity: 100%;}
+}
+@keyframes popin {
+  0% { transform: scale(0%); opacity: 0%;}
+  60% { transform: scale(110%); opacity: 100%;}
+  100% { transform: scale(100%); opacity: 100%;}
+}
+
 
 </style>
 <body>
 <main>
+  <div id="save-contact">
+    <div id="bg-block">      
+    </div>
+    <div id="phone-popup">
+      <img src="../img/smartphone.svg" id="smartphone"/>
+      <div id="logo-and-button">
+        <img src="../img/logo-circle.svg" id="logo-pop" />
+        <a href="./img/MitchDesign.vcf" download id="contact-dl">Save My Contact Info</a>
+      </div>
+    </div>
+  </div>
   <div id="region-cards-wrapper">
     <div id="card">
       <img src="bc_ab_cover_693x403.png" alt="mountains">

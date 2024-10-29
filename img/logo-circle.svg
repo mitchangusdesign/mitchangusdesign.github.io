@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 139.78 139.78">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        stroke: #0c2144;
+        stroke-miterlimit: 10;
+        stroke-width: 7px;
+      }
+
+      .cls-2 {
+        fill: #0c2144;
+      }
+    </style>
+  </defs>
+  <g id="Layer_1-2" data-name="Layer 1">
+    <g>
+      <circle class="cls-1" cx="69.89" cy="69.89" r="66.39"/>
+      <g id="New_Logomark" data-name="New Logomark">
+        <g>
+          <polygon class="cls-2" points="58.39 29.12 61.21 36.46 103.32 36.46 103.32 103.32 36.46 103.32 36.46 36.46 36.46 29.12 29.12 29.12 29.12 110.65 110.65 110.65 110.65 29.12 58.39 29.12"/>
+          <polygon class="cls-2" points="42.76 29.12 42.76 96.61 52.18 96.61 52.18 61.21 65.07 96.61 74.6 96.61 87.02 68.5 87.16 96.61 96.61 96.61 96.61 42.84 87.66 42.84 71.06 81.28 51.01 29.12 42.76 29.12"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
