@@ -362,8 +362,8 @@ li {
    color: #707070;
    background-image: radial-gradient(ellipse at center, #ffffff, #f0f0f0 );
    box-shadow: 0px 3px 5px rgba(0, 0, 0, .3);
-   -webkit-animation: popin .5s ease-in-out forwards 2.6s;
-   animation: popin .5s ease-in-out forwards 2.6s;
+   -webkit-animation: popin .5s ease-in-out forwards 1.6s;
+   animation: popin .5s ease-in-out forwards 1.6s;
 }
 #contact-dl:active {
     scale: 90%;
@@ -372,8 +372,8 @@ li {
 #smartphone {
     position: absolute;
     top: 100%;
-    -webkit-animation: move .5s ease-in-out forwards 2s ;
-    animation: move .5s ease-in-out forwards 2s;
+    -webkit-animation: move .5s ease-in-out forwards 1s ;
+    animation: move .5s ease-in-out forwards 1s;
 }
   
 #logo-pop {
@@ -382,8 +382,8 @@ li {
     position: absolute;
     top: 30%;
     left: 0; right: 0; margin: 0 auto;
-    -webkit-animation: popin .5s ease-in-out forwards 2.3s;
-    animation: popin .5s ease-in-out forwards 2.3s;
+    -webkit-animation: popin .5s ease-in-out forwards 1.3s;
+    animation: popin .5s ease-in-out forwards 1.3s;
 }
   
   
