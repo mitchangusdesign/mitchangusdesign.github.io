@@ -238,7 +238,6 @@ li {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 1.8rem;
     margin: 60px auto;
-    border-radius: 0px;
 }
   
 #card img {
@@ -322,7 +321,6 @@ li {
     margin-top: 60px;
     margin-left: auto;
     margin-right: auto;
-    border: 1px red solid;
 }
 #bg-block {
     position: absolute;
@@ -347,14 +345,12 @@ li {
     margin-left: auto;
     margin-right: auto;
     overflow: hidden;
-    border: 1px green solid;
 }
 #logo-and-button {
     display: flex;
     position: relative;
     align-items: end;
     width: 100%;
-    border: 1px blue dashed;
 }
 #contact-dl {
    display: inline-block;
