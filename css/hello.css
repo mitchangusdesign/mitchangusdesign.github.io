@@ -238,6 +238,7 @@ li {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 1.8rem;
     margin: 60px auto;
+    border-radius: 0px;
 }
   
 #card img {
@@ -259,17 +260,22 @@ li {
     position: relative;
     overflow: hidden;
     text-decoration: none;
+    border-radius: 1em;
 }
 #card-box {
     display: flex;
     width: 100%;
-    padding: 15% 35% ;
     background-color: #0C2144;
     height: 200px;
     overflow: hidden;
     background-image: url("/img/card-box-bg-1000w.webp") ;
     background-position: center;
     background-size: cover;
+}
+#card-box img {
+    height: 55%;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 #card-content {
     display: flex;
@@ -310,19 +316,20 @@ li {
 #save-contact {
     display: flex;
     position: relative;
-    width: 300px;
+    width: 100%;
     height: fit-content;
     vertical-align: bottom;
     margin-top: 60px;
     margin-left: auto;
     margin-right: auto;
+    border: 1px red solid;
 }
 #bg-block {
     position: absolute;
     right: 5%;
     bottom: -5px;
     width: 90%;
-    height: 150px;
+    height: 50%;
     border: 5px #0c2144 solid;
     background-color: #0c2144;
     background-image: url("/img/card-box-bg-1000w.webp") ;
@@ -333,37 +340,37 @@ li {
 #phone-popup {
     display: flex;
     position: relative;
-    height: 280px;
+    aspect-ratio: 3/4;
     width: 65%;
     vertical-align: bottom;
     z-index: 1;
     margin-left: auto;
     margin-right: auto;
     overflow: hidden;
-  
+    border: 1px green solid;
 }
 #logo-and-button {
     display: flex;
     position: relative;
     align-items: end;
     width: 100%;
-  
+    border: 1px blue dashed;
 }
 #contact-dl {
    display: inline-block;
    transform: scale(0%);
-   margin: 0 auto 40px auto;
+   margin: 0 auto 15% auto;
    padding: 10px 15px 10px 15px;
    font-family: 'Poppins';
    font-weight: 600;
-   font-size: 12px;
+   font-size: 4vw;
    border: 0px;
    border-radius: 12px;
    color: #707070;
    background-image: radial-gradient(ellipse at center, #ffffff, #f0f0f0 );
    box-shadow: 0px 3px 5px rgba(0, 0, 0, .3);
-   -webkit-animation: popin .5s ease-in-out forwards 2.6s;
-   animation: popin .5s ease-in-out forwards 2.6s;
+   -webkit-animation: popin .5s ease-in-out forwards 1.6s;
+   animation: popin .5s ease-in-out forwards 1.6s;
 }
 #contact-dl:active {
     scale: 90%;
@@ -372,8 +379,8 @@ li {
 #smartphone {
     position: absolute;
     top: 100%;
-    -webkit-animation: move .5s ease-in-out forwards 2s ;
-    animation: move .5s ease-in-out forwards 2s;
+    -webkit-animation: move .5s ease-in-out forwards 1s ;
+    animation: move .5s ease-in-out forwards 1s;
 }
   
 #logo-pop {
@@ -382,20 +389,20 @@ li {
     position: absolute;
     top: 30%;
     left: 0; right: 0; margin: 0 auto;
-    -webkit-animation: popin .5s ease-in-out forwards 2.3s;
-    animation: popin .5s ease-in-out forwards 2.3s;
+    -webkit-animation: popin .5s ease-in-out forwards 1.3s;
+    animation: popin .5s ease-in-out forwards 1.3s;
 }
   
   
 @-webkit-keyframes move {
-   0% { transform: translateY(0px); }
-   60% { transform: translateY(-270px); }
-   100% { transform: translateY(-250px); }
+    0% { transform: translateY(0%); }
+    60% { transform: translateY(-65%); }
+    100% { transform: translateY(-60%); }
 }
 @keyframes move {
-   0% { transform: translateY(0px); }
-   60% { transform: translateY(-270px); }
-   100% { transform: translateY(-250px); }
+   0% { transform: translateY(0%); }
+   60% { transform: translateY(-65%); }
+   100% { transform: translateY(-60%); }
 }
 @-webkit-keyframes popin {
     0% { transform: scale(0%); opacity: 0%;}
@@ -446,16 +453,23 @@ footer {
 
                                         /* Responsiveness */
 
-@media screen and (max-width: 1285px) {
-  .desktop-cards-wrapper {
-    grid-template-columns: 1fr 1fr;
-  }
-  #mobile-save-contact {
-    display: none;
-  }
-
-
+@media screen and (max-width: 1440px) {
+    .desktop-cards-wrapper {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    #card {
+        border-radius: 0em;
+    }
+    #mobile-save-contact {
+        display: none;
+    }
   
+}
+
+@media screen and (max-width: 1200px) {
+    .desktop-cards-wrapper {
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
 @media (max-width: 801px) {
@@ -468,4 +482,5 @@ footer {
     }
 
 }
+
 
