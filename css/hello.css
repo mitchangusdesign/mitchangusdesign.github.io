@@ -449,32 +449,31 @@ footer {
 
                                         /* Responsiveness */
 
-@media screen and (max-width: 1440px) {
+@media screen and (min-width: 801px) {
     .desktop-cards-wrapper {
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
+
     #card {
         border-radius: 0em;
     }
+
     #mobile-save-contact {
         display: none;
     }
-  
 }
 
 @media screen and (max-width: 1200px) {
     .desktop-cards-wrapper {
         grid-template-columns: 1fr 1fr;
     }
+
 }
 
 @media (max-width: 801px) {
 
     .desktop-cards-wrapper {
         grid-template-columns: 1fr;
-    }
-    #mobile-save-contact {
-        display: flex;
     }
 
 }
