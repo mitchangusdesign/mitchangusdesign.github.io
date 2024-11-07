@@ -259,7 +259,7 @@ li {
     position: relative;
     overflow: hidden;
     text-decoration: none;
-    border-radius: 1em;
+    border-radius: 1rem;
 }
 #card-box {
     display: flex;
@@ -333,7 +333,7 @@ li {
     background-image: url("/img/card-box-bg-1000w.webp") ;
     background-position: center;
     background-size: cover;
-    border-radius: 1em;
+    border-radius: 1rem;
 }
 #phone-popup {
     display: flex;
