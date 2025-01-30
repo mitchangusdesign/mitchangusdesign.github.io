@@ -13,17 +13,19 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="Affordable and professional graphic design">
+    <meta name="description" content="Mitch Angus Design Privacy Policy">
     <meta name="keywords" content="logo design, graphic design, print design, web design, affordable web design, professional web design">
     <meta name="author" content="Mitchell Angus">
     <meta property="og:image" content="https://mitchangus.design/img/og-image.jpg" />
-    <title>Mitchell Angus Design | About</title>
+    <title>Privacy Policy</title>
     <link rel="stylesheet" href="./css/style.css">
     <!--<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins: 100,300,400,500,600,700,800"> -->
     <link rel="icon" href="img/favicon.png">
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <style>html {scroll-behavior: smooth;}</style>
 </head>
 <body>
-  <!-- Navigation Bar -->
+    <!-- Navigation Bar -->
   <header id="header">   
       <!-- Logo -->  
       <a href="/"><img src="/img/logo-white.svg" alt="M Logo" class="header-logo"></a>
@@ -33,34 +35,59 @@
       <input class="side-menu" type="checkbox" id="side-menu"/>
       <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>          
       <!-- Menu -->
-      <nav class="nav">         
+      <nav class="nav">   
           <ul class="menu">
               <li><a href="work">work</a></li>
               <li><a href="services">services</a></li>
-              <li><a class="current-page">about</a></li>
+              <li><a href="about">about</a></li>
               <li><a href="contact">contact</a></li>
           </ul>
       </nav> 
   </header>
   <main>
-      <div id="page-head">
-          <div id="my-intro">
-              <span class="mitchangus">Mitchell Angus</span>
-              <h1 class="page-title">About Me</h1>
-          </div>
+      <div class="policy-text">
+        <h1 class="page-title">Privacy Policy</h1>
+        <h2>Data We Collect</h2>
+          <p>Privacy Policy Data Collected</p>
+        <h2>Opt Out</h2>
+        <p>User Opt Out text</p>
+        <p>Click below to opt out of Google Analytics</p>
+        <a href="javascript:gaOptout()" id="optoutbtn" onclick = "changeImage()">Opt Out</a>
       </div>    
-      
-      <section id="about-blurb">
-          <p>My name is Mitchell Angus and I am a graphic designer and digital artist based in Phoenix, Arizona. I'm an artistic, easy-going type and when I'm not busy adoring my wife and two small dogs, I'm immersed in new ways to improve my craft and value to my clients.
-          </p>
-      </section>
-      <section id="about-mission">
-          <p><span style="font-weight: 600;">I believe that at the heart of successful design is communication.</span> Good design can be subtle and powerful, but great design can be influential. Good design starts with a conversation. Great design starts with a conversation with me.                
-          </p>
-          <p><span style="font-weight: 600;">I am inspired by You.</span> Small business is anything but small in its influence of our lives and neighborhoods. People love to support it because they recognize the benefit it provides. That is, if they can find it! Your small business deserves to get recognized.
-          </p>
-          <p><span style="font-weight: 600;">I have a mission.</span> If you don’t put your best foot forward, your limitations tell your story. Every small business deserves access to professional design. If you invest in your business, I will too. I can work with any budget.
-          </p>
+      <div id="scroll-down">
+        <a href="#preview"><script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script><lottie-player src="https://mitchangus.design/visjs/downArrow.json" background="transparent" speed="1" style="width: 200px; height: 56px; margin-left: auto; margin-right: auto;" direction="1" mode="normal" autoplay loop hover></lottie-player></a>
+        
+      </div>
+      <section id="preview" class="preview" tabindex="-1">
+        <div id="blog">
+          <div class="front-page">
+            <img loading="lazy" src="../img/see_my_work_800w.webp">
+          </div>
+          <div class="blog-words">
+            <div>
+              <h2>Portfolio</h2>
+              <p>Peruse some key examples of finished projects and conceptual designs from my professional portfolio.</p>
+              <a href="/work">
+                <button id="front-page-button">See My Work</button>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div id="blog">
+          <div class="front-page">
+            <img loading="lazy" src="../img/design_srvcs_800w.webp">
+          </div>
+          <div class="blog-words">
+            <div>
+              <h2>Design Services</h2>
+              <p>Learn about some common problems you can solve with effective Graphic Design.</p>
+              <a href="/services">
+                <button id="front-page-button">See Services</button>
+              </a>
+            </div>
+          </div>
+        </div>
 
       </section>
   </main>
@@ -130,8 +157,17 @@
     <div class="footer-text">
       Copyright Mitchell Angus 2024
     </div>
+    <div class="opt-out-link">
+      <a href="./privacy">Privacy Policy</a>
+    </div>
   </footer>
-  <script src="./js/hideNavOnScroll.js"></script>
-  <script src="./js/closeMobileMenu.js"></script>
+    <script src="./js/hideNavOnScroll.js"></script>
+    <script src="./js/closeMobileMenu.js"></script>
+    <script>
+       function changeImage() {
+          var clicked = "Thank You";
+          optoutbtn.innerText = clicked;
+       }
+    </script>
 </body>
 </html>
