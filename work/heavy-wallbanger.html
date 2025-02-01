@@ -222,10 +222,12 @@
 <script>
   function openModal() {
     document.getElementById("myModal").style.display = "flex";
+document.body.style.touch-action = none;
   }
   
   function closeModal() {
     document.getElementById("myModal").style.display = "none";
+document.body.style.touch-action = auto;
   }
   
   function openToSlide(x) {
