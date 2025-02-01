@@ -227,10 +227,6 @@
   function closeModal() {
     document.getElementById("myModal").style.display = "none";
   }
-
-  function onRequestClose() {
-document.getElementById("myModal").style.display = "none";
- }
   
   function openToSlide(x) {
   var element = document.getElementById(x)
@@ -256,6 +252,13 @@ document.getElementById("myModal").style.display = "none";
       modal.style.display = "none";
     }
 }
+
+// Android back button close modal
+window.addEventListener('popstate', () => {
+document.getElementById("myModal").style.display = "none";
+console.log('User clicked back button');
+
+});
   </script>
 
 
