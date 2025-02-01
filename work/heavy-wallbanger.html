@@ -222,12 +222,10 @@
 <script>
   function openModal() {
     document.getElementById("myModal").style.display = "flex";
-document.body.style.touchAction = none;
   }
   
   function closeModal() {
     document.getElementById("myModal").style.display = "none";
-document.body.style.touchAction = auto;
   }
   
   function openToSlide(x) {
@@ -255,12 +253,6 @@ document.body.style.touchAction = auto;
     }
 }
 
-// Android back button close modal
-window.addEventListener('popstate', () => {
-document.getElementById("myModal").style.display = "none";
-console.log('User clicked back button');
-
-});
   </script>
 
 
