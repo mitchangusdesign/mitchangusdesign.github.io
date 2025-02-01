@@ -51,21 +51,21 @@
           </div>
           <section class="project">
               <div>
-                <img src="../img/matterwall_preview1600w copy.webp" onclick="openModal();currentSlide(1)" alt="Composite image of a sketch of an energy drink can label design transitioning to a final rendering of the can label.">
+                <img src="../img/matterwall_preview1600w copy.webp" onclick="openModal();openToSlide('slide-1')" title="Matterwall Gym Shirt" alt="Image of a man wearing tshirt with Matterwall Logo on the back">
               </div>
               <div>
                 <h2>Matterwall Logo Design</h2>
                 <p>The fictional Matterwall Climbing Gym logo involves imagery of Matterhorn Mountain, a peak famous for its silhouette and an icon amongst mountain climbers. Included in that imagery is a coyote, a symbol of ecological health and a common figure in the wild throughout Arizona's myriad natural rock climbing destinations.</p>
               </div>
               <div>
-                <img src="../img/brochure_mockup_2500w.webp" onclick="openModal();currentSlide(2)" alt="Image of can wrapper design laid flat.">
+                <img src="../img/brochure_mockup_2500w.webp" onclick="openModal();openToSlide('slide-2')" alt="Open Matterwal Gym brochure on concrete surface">
               </div>
               <div>
                 <h2>Print Brochure</h2>
                 <p>Matterwall Climbing Gym utilizes print literature containing necessary information on classes, schedules for competitions and afterhours events. I wrote the copy for this brochure myself, identifying points that a gym would need to communicate using my own research. I also created a brand style and made assets in line with the brand "feel". I utilized Adobe CC to streamline my workflow, leveraging Photoshop, Illustrator and InDesign with libraries.</p>
               </div>
               <div>
-                <img src="../img/matterwall_front_desk1200w.webp" onclick="openModal();currentSlide(3)" alt="Earlier version of Lift Off Energy drink can floating in a peachy gradient space.">
+                <img src="../img/matterwall_front_desk1200w.webp" onclick="openModal();openToSlide('slide-3')" alt="Rendering of a climbing gym front desk with branded products">
               </div>
               <div>
                 <h2>Indoor Signage</h2>
@@ -158,84 +158,68 @@
 <script src="../js/closeMobileMenu.js"></script>
 
 <!-- Start Modal -->
-  <div id="myModal" class="modal">
-    <span class="close cursor" onclick="closeModal()">&times;</span>
-    <div class="modal-content">
-      
-      <div class="mySlides">
-        <div class="numbertext">1 / 3</div>
-        <img src="../img/matterwall_preview1600w copy.webp" style="width:100%">
+<div id="myModal" class="modal">
+  <span class="close cursor" onclick="closeModal()">&times;</span>
+  <div class="modal-content">
+    <button onclick="scrollNext(-1, 0)" id="nav-l" class="nav-btn"> &lt </button>
+    <button onclick="scrollNext(1, 0)" id="nav-r" class="nav-btn"> &gt </button>
+    <div id="scroll-wrap" class="scrolling-wrapper">
+      <div id="slide-1" class="modal-card">
+        <img src="../img/matterwall_preview1600w copy.webp">
+        <div class="caption-container" >
+          <p class="modal-caption">Image of a man wearing tshirt with Matterwall Logo on the back.</p>
+        </div>
       </div>
-  
-      <div class="mySlides">
-        <div class="numbertext">2 / 3</div>
-        <img src="../img/brochure_mockup_2500w.webp" style="width:100%">
+      <div id="slide-2" class="modal-card">
+        <img src="../img/brochure_mockup_2500w.webp">
+        <div class="caption-container" >
+          <p class="modal-caption">Open Matterwal Gym brochure on concrete surface.</p>
+        </div>
       </div>
-
-      <div class="mySlides">
-        <div class="numbertext">3 / 3</div>
-        <img src="../img/matterwall_front_desk1200w.webp" style="width:100%">
-      </div>
-
-      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-      <a class="next" onclick="plusSlides(1)">&#10095;</a>
-  
-      <div class="caption-container">
-        <p id="caption"></p>
-      </div>
-  
-  
-      <div class="column">
-        <img class="demo" style="display: none;" onclick="currentSlide(1)" alt="Matterwall Coyote Logo">
-      </div>
-      <div class="column">
-        <img class="demo" style="display: none;" onclick="currentSlide(2)" alt="Trifold Brochure Mockup">
-      </div>
-      <div class="column">
-        <img class="demo" style="display: none;" onclick="currentSlide(3)" alt="Mockup of Check-in Desk with Signage">
-      </div>
-    
+      <div id="slide-3" class="modal-card">
+        <img src="../img/matterwall_front_desk1200w.webp">
+        <div class="caption-container" >
+          <p class="modal-caption">Rendering of a climbing gym front desk with branded products.</p>
+        </div>
+      </div>      
     </div>
   </div>
+</div>
 
-  <script>
-    function openModal() {
-      document.getElementById("myModal").style.display = "block";
+<script>
+  function openModal() {
+    document.getElementById("myModal").style.display = "block";
+  }
+  
+  function closeModal() {
+    document.getElementById("myModal").style.display = "none";
+  }
+
+  function openToSlide(x) {
+  var element = document.getElementById(x)
+      element.scrollIntoView({ behavior: 'instant' })
+  }
+
+  // Modal Nav Button Horizontal Scroll Mechanism
+  var w = document.documentElement.clientWidth;
+  function scrollNext(x, y) {
+    document.getElementById('scroll-wrap').scrollBy({
+    top: y,
+    left:w * x,
+    behavior: "smooth",
+  });
+  }
+
+  // Get the modal
+  var modal = document.getElementById('myModal');
+
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
     }
-    
-    function closeModal() {
-      document.getElementById("myModal").style.display = "none";
-    }
-    
-    var slideIndex = 1;
-    showSlides(slideIndex);
-    
-    function plusSlides(n) {
-      showSlides(slideIndex += n);
-    }
-    
-    function currentSlide(n) {
-      showSlides(slideIndex = n);
-    }
-    
-    function showSlides(n) {
-      var i;
-      var slides = document.getElementsByClassName("mySlides");
-      var dots = document.getElementsByClassName("demo");
-      var captionText = document.getElementById("caption");
-      if (n > slides.length) {slideIndex = 1}
-      if (n < 1) {slideIndex = slides.length}
-      for (i = 0; i < slides.length; i++) {
-          slides[i].style.display = "none";
-      }
-      for (i = 0; i < dots.length; i++) {
-          dots[i].className = dots[i].className.replace(" active", "");
-      }
-      slides[slideIndex-1].style.display = "flex";
-      dots[slideIndex-1].className += " active";
-      captionText.innerHTML = dots[slideIndex-1].alt;
-    }
-    </script>
+}
+  </script>
 
 </body>
 </html>

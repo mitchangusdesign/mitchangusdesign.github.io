@@ -58,8 +58,7 @@
 
 #slideshow {
     position: relative;
-    top: 0;
-    left: 0;
+    
 }
 
 #slide1 {
@@ -75,6 +74,22 @@
     opacity: 0;
     animation: slideshow  alternate infinite 2s ease-in-out;
 }
+
+#modal-slideshow {
+    position: relative;
+    background-image: url(../img/liftoffFinalA1600w.webp);
+    background-position: top center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+#modal-slide {
+    position: relative;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    animation: slideshow  alternate infinite 2s ease-in-out;
+}
+
 @-webkit-keyframes slideshow {
     0%   { opacity: 0; }
     20%  { opacity: 0; }
@@ -159,12 +174,10 @@
     justify-content: center;
     position: relative;
     margin: auto;
-    padding: 0;
     width: 100%;
-    max-width: 900px;
+    height: auto;   
     background-color: rgba(0, 0, 0, 0.8);
   }
-
 
   /* The Close Button */
   .close {
@@ -230,16 +243,87 @@
     left: 0;
   }
   
-  .modal-content img, video, .slideshow {
-    margin-bottom: -7px;
-  }
   
   .caption-container {
+    width: fit-content;
+    white-space: wrap;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
     text-align: center;
     background-color: rgba(0, 0, 0, 0);
     padding: 12px 16px;
     color: white;
-}
+    }
+
+           
+    .scrolling-wrapper {
+        overflow-x: scroll;
+        overflow-y: hidden;
+        white-space: nowrap;
+        scroll-snap-type: x mandatory;
+        scrollbar-width:none;
+        font-family: 'poppins', san serif;
+        }
+
+    .modal-card {
+        display: inline-flex;
+        flex-direction: column;
+        vertical-align: middle;
+        text-align:center;
+        width:100vw;
+        height:fit-content;
+        scroll-snap-align:center;
+        box-sizing: border-box;
+    }
+    .modal-card img {
+        position: relative;
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+
+    .scrolling-wrapper {
+        -webkit-overflow-scrolling: touch;
+    }
+
+    #nav-l {
+        left:0;
+        margin-left:2%;
+    }
+    #nav-r {
+        right:0;
+        margin-right:2%;
+    }
+    .nav-btn {
+        position:absolute;
+        top:40%;
+        z-index: 300;
+        height: auto;
+        width: auto;
+        padding: 15px;
+        border-radius: 2rem;
+        border:none;
+        font-family:poppins;
+        font-weight:bold;
+        font-size:xx-large;
+        color:#808080;
+        background-color:#d0d0d088;
+        cursor:pointer;
+    }
+    .nav-btn:active {
+        background-color:#e0e0e0;
+    }
+
+    .card > h2 {
+        padding:5px 20px;
+        width:fit-content;
+        margin-left:auto;
+        margin-right:auto;
+        border-radius:5px;
+        background-color:#ffffffd0;
+    }
+
 
 #comic-covers {
     display: flex;
@@ -335,6 +419,52 @@
     }
     .modal {
         padding-top: 40px;
+    }
+    .modal-content {
+        max-width: 900px;
+        padding-top: 2%;
+    }
+    .modal-card {
+        width: 100%;
+        margin:auto;
+        background-position: top center;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    .modal-card img {
+        width: 100%;
+        height: auto;
+        max-height: 75vh;
+    }
+
+    .nav-btn {
+        position:absolute;
+        top:40%;
+        z-index: 300;
+        height: auto;
+        width: auto;
+        padding: 15px;
+        border-radius: 2rem;
+        border:none;
+        font-family:poppins;
+        font-weight:bold;
+        font-size:xx-large;
+        color:#808080;
+        background-color:#e0e0ffaa;
+        cursor:pointer;
+        transition: all .2s;
+    }
+    .nav-btn:hover {
+        background-color:#f0f0f0;
+    }
+    .nav-btn:active {
+        background-color:white;
+    }
+    #nav-l {
+        margin-left:5%;
+    }
+    #nav-r {
+        margin-right:5%;
     }
 }
   

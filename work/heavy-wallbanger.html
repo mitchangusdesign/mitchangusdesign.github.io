@@ -50,8 +50,8 @@
         <h1 class="page-title" style="text-align: center;">Heavy Wallbanger</h1>
       </div>
       <section class="project">
-        <div>
-          <img src="../img/heavy_wallbanger_preview1600w.webp" onclick="openModal();currentSlide(1)" alt="Cover of a story script with Heavy Wallbanger logo on the front.">
+        <div >
+          <img src="../img/heavy_wallbanger_preview1600w.webp" onclick="openModal();openToSlide('slide-1')" alt="Cover of a story script with Heavy Wallbanger logo on the front.">
         </div>
         <div>
           <h2>Heavy Wallbanger Logo</h2>
@@ -59,17 +59,17 @@
         </div>
         <div id="comic-covers">
           <div class="card-container">
-            <img src="../img/Warlock_Cover_2000w.webp" onclick="openModal();currentSlide(2)" alt="Illustrated comic book cover titled Warlock and the Hotshots" style="cursor: pointer; z-index: 4;">
+            <img src="../img/Warlock_Cover_2000w.webp" onclick="openModal();openToSlide('slide-2')" alt="Illustrated comic book cover titled Warlock and the Hotshots" style="cursor: pointer; z-index: 4;">
           </div>
           <div class="card-container">
             <div class="cover-shadow"></div>
-            <img src="../img/theORPHANS_Cover_2000w.webp" onclick="openModal();currentSlide(3)" alt="Illustrated comic book cover titled The Orphans" style="cursor: pointer; z-index: 3;">
+            <img src="../img/theORPHANS_Cover_2000w.webp" onclick="openModal();openToSlide('slide-3')" alt="Illustrated comic book cover titled The Orphans" style="cursor: pointer; z-index: 3;">
           </div>
           <div class="card-container">
-            <img src="../img/Elite_United_Cover.webp" onclick="openModal();currentSlide(4)" alt="Illustrated comic book cover titled Elite United" style="cursor: pointer; z-index: 2;">
+            <img src="../img/Elite_United_Cover.webp" onclick="openModal();openToSlide('slide-4')" alt="Illustrated comic book cover titled Elite United" style="cursor: pointer; z-index: 2;">
           </div>
           <div class="card-container">
-            <img src="../img/Task_Force_Cover_2000w.webp" onclick="openModal();currentSlide(5)" alt="Illustrated comic book cover titled Task Force" style="cursor: pointer; z-index: 1;">
+            <img src="../img/Task_Force_Cover_2000w.webp" onclick="openModal();openToSlide('slide-5')" alt="Illustrated comic book cover titled Task Force" style="cursor: pointer; z-index: 1;">
           </div>
         </div>
         <div>
@@ -77,7 +77,7 @@
           <p>Client required artistic typography in line with comic book style. Each title appearance determined by communication of client's vision and specification. Newly designed logos and headers were then utilized in comic book cover layouts.</p>
         </div>
         <div>
-          <img src="../img/Heavy_Wallbanger_Reel2900w.webp" onclick="openModal();currentSlide(6)" alt="Cover image of play button over a film strip" style="cursor: pointer;">
+          <img src="../img/Heavy_Wallbanger_Reel2900w.webp" onclick="openModal();openToSlide('slide-6')" alt="Cover image of play button over a film strip" style="cursor: pointer;">
         </div>
         <div>
           <h2>3D Animated Logo</h2>
@@ -169,114 +169,91 @@
   <script src="../js/hideNavOnScroll.js"></script>
   <script src="../js/closeMobileMenu.js"></script>
 
-<!-- Start Modal Test HTML -->
-  <div id="myModal" class="modal">
-    <span class="close cursor" onclick="closeModal()">&times;</span>
-    <div class="modal-content">
-      
-      <div class="mySlides">
-        <div class="numbertext">1 / 6</div>
-        <img src="../img/heavy_wallbanger_preview1600w.webp" style="width:100%">
+<!-- Start Modal -->
+<div id="myModal" class="modal">
+  <span class="close cursor" onclick="closeModal()">&times;</span>
+  <div class="modal-content">
+    <button onclick="scrollNext(-1, 0)" id="nav-l" class="nav-btn"> &lt </button>
+    <button onclick="scrollNext(1, 0)" id="nav-r" class="nav-btn"> &gt </button>
+    <div id="scroll-wrap" class="scrolling-wrapper">
+      <div id="slide-1" class="modal-card">
+        <img src="../img/heavy_wallbanger_preview1600w.webp">
+        <div class="caption-container" >
+          <p class="modal-caption">Cover of a story script with Heavy Wallbanger logo on the front.</p>
+        </div>
       </div>
-  
-      <div class="mySlides">
-        <div class="numbertext">2 / 6</div>
-        <img src="../img/Warlock_Cover_2000w.webp" style="height: 80vh;">
+      <div id="slide-2" class="modal-card">
+        <img src="../img/Warlock_Cover_2000w.webp">
+        <div class="caption-container" >
+          <p class="modal-caption">Illustrated comic book cover titled Warlock and the Hotshots</p>
+        </div>
       </div>
-  
-      <div class="mySlides">
-        <div class="numbertext">3 / 6</div>
-        <img src="../img/theORPHANS_Cover_2000w.webp" style="height: 80vh;">
+      <div id="slide-3" class="modal-card">
+        <img src="../img/theORPHANS_Cover_2000w.webp">
+        <div class="caption-container" >
+          <p class="modal-caption">Illustrated comic book cover titled The Orphans</p>
+        </div>
       </div>
-
-      <div class="mySlides">
-        <div class="numbertext">4 / 6</div>
-        <img src="../img/Elite_United_Cover.webp" style="height: 80vh;">
+      <div id="slide-4" class="modal-card">
+        <img src="../img/Elite_United_Cover.webp">
+        <div class="caption-container" >
+          <p class="modal-caption">Illustrated comic book cover titled Elite United</p>
+        </div>
       </div>
-
-      <div class="mySlides">
-        <div class="numbertext">5 / 6</div>
-        <img src="../img/Task_Force_Cover_2000w.webp" style="height: 80vh;">
+      <div id="slide-5" class="modal-card">
+        <img src="../img/Task_Force_Cover_2000w.webp">
+        <div class="caption-container" >
+          <p class="modal-caption">Illustrated comic book cover titled Task Force</p>
+        </div>
       </div>
-
-      <div class="mySlides">
-        <div class="numbertext">6 / 6</div>
-        <!-- <img src="img_mountains_wide.jpg" style="width:100%"> -->
+      <div id="slide-6" class="modal-card">
         <video width="100%" controls style="margin-top: 50px;">
           <source src="../img/Heavy Wallbanger.mp4" type="video/webm">
           Your browser does not support webm video.
         </video>
-      </div>
-      
-      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-      <a class="next" onclick="plusSlides(1)">&#10095;</a>
-  
-      <div class="caption-container">
-        <p id="caption"></p>
-      </div>
-  
-  
-      <div class="column">
-        <img class="demo" style="display: none;" onclick="currentSlide(1)" alt="Cover of a story script with Heavy Wallbanger logo on the front.">
-      </div>
-      <div class="column">
-        <img class="demo" style="display: none;" onclick="currentSlide(2)" alt="Illustrated comic book cover titled Warlock and the Hotshots.">
-      </div>
-      <div class="column">
-        <img class="demo" style="display: none;" onclick="currentSlide(3)" alt="Illustrated comic book cover titled The ORPHANS.">
-      </div>
-      <div class="column">
-        <img class="demo" style="display: none;" onclick="currentSlide(4)" alt="Illustrated comic book cover titled Elite United.">
-      </div>
-      <div class="column">
-        <img class="demo" style="display: none;" onclick="currentSlide(5)" alt="Illustrated comic book cover titled Company Men: Task Force.">
-      </div>
-      <div class="column">
-        <img class="demo" style="display: none;" onclick="currentSlide(6)" alt="6sec Logo Sting">
-      </div>
-    
+        <div class="caption-container" >
+          <p class="modal-caption">Short "Sting" of 3d logo model with sound</p>
+        </div>
+      </div>     
     </div>
   </div>
+</div>
 
-  <script>
-    function openModal() {
-      document.getElementById("myModal").style.display = "block";
+<script>
+  function openModal() {
+    document.getElementById("myModal").style.display = "block";
+  }
+  
+  function closeModal() {
+    document.getElementById("myModal").style.display = "none";
+  }
+  
+  function openToSlide(x) {
+  var element = document.getElementById(x)
+      element.scrollIntoView({ behavior: 'instant' })
+  }
+
+  // Modal Nav Button Horizontal Scroll Mechanism
+  var w = document.documentElement.clientWidth;
+  function scrollNext(x, y) {
+    document.getElementById('scroll-wrap').scrollBy({
+    top: y,
+    left:w * x,
+    behavior: "smooth",
+  });
+  }
+
+  // Get the modal
+  var modal = document.getElementById('myModal');
+
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
     }
-    
-    function closeModal() {
-      document.getElementById("myModal").style.display = "none";
-    }
-    
-    var slideIndex = 1;
-    showSlides(slideIndex);
-    
-    function plusSlides(n) {
-      showSlides(slideIndex += n);
-    }
-    
-    function currentSlide(n) {
-      showSlides(slideIndex = n);
-    }
-    
-    function showSlides(n) {
-      var i;
-      var slides = document.getElementsByClassName("mySlides");
-      var dots = document.getElementsByClassName("demo");
-      var captionText = document.getElementById("caption");
-      if (n > slides.length) {slideIndex = 1}
-      if (n < 1) {slideIndex = slides.length}
-      for (i = 0; i < slides.length; i++) {
-          slides[i].style.display = "none";
-      }
-      for (i = 0; i < dots.length; i++) {
-          dots[i].className = dots[i].className.replace(" active", "");
-      }
-      slides[slideIndex-1].style.display = "flex";
-      dots[slideIndex-1].className += " active";
-      captionText.innerHTML = dots[slideIndex-1].alt;
-    }
+}
   </script>
-    
+
 
 </body>
 </html>

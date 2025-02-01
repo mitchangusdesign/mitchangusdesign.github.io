@@ -51,21 +51,21 @@
           </div>
           <section class="project">
               <div>
-                <img src="../img/liftoffEvolution1600w.webp" onclick="openModal();currentSlide(1)" alt="Composite image of a sketch of an energy drink can label design transitioning to a final rendering of the can label.">
+                <img src="../img/liftoffEvolution1600w.webp" onclick="openModal();openToSlide('slide-1')" alt="Composite image of a sketch of an energy drink can label design transitioning to a final rendering of the can label.">
               </div>
               <div>
                 <h2>From Sketch to Final</h2>
                 <p>The Lift Off Energy concept is for an energy drink company with a power-driven, yet whimsical vibe. I was inspired to sketch this design when I saw how beverage can labels could be printed with simple transparency and I wanted to see what I could come up with to leverage it. I chose an energy drink because I like the visual language that goes along with a high energy brand; a language that utilizes high contrast and bright colors. I started with initial design ideas and sketches and moved to a first draft. Tools used: pencil and paper sketch, Adobe Illustrator, Blender for 3D renders, Adobe Lightroom Classic for color grading.</p>
               </div>
               <div>
-                <img src="../img/liftofffirstdraft2800.webp" onclick="openModal();currentSlide(2)" alt="Image of can wrapper design laid flat.">
+                <img src="../img/liftofffirstdraft2800.webp" onclick="openModal();openToSlide('slide-2')" alt="Image of can wrapper design laid flat.">
               </div>
               <div>
                 <h2>First Draft</h2>
                 <p>In designing the first draft, I separated the canvas into three equal parts. When I studied cans in my fridge I observed that you can see only 1/3 of the sides from any angle. I arranged the composition to match the sketch and decided on which spaces would show through to the can surface. Next, I like to render my designs in 3D space to inspect for mistakes or unintended tangents that only make themselves visible when viewed at specific angles.</p>
               </div>
               <div>
-                <img src="../img/liftoffEarlyVer1600w.webp" onclick="openModal();currentSlide(3)" alt="Earlier version of Lift Off Energy drink can floating in a peachy gradient space.">
+                <img src="../img/liftoffEarlyVer1600w.webp" onclick="openModal();openToSlide('slide-3')" alt="Earlier version of Lift Off Energy drink can floating in a peachy gradient space.">
               </div>
               <div>
                 <h2>Critical Reception</h2>
@@ -74,7 +74,7 @@
               
               <div id="slideshow">
                 <img id="slide1" src="../img/liftoffFinalA1600w.webp" alt="3 Energy drink cans floating in a peachy gradient space.">
-                <img id="slide2" src="../img/liftoffFinalB1600w.webp" onclick="openModal();currentSlide(4)">
+                <img id="slide2" src="../img/liftoffFinalB1600w.webp" onclick="openModal();openToSlide('slide-4')">
               </div>
               <div>
                 <h2>Final Form</h2>
@@ -170,51 +170,36 @@
   <div id="myModal" class="modal">
     <span class="close cursor" onclick="closeModal()">&times;</span>
     <div class="modal-content">
-      
-      <div class="mySlides">
-        <div class="numbertext">1 / 4</div>
-        <img src="../img/liftoffEvolution1600w.webp" style="width:100%">
+      <button onclick="scrollNext(-1, 0)" id="nav-l" class="nav-btn"> &lt </button>
+      <button onclick="scrollNext(1, 0)" id="nav-r" class="nav-btn"> &gt </button>
+      <div id="scroll-wrap" class="scrolling-wrapper">
+        <div id="slide-1" class="modal-card">
+          <img src="../img/liftoffEvolution1600w.webp">
+          <div class="caption-container" >
+            <p class="modal-caption">Image depicting evolution from sketch to design.</p>
+          </div>
+        </div>
+        <div id="slide-2" class="modal-card">
+          <img src="../img/liftofffirstdraft2800.webp">
+          <div class="caption-container" >
+            <p class="modal-caption">First draft of branded can label.</p>
+          </div>
+        </div>
+        <div id="slide-3" class="modal-card">
+          <img src="../img/liftoffEarlyVer1600w.webp">
+          <div class="caption-container" >
+            <p class="modal-caption">Early version of can label layout.</p>
+          </div>
+        </div>
+        <div id="slide-4" class="modal-card">          
+          <div id="modal-slideshow">
+          <img id="modal-slide" src="../img/liftoffFinalB1600w.webp">
+          </div>
+          <div class="caption-container" >
+            <p class="modal-caption">Final can design.</p>
+          </div>
+        </div>      
       </div>
-  
-      <div class="mySlides">
-        <div class="numbertext">2 / 4</div>
-        <img src="../img/liftofffirstdraft2800.webp" style="width:80%">
-      </div>
-
-      <div class="mySlides">
-        <div class="numbertext">3 / 4</div>
-        <img src="../img/liftoffEarlyVer1600w.webp" style="width:100%">
-      </div>
-  
-      <div class="mySlides">
-        
-        <!-- <img src="img_mountains_wide.jpg" style="width:100%"> -->
-          <img id="slide1" src="../img/liftoffFinalA1600w.webp" style="width: 100%;">
-          <img id="slide2" src="../img/liftoffFinalB1600w.webp" style="width: 100%;">
-          <div class="numbertext">4 / 4</div>
-      </div>
-      
-      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-      <a class="next" onclick="plusSlides(1)">&#10095;</a>
-  
-      <div class="caption-container">
-        <p id="caption"></p>
-      </div>
-  
-  
-      <div class="column">
-        <img class="demo" style="display: none;" onclick="currentSlide(1)" alt="Image depicting evolution from sketch to design.">
-      </div>
-      <div class="column">
-        <img class="demo" style="display: none;" onclick="currentSlide(2)" alt="First draft of branded can label.">
-      </div>
-      <div class="column">
-        <img class="demo" style="display: none;" onclick="currentSlide(3)" alt="Early version of can label layout.">
-      </div>
-      <div class="column">
-        <img class="demo" style="display: none;" onclick="currentSlide(4)" alt="Final can design.">
-      </div>
-    
     </div>
   </div>
 
@@ -226,35 +211,31 @@
     function closeModal() {
       document.getElementById("myModal").style.display = "none";
     }
-    
-    var slideIndex = 1;
-    showSlides(slideIndex);
-    
-    function plusSlides(n) {
-      showSlides(slideIndex += n);
+
+    function openToSlide(x) {
+    var element = document.getElementById(x)
+        element.scrollIntoView({ behavior: 'instant' })
     }
-    
-    function currentSlide(n) {
-      showSlides(slideIndex = n);
+
+    // Modal Nav Button Horizontal Scroll Mechanism
+    var w = document.documentElement.clientWidth;
+    function scrollNext(x, y) {
+      document.getElementById('scroll-wrap').scrollBy({
+      top: y,
+      left:w * x,
+      behavior: "smooth",
+    });
     }
-    
-    function showSlides(n) {
-      var i;
-      var slides = document.getElementsByClassName("mySlides");
-      var dots = document.getElementsByClassName("demo");
-      var captionText = document.getElementById("caption");
-      if (n > slides.length) {slideIndex = 1}
-      if (n < 1) {slideIndex = slides.length}
-      for (i = 0; i < slides.length; i++) {
-          slides[i].style.display = "none";
+
+    // Get the modal
+    var modal = document.getElementById('myModal');
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
       }
-      for (i = 0; i < dots.length; i++) {
-          dots[i].className = dots[i].className.replace(" active", "");
-      }
-      slides[slideIndex-1].style.display = "flex";
-      dots[slideIndex-1].className += " active";
-      captionText.innerHTML = dots[slideIndex-1].alt;
-    }
+}
     </script>
 
 </body>
