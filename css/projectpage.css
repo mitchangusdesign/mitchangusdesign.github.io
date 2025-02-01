@@ -155,6 +155,8 @@
 /* The Modal (background) */
 .modal {
     display: none;
+    flex-direction: column;
+    justify-content: center;
     position: fixed;
     touch-action: none;
     z-index: 20;
@@ -168,8 +170,8 @@
   
   /* Modal Content */
   .modal-content {
-    display: inline-flex;
-    vertical-align: middle;
+    overflow-y: hidden;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     position: relative;
