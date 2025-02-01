@@ -418,7 +418,7 @@
         transform:translateX(3rem) rotate(10deg) scale(105%) ;
     }
     .modal {
-        padding-top: 40px;
+        padding-top: 20vh;
     }
     .modal-content {
         max-width: 900px;
