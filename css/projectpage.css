@@ -158,7 +158,7 @@
     position: fixed;
     touch-action: none;
     z-index: 20;
-    padding-top: 10vh;
+    padding-top: 20vh;
     left: 0;
     top: 0;
     width: 100%;
@@ -418,7 +418,7 @@
         transform:translateX(3rem) rotate(10deg) scale(105%) ;
     }
     .modal {
-        padding-top: 20vh;
+        padding-top: 40px;
     }
     .modal-content {
         max-width: 900px;
