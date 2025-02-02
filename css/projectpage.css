@@ -172,7 +172,6 @@
   .modal-content {
     overflow-y: hidden;
     touch-action: none;
-    touch-action: pan-x;
     display: flex;
     flex-direction: column;
     justify-content: center;
