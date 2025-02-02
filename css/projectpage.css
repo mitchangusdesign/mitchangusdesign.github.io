@@ -266,6 +266,7 @@
     .scrolling-wrapper {
         overflow-x: scroll;
         overflow-y: hidden;
+        touch-action: none;
         white-space: nowrap;
         scroll-snap-type: x mandatory;
         scrollbar-width:none;
