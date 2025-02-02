@@ -267,6 +267,7 @@
         overflow-x: scroll;
         overflow-y: hidden;
         touch-action: none;
+        touch-action: pan-x;
         white-space: nowrap;
         scroll-snap-type: x mandatory;
         scrollbar-width:none;
