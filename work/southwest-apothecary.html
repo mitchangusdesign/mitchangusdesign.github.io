@@ -51,21 +51,21 @@
           </div>
           <section class="project">
               <div>
-                <img src="../img/sw_preview1600w.webp" onclick="openModal();currentSlide(1)" alt="Composite image of a sketch of an energy drink can label design transitioning to a final rendering of the can label.">
+                <img src="../img/sw_preview1600w.webp" onclick="openModal();currentSlide(1)" alt="Southwest Apothecary logo on image of model in spring meadow.">
               </div>
               <div>
                 <h2>Southwest Apothecary Logo</h2>
                 <p>Concept for self care brand with focus on botanicals from the Southwest United States. Logo features iconic native plant the Saguaro cactus. Logo and branding follows BOHO style design cues.</p>
               </div>
               <div>
-                <img src="../img/sw_product_mockup.webp" onclick="openModal();currentSlide(2)" alt="Image of can wrapper design laid flat.">
+                <img src="../img/sw_product_mockup.webp" onclick="openModal();currentSlide(2)" alt="Mockup of facial products with branding.">
               </div>
               <div>
                 <h2>Product Mockup</h2>
                 <p>Proposed packaging for various product types. Models 3D rendered in Blender, optimized in Adobe Photoshop, text and overlay applied in Adobe Illustrator.</p>
               </div>
               <div>
-                <img src="../img/sw_package_design.webp" onclick="openModal();currentSlide(3)" alt="Earlier version of Lift Off Energy drink can floating in a peachy gradient space.">
+                <img src="../img/sw_package_design.webp" onclick="openModal();currentSlide(3)" alt="Branded Southwest Apothecary gift box.">
               </div>
               <div>
                 <h2>Branding Applications</h2>
@@ -158,84 +158,68 @@
 <script src="../js/closeMobileMenu.js"></script>
 
 <!-- Start Modal -->
-  <div id="myModal" class="modal">
-    <span class="close cursor" onclick="closeModal()">&times;</span>
-    <div class="modal-content">
-      
-      <div class="mySlides">
-        <div class="numbertext">1 / 3</div>
-        <img src="../img/sw_preview1600w.webp" style="width:100%">
+<div id="myModal" class="modal">
+  <span class="close cursor" onclick="closeModal()">&times;</span>
+  <div class="modal-content">
+    <button onclick="scrollNext(-1, 0)" id="nav-l" class="nav-btn"> &lt </button>
+    <button onclick="scrollNext(1, 0)" id="nav-r" class="nav-btn"> &gt </button>
+    <div id="scroll-wrap" class="scrolling-wrapper">
+      <div id="slide-1" class="modal-card">
+        <img src="../img/sw_preview1600w.webp">
+        <div class="caption-container" >
+          <p class="modal-caption">Southwest Apothecary logo on image of model in spring meadow.</p>
+        </div>
       </div>
-  
-      <div class="mySlides">
-        <div class="numbertext">2 / 3</div>
-        <img src="../img/sw_product_mockup.webp" style="width:80%">
+      <div id="slide-2" class="modal-card">
+        <img src="../img/sw_product_mockup.webp">
+        <div class="caption-container" >
+          <p class="modal-caption">Mockup of facial products with branding.</p>
+        </div>
       </div>
-
-      <div class="mySlides">
-        <div class="numbertext">3 / 3</div>
-        <img src="../img/sw_package_design.webp" style="width:100%">
-      </div>
-
-      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-      <a class="next" onclick="plusSlides(1)">&#10095;</a>
-  
-      <div class="caption-container">
-        <p id="caption"></p>
-      </div>
-  
-  
-      <div class="column">
-        <img class="demo" style="display: none;" onclick="currentSlide(1)" alt="Southwest Apothecary logo on image of model in spring meadow.">
-      </div>
-      <div class="column">
-        <img class="demo" style="display: none;" onclick="currentSlide(2)" alt="Mockup of facial products with branding.">
-      </div>
-      <div class="column">
-        <img class="demo" style="display: none;" onclick="currentSlide(3)" alt="Branded Southwest Apothecary gift box.">
-      </div>
-    
+      <div id="slide-3" class="modal-card">
+        <img src="../img/sw_package_design.webp">
+        <div class="caption-container" >
+          <p class="modal-caption">Branded Southwest Apothecary gift box.</p>
+        </div>
+      </div>  
     </div>
   </div>
+</div>
 
-  <script>
-    function openModal() {
-      document.getElementById("myModal").style.display = "block";
+<script>
+  function openModal() {
+    document.getElementById("myModal").style.display = "flex";
+}
+  
+  function closeModal() {
+    document.getElementById("myModal").style.display = "none";
+  }
+  
+  function openToSlide(x) {
+  var element = document.getElementById(x)
+      element.scrollIntoView({ behavior: 'instant' })
+  }
+
+  // Modal Nav Button Horizontal Scroll Mechanism
+  var w = document.documentElement.clientWidth;
+  function scrollNext(x, y) {
+    document.getElementById('scroll-wrap').scrollBy({
+    top: y,
+    left:w * x,
+    behavior: "smooth",
+  });
+  }
+
+  // Get the modal
+  var modal = document.getElementById('myModal');
+
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
     }
-    
-    function closeModal() {
-      document.getElementById("myModal").style.display = "none";
-    }
-    
-    var slideIndex = 1;
-    showSlides(slideIndex);
-    
-    function plusSlides(n) {
-      showSlides(slideIndex += n);
-    }
-    
-    function currentSlide(n) {
-      showSlides(slideIndex = n);
-    }
-    
-    function showSlides(n) {
-      var i;
-      var slides = document.getElementsByClassName("mySlides");
-      var dots = document.getElementsByClassName("demo");
-      var captionText = document.getElementById("caption");
-      if (n > slides.length) {slideIndex = 1}
-      if (n < 1) {slideIndex = slides.length}
-      for (i = 0; i < slides.length; i++) {
-          slides[i].style.display = "none";
-      }
-      for (i = 0; i < dots.length; i++) {
-          dots[i].className = dots[i].className.replace(" active", "");
-      }
-      slides[slideIndex-1].style.display = "flex";
-      dots[slideIndex-1].className += " active";
-      captionText.innerHTML = dots[slideIndex-1].alt;
-    }
-    </script>
+}
+</script>
 
 </body>
 </html>
