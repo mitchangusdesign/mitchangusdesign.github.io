@@ -65,47 +65,47 @@
       </section>
       <section class="desktop-options">
         <div class="desktop-cards-wrapper">
-            <div id="card">
-              <div id="card-box">
-                <img src="./img/insta-icon.svg" alt="White Instagram Icon"/>
-              </div>
-              <div id="card-content">
+            <div class="hello-card">
+              <a class="hello-card-box" href="https://instagram.com/mitchangus.design/">
+                <img id="ig-ico" src="./img/insta-icon.svg" alt="White Instagram Icon"/>
+              </a>
+              <div class="hello-card-content">
                 <p>Follow on Instagram to see more examples of motion graphics and animated intros!</p>
                 <a href="https://instagram.com/mitchangus.design/">
-                    <button id="hello-button">Let's Go!</button>
+                  <button class="hello-button">Let's Go!</button>
                 </a>
               </div>
             </div>
-            <div id="card">
-                <div id="card-box">
+            <div class="hello-card">
+                <a class="hello-card-box" href="https://www.linkedin.com/in/mitchangusdesign/">
                   <img src="./img/linkedin-icon.svg" alt="White Instagram Icon"/>
-                </div>
-                <div id="card-content">
+                </a>
+                <div class="hello-card-content">
                   <p>Connect with me on Linked In and let's expand our small business network!</p>
                   <a href="https://www.linkedin.com/in/mitchangusdesign/">
-                      <button id="hello-button">Let's Go!</button>
+                    <button class="hello-button">Let's Go!</button>
                   </a>
                 </div>
             </div>
-            <div id="card">
-                <div id="card-box">
+            <div class="hello-card">
+                <a class="hello-card-box" href="./contact">
                   <img src="./img/quote-icon.svg" alt="White Instagram Icon"/>
-                </div>
-                <div id="card-content">
+                </a>
+                <div class="hello-card-content">
                   <p>Whether big or small, your projects receive competitive pricing quotes!</p>
                   <a href="./contact">
-                      <button id="hello-button">Let's Go!</button>
+                    <button class="hello-button">Let's Go!</button>
                   </a>
                 </div>
             </div>
-            <div id="card">
-                <div id="card-box">
+            <div class="hello-card">
+                <a class="hello-card-box" href="./img/MitchDesign.vcf">
                   <img src="./img/M-icon.svg" alt="White Instagram Icon"/>
-                </div>
-                <div id="card-content">
+                </a>
+                <div class="hello-card-content">
                   <p>Save my contact info directly to Outlook or iCal via .VCF download!</p>
                   <a href="./img/MitchDesign.vcf" download>
-                      <button id="hello-button">Let's Go!</button>
+                    <button class="hello-button">Let's Go!</button>
                   </a>
                 </div>
             </div>
@@ -184,6 +184,19 @@
   </footer>
   <script src="../js/hideNavOnScroll.js"></script>
   <script src="../js/closeMobileMenu.js"></script>
+  <script>
+    const parentElement = document.getElementsByClassName('hello-card-box')[0];
+    const children = parentElement.children;
+
+/* Window Scrolling */
+window.addEventListener("scroll", function(){
+
+   if(isInViewport(children)) {
+      children.classList.toggle("animation"); 
+   }
+
+});
+  </script>
 
 
     
