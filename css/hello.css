@@ -310,6 +310,9 @@ li {
 .hello-card:hover .hello-card-box img {
     animation: wiggle .5s ease 0s 1 normal forwards;
 }
+.wiggleOn {
+    animation: wiggle .5s ease 0s 1 normal forwards;
+}
 @keyframes wiggle {
     0%,
     100% {transform: translateX(0%); transform-origin: 50% 50%;}
