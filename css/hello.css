@@ -307,9 +307,7 @@ li {
     border: 0px solid #0c2144;
     transform: scale(1.05);
 }
-.hello-card:hover .hello-card-box img {
-    animation: wiggle .5s ease 0s 1 normal forwards;
-}
+
 .wiggleOn {
     animation: wiggle .5s ease 0s 1 normal forwards;
 }
@@ -472,6 +470,9 @@ footer {
 
     #mobile-save-contact {
         display: none;
+    }
+    .hello-card:hover .hello-card-box img {
+    animation: wiggle .5s ease 0s 1 normal forwards;
     }
 }
 
