@@ -14,4 +14,5 @@ const observer = new IntersectionObserver((entries) => {
 
 const wiggleElements = document.querySelectorAll('.hello-card-box img');   
   wiggleElements.forEach((el) => observer.observe(el));
+  }
 });
