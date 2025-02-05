@@ -5,6 +5,7 @@
     padding: 20px;
     width: 100%;
     text-wrap: nowrap;
+    overflow: hidden;
 }
 
 .project-title h1 {
