@@ -237,7 +237,7 @@ li {
     align-items: center;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 1.8rem;
-    margin: 60px auto;
+    margin: 70px auto;
 }
   
 .hello-card img {
