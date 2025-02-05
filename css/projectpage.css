@@ -4,7 +4,7 @@
     margin: 40px 0 20px 0;
     padding: 20px;
     width: 100%;
-    wrap: no-wrap;
+    text-wrap: nowrap;
 }
 
 .project-title h1 {
