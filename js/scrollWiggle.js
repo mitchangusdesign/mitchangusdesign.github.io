@@ -1,3 +1,6 @@
+window.addEventListener('resize', function(){
+    if(window.innerWidth < 801){
+
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
    console.log(entry)
@@ -8,6 +11,6 @@ const observer = new IntersectionObserver((entries) => {
     }
   });
 });
-
+});
 const wiggleElements = document.querySelectorAll('.hello-card-box img');   
   wiggleElements.forEach((el) => observer.observe(el));
