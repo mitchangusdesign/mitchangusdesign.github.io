@@ -169,7 +169,7 @@
 <!-- Start Modal -->
   <div id="myModal" class="modal">
     <span class="close cursor" onclick="closeModal()">&times;</span>
-    <div class="modal-content">
+    <div id="modal-scroll" class="modal-content">
       <button onclick="scrollNext(-1, 0)" id="nav-l" class="nav-btn"> &lt </button>
       <button onclick="scrollNext(1, 0)" id="nav-r" class="nav-btn"> &gt </button>
       <div id="scroll-wrap" class="scrolling-wrapper">
@@ -218,11 +218,14 @@
     }
 
     // Modal Nav Button Horizontal Scroll Mechanism
-    var w = document.documentElement.clientWidth;
+    var w = document.documentElement.clientWidth; 
+    // var w = document.getElementById("modal-scroll").clientWidth;
+    // var w = modal-scroll.clientWidth;
+
     function scrollNext(x, y) {
       document.getElementById('scroll-wrap').scrollBy({
       top: y,
-      left:w * x,
+      left:w / 1.5 * x,
       behavior: "smooth",
     });
     }
@@ -235,7 +238,7 @@
       if (event.target == modal) {
         modal.style.display = "none";
       }
-}
+    }
     </script>
 
 </body>
