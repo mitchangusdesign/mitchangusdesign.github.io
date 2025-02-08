@@ -127,7 +127,7 @@
     border-radius: .5em;
     border-width: 0px;
 
-    transition: all .3s ease-in-out;
+    transition: all .2s ease-in-out;
 }
 
 #home-button {
@@ -142,7 +142,7 @@
     background-color: white;
     border-radius: .5em;
     border: 1px lightgray solid;
-    transition: all .3s ease-in-out;
+    transition: all .2s ease-in-out;
 }
 .back-next-button:hover {
     background-color: #0c122f;
