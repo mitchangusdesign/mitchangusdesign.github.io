@@ -218,10 +218,10 @@
     }
 
     // Modal Nav Button Horizontal Scroll Mechanism
+    // Get the width of the viewport
     var w = document.documentElement.clientWidth; 
-    // var w = document.getElementById("modal-scroll").clientWidth;
-    // var w = modal-scroll.clientWidth;
 
+    // Take the value of the left or right button and multiply by the width/1.5 and scroll page by the result 
     function scrollNext(x, y) {
       document.getElementById('scroll-wrap').scrollBy({
       top: y,
