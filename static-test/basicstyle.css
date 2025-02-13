@@ -40,6 +40,12 @@ body {
     background-color: rgba(0, 0, 0, 0);
     color: white;
 }
+.nav-item {
+    border: none;
+    font-size: xx-large;
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+}
 #nav-panel a, ul {
     text-decoration: inherit;
     color: inherit;
