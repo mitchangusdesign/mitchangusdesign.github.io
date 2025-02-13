@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Hero CSS Slideshow</title>
+    <link rel="stylesheet" href="./basicstyle.css">
+</head>
+<body>
+    <section class="mobile-hero">
+        <img src="./img/2.jpg" id="slide-2" class="hero-image"/>
+        <img src="./img/3.jpg" id="slide-3" class="hero-image"/>
+        <div class="hero-info">
+            <h1>Restaurant Name</h1>
+            <p>"Get your ass in here!"</p>
+        </div>
+        <button id="nav-open" popovertarget="nav-panel" popovertargetaction="show" type="button">+</button>
+        <div id="nav-panel" popover data-placement="bottom">
+            <!-- <button id="nav-close" popopvertarget="nav-panel" popovertargetaction="hide" type="button" >&times;</button> -->
+            <input id="nav-close" type="button" popovertarget="nav-panel" popovertargetaction="hide" value="&times;">
+            <h2>Navigation</h2>
+            <ul>
+                <li onclick="opentab('menu')">
+                    <a href="#" >Menu</a>
+                </li>
+                <li>
+                    <a href="#" onclick="opentab('hours')">Hours</a>
+                </li>
+                <li>
+                    <a href="#" onclick="opentab('location')">Location</a>
+                </li>
+                <li>
+                    <a href="#">Reviews</a>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section id="info" class="essential-info">
+        <div class="tab-titles">
+            <p class="tab-links active-link" onclick="opentab('menu')">Menu</p>
+            <p class="tab-links" onclick="opentab('hours')">Hours</p>
+            <p class="tab-links" onclick="opentab('location')">Location</p>
+        </div>
+        <div class="tab-contents active-tab" id="menu">
+            <ul>
+                <li><span>Mergers</span><br>Led international team</li>
+                <li><span>Acquisitions</span><br>Led international team</li>
+                <li><span>Tax Provisions</span><br>Led international team</li>
+                <li><span>Mergers</span><br>Led international team</li>
+                <li><span>Acquisitions</span><br>Led international team</li>
+                <li><span>Tax Provisions</span><br>Led international team</li>
+                <li><span>Mergers</span><br>Led international team</li>
+                <li><span>Acquisitions</span><br>Led international team</li>
+                <li><span>Tax Provisions</span><br>Led international team</li>
+                <li><span>Mergers</span><br>Led international team</li>
+                <li><span>Acquisitions</span><br>Led international team</li>
+                <li><span>Tax Provisions</span><br>Led international team</li>
+                <li><span>Mergers</span><br>Led international team</li>
+                <li><span>Acquisitions</span><br>Led international team</li>
+                <li><span>Tax Provisions</span><br>Led international team</li>
+                <li><span>Mergers</span><br>Led international team</li>
+                <li><span>Acquisitions</span><br>Led international team</li>
+                <li><span>Tax Provisions</span><br>Led international team</li>
+                <li><span>Mergers</span><br>Led international team</li>
+                <li><span>Acquisitions</span><br>Led international team</li>
+                <li><span>Tax Provisions</span><br>Led international team</li>
+            </ul>
+        </div>
+        <div class="tab-contents" id="hours">
+            <ul>
+                <li><span>Tax</span><br>CPA License</li>
+                <li><span>Tax Board Cert</span><br>Other License</li>
+                <li><span>Tax</span><br>CPA License</li>
+                <li><span>Tax Board Cert</span><br>Other License</li>
+                <li><span>Tax</span><br>CPA License</li>
+                <li><span>Tax Board Cert</span><br>Other License</li>
+                <li><span>Tax</span><br>CPA License</li>
+                <li><span>Tax Board Cert</span><br>Other License</li>
+                <li><span>Tax</span><br>CPA License</li>
+                <li><span>Tax Board Cert</span><br>Other License</li>
+                <li><span>Tax</span><br>CPA License</li>
+                <li><span>Tax Board Cert</span><br>Other License</li>
+                <li><span>Tax</span><br>CPA License</li>
+                <li><span>Tax Board Cert</span><br>Other License</li>
+            </ul>	
+        </div>
+        <div class="tab-contents" id="location">
+            <ul>
+                <li><span>Tax</span><br>CPA License</li>
+                <li><span>Tax Board Cert</span><br>Other License</li>
+                <li><span>Tax</span><br>CPA License</li>
+                <li><span>Tax Board Cert</span><br>Other License</li>
+                <li><span>Tax</span><br>CPA License</li>
+                <li><span>Tax Board Cert</span><br>Other License</li>
+                <li><span>Tax</span><br>CPA License</li>
+                <li><span>Tax Board Cert</span><br>Other License</li>
+                <li><span>Tax</span><br>CPA License</li>
+                <li><span>Tax Board Cert</span><br>Other License</li>
+                <li><span>Tax</span><br>CPA License</li>
+                <li><span>Tax Board Cert</span><br>Other License</li>
+                <li><span>Tax</span><br>CPA License</li>
+                <li><span>Tax Board Cert</span><br>Other License</li>
+                <li><span>Tax</span><br>CPA License</li>
+                <li><span>Tax Board Cert</span><br>Other License</li>
+            </ul>	
+        </div>
+
+    </section>
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+    
+</script>
+</body>
+</html>
