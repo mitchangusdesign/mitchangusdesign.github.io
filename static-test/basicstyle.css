@@ -62,7 +62,8 @@ body {
     to {opacity: 1;}    
 }
 #nav-panel[popover] ul li {
-    animation: .5s ease-out FadeInRt;
+    opacity: 0;
+    animation: .5s ease-out FadeInRt forward;
 }
 @keyframes FadeInRt {
     from { transform: translateX(120px); opacity: 0;}
