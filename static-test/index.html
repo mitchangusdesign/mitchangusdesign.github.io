@@ -21,23 +21,18 @@
             <h2>Navigation</h2>
             <ul>
                 <li>
-                <a href="#logo">
-                <input class="nav-item" type="button" popovertarget="nav-panel" popovertargetaction="hide" value="See Menu">
+                <a href="#menu">
+                <input class="nav-item" type="button" popovertarget="nav-panel" popovertargetaction="hide" value="See Menu" onclick="opentab('menu')">
                 </a>
                 </li>
                 <li>
-                <a href="#logo">
-                <input class="nav-item" type="button" popovertarget="nav-panel" popovertargetaction="hide" value="See Menu">
+                <a href="#hours">
+                <input class="nav-item" type="button" popovertarget="nav-panel" popovertargetaction="hide" value="See Hours" onclick="opentab('hours')">
                 </a>
                 </li>
                 <li>
-                <a href="#logo">
-                <input class="nav-item" type="button" popovertarget="nav-panel" popovertargetaction="hide" value="See Hours">
-                </a>
-                </li>
-                <li>
-                <a href="#logo">
-                <input class="nav-item" type="button" popovertarget="nav-panel" popovertargetaction="hide" value="See Location">
+                <a href="#location">
+                <input class="nav-item" type="button" popovertarget="nav-panel" popovertargetaction="hide" value="See Location" onclick="opentab('location')">
                 </a>
                 </li>
                 <li>
@@ -46,8 +41,10 @@
                 </a>
                 </li>
             </ul>
+            <input class="menu-goaway" type="button" popovertarget="nav-panel" popovertargetaction="hide">
         </div>
     </section>
+    <div id="info"></div>
     <section class="essential-info">
         <div class="tab-titles">
             <p class="tab-links active-link" onclick="opentab('menu')">Menu</p>
@@ -56,69 +53,51 @@
         </div>
         <div class="tab-contents active-tab" id="menu">
             <ul>
-                <li><span>Mergers</span><br>Led international team</li>
-                <li><span>Acquisitions</span><br>Led international team</li>
-                <li><span>Tax Provisions</span><br>Led international team</li>
-                <li><span>Mergers</span><br>Led international team</li>
-                <li><span>Acquisitions</span><br>Led international team</li>
-                <li><span>Tax Provisions</span><br>Led international team</li>
-                <li><span>Mergers</span><br>Led international team</li>
-                <li><span>Acquisitions</span><br>Led international team</li>
-                <li><span>Tax Provisions</span><br>Led international team</li>
-                <li><span>Mergers</span><br>Led international team</li>
-                <li><span>Acquisitions</span><br>Led international team</li>
-                <li><span>Tax Provisions</span><br>Led international team</li>
-                <li><span>Mergers</span><br>Led international team</li>
-                <li><span>Acquisitions</span><br>Led international team</li>
-                <li><span>Tax Provisions</span><br>Led international team</li>
-                <li><span>Mergers</span><br>Led international team</li>
-                <li><span>Acquisitions</span><br>Led international team</li>
-                <li><span>Tax Provisions</span><br>Led international team</li>
-                <li><span>Mergers</span><br>Led international team</li>
-                <li><span>Acquisitions</span><br>Led international team</li>
-                <li><span>Tax Provisions</span><br>Led international team</li>
+                <li><h2>Food</h2></li>
+                <li><span>Dish 1</span><br>Meaningful Description. Main Ingredients and allergy factors.</li>
+                <li><span>Dish 2</span><br>Meaningful Description. Main Ingredients and allergy factors.</li>
+                <li><span>Dish 3</span><br>Meaningful Description. Main Ingredients and allergy factors.</li>
+                <li><span>Dish 4</span><br>Meaningful Description. Main Ingredients and allergy factors.</li>
+                <li><span>Dish 5</span><br>Meaningful Description. Main Ingredients and allergy factors.</li>
+                <li><span>Dish 6</span><br>Meaningful Description. Main Ingredients and allergy factors.</li>
+                <li><span>Dish 7</span><br>Meaningful Description. Main Ingredients and allergy factors.</li>
+                <li><span>Dish 8</span><br>Meaningful Description. Main Ingredients and allergy factors.</li>
+                <li><span>Dish 9</span><br>Meaningful Description. Main Ingredients and allergy factors.</li>
+                <li><span>Dish 10</span><br>Meaningful Description. Main Ingredients and allergy factors.</li>
+                <li><span>Dish 11</span><br>Meaningful Description. Main Ingredients and allergy factors.</li>
+                <li><h2>Drinks</h2></li>
+                <li><span>Drink 1</span><br>Meaningful Description of main Ingredients and serving vessel.</li>
+                <li><span>Drink 2</span><br>Meaningful Description of main Ingredients and serving vessel.</li>
+                <li><span>Drink 3</span><br>Meaningful Description of main Ingredients and serving vessel.</li>
+                <li><span>Drink 4</span><br>Meaningful Description of main Ingredients and serving vessel.</li>
+                <li><span>Drink 5</span><br>Meaningful Description of main Ingredients and serving vessel.</li>
+                <li><span>Drink 6</span><br>Meaningful Description of main Ingredients and serving vessel.</li>
+                <li><span>Drink 7</span><br>Meaningful Description of main Ingredients and serving vessel.</li>
             </ul>
         </div>
         <div class="tab-contents" id="hours">
             <ul>
-                <li><span>Tax</span><br>CPA License</li>
-                <li><span>Tax Board Cert</span><br>Other License</li>
-                <li><span>Tax</span><br>CPA License</li>
-                <li><span>Tax Board Cert</span><br>Other License</li>
-                <li><span>Tax</span><br>CPA License</li>
-                <li><span>Tax Board Cert</span><br>Other License</li>
-                <li><span>Tax</span><br>CPA License</li>
-                <li><span>Tax Board Cert</span><br>Other License</li>
-                <li><span>Tax</span><br>CPA License</li>
-                <li><span>Tax Board Cert</span><br>Other License</li>
-                <li><span>Tax</span><br>CPA License</li>
-                <li><span>Tax Board Cert</span><br>Other License</li>
-                <li><span>Tax</span><br>CPA License</li>
-                <li><span>Tax Board Cert</span><br>Other License</li>
+                <li><h2>Hours</h2></li>
+                <li><span>Monday</span><br>8am - 9pm</li>
+                <li><span>Tuesday</span><br>8am - 9pm</li>
+                <li><span>Wednesday</span><br>8am - 9pm</li>
+                <li><span>Thursday</span><br>8am - 9pm</li>
+                <li><span>Friday</span><br>8am - 10pm</li>
+                <li><span>Saturday</span><br>8am - 5pm</li>
+                <li><span>Sunday</span><br>8am - 5pm</li>                
             </ul>	
         </div>
         <div class="tab-contents" id="location">
             <ul>
-                <li><span>Tax</span><br>CPA License</li>
-                <li><span>Tax Board Cert</span><br>Other License</li>
-                <li><span>Tax</span><br>CPA License</li>
-                <li><span>Tax Board Cert</span><br>Other License</li>
-                <li><span>Tax</span><br>CPA License</li>
-                <li><span>Tax Board Cert</span><br>Other License</li>
-                <li><span>Tax</span><br>CPA License</li>
-                <li><span>Tax Board Cert</span><br>Other License</li>
-                <li><span>Tax</span><br>CPA License</li>
-                <li><span>Tax Board Cert</span><br>Other License</li>
-                <li><span>Tax</span><br>CPA License</li>
-                <li><span>Tax Board Cert</span><br>Other License</li>
-                <li><span>Tax</span><br>CPA License</li>
-                <li><span>Tax Board Cert</span><br>Other License</li>
-                <li><span>Tax</span><br>CPA License</li>
-                <li><span>Tax Board Cert</span><br>Other License</li>
-            </ul>	
+                <li><span>Point Nemo</span><br>Loneliest Place on Earth.</li>
+            </ul>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d64830235.401406124!2d77.77221679687496!3d7.362466865535751!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x66679bd46855a06b%3A0x12ce637905650abd!2sNemo!5e0!3m2!1sen!2sus!4v1739493256587!5m2!1sen!2sus" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
-
     </section>
+    <footer>
+        <div><h3>Hm. Just a footer.</h3></div>
+    </footer>
+        
 <script>
 
     var tablinks = document.getElementsByClassName("tab-links");
