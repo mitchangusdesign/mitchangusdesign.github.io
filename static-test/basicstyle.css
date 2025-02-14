@@ -61,6 +61,18 @@ body {
     from {opacity: 0;}
     to {opacity: 1;}    
 }
+#nav-panel[popover] ul li {
+    animation: 1s ease-out FadeInRt;
+}
+@keyframes FadeInRt {
+    from { transform: translateX(120px)}
+    to { transform: translateX(0px)}
+}
+#nav-panel[popover] ul li:nth-child(1) { animation-delay: .5s }
+#nav-panel[popover] ul li:nth-child(1) { animation-delay: 1s }
+#nav-panel[popover] ul li:nth-child(1) { animation-delay: 1.5s }
+#nav-panel[popover] ul li:nth-child(1) { animation-delay: 2s }
+
 #nav-close {
     position: absolute;
     top: 10px;
