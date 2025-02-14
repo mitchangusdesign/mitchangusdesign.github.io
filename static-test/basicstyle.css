@@ -68,10 +68,10 @@ body {
     from { transform: translateX(120px)}
     to { transform: translateX(0px)}
 }
-#nav-panel[popover] ul li:nth-child(1) { animation-delay: .5s }
-#nav-panel[popover] ul li:nth-child(1) { animation-delay: 1s }
-#nav-panel[popover] ul li:nth-child(1) { animation-delay: 1.5s }
-#nav-panel[popover] ul li:nth-child(1) { animation-delay: 2s }
+#nav-panel[popover] ul li:nth-child(2) { animation-delay: .2s }
+#nav-panel[popover] ul li:nth-child(3) { animation-delay: .4s }
+#nav-panel[popover] ul li:nth-child(4) { animation-delay: .6s }
+#nav-panel[popover] ul li:nth-child(5) { animation-delay: .8s }
 
 #nav-close {
     position: absolute;
