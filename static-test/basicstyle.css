@@ -243,3 +243,64 @@ footer {
     background-color: #961B3A;
     color: bisque;
 }
+
+.item-wrapper {
+    font-family: "Domine", serif;
+    display: grid; 
+    grid-template-columns: repeat(3, fit-content); 
+    grid-template-rows: repeat(2, fit-content);
+    border-radius: 1em;
+    border: .15rem #707070 solid;
+    padding: .8rem;
+    background-image: repeating-linear-gradient(white, white 3px, #fafafa 3px, #fafafa 6px);
+}
+.name {
+    margin: 0 0 .5rem 0;
+    grid-column: span 3 / span 3;
+}
+.description {
+    display: inline-grid;
+    vertical-align: middle;
+    grid-column: span 2 / span 2; 
+    grid-row-start: 2;
+    padding: .5rem 0;
+}
+.price {
+    display: inline-block;
+    vertical-align: middle;
+    grid-column-start: 3; 
+    grid-row-start: 2;
+    font-weight: 600;
+    font-size: 1.2rem;
+    padding: .5rem;
+}
+
+@media only screen and (min-width: 600px) {
+  body {
+    background-color: lightblue;
+  }
+  .item-wrapper {
+    display: flex; 
+    flex-direction: row;
+    justify-content: space-between;
+    border-radius: 1em;
+    border: .15rem #707070 solid;
+    padding: .8rem;
+    background-image: repeating-linear-gradient(white, white 3px, #fafafa 3px, #fafafa 6px);
+    }
+.name {
+    margin: 0 auto auto;
+    padding: .5rem;
+}
+.description {
+    width: 75%;
+    margin: auto;
+    padding: .5rem 0;
+}
+.price {
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin: auto;
+    padding: .5rem;
+}
+}
