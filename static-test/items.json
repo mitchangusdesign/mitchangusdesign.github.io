@@ -23,7 +23,7 @@
    {"name": "Cocktail 8",
    "description": "Ingredients and blurb about how its made and or how its served",
    "price": "$14"}
- ]
+ ],
  "dinners": [
   {"name": "Combo Plate 1",
    "description": "Meaningful Description. Main Ingredients and allergy factors.",
