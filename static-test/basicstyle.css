@@ -251,7 +251,8 @@ footer {
     grid-template-rows: repeat(2, fit-content);
     margin: 0 1% .5rem 1%;
     border-radius: 1em;
-    border: .15rem #707070 solid;
+    border: 0px;
+    box-shadow: 3px 5px 10px lightgray;
     padding: .8rem;
     background-image: repeating-linear-gradient(white, white 3px, #fafafa 3px, #fafafa 6px);
 }
@@ -285,7 +286,8 @@ footer {
     flex-direction: row;
     justify-content: space-between;
     border-radius: 1em;
-    border: .15rem #707070 solid;
+    border: 0px;
+    box-shadow: 3px 5px 10px darkgray;
     padding: .8rem;
     background-image: repeating-linear-gradient(white, white 3px, #fafafa 3px, #fafafa 6px);
     }
