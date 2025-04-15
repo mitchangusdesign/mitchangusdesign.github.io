@@ -155,6 +155,7 @@ body {
 }
 #slide-2 {
     width: 100%;
+    height: 100%;
     animation: 10s ease-in-out 0s infinite alternate fadeOut;
     z-index: 2;
 }
