@@ -12,7 +12,7 @@ async function populate() {
 }
      
 function populateMenu(obj) {
-  const menu = document.getElementById('menulist');
+  const menu = document.querySelector('.menulist');
   const items = obj.cocktails;
 
   for ( const item of items ) {
