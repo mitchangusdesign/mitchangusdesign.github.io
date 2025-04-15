@@ -249,6 +249,7 @@ footer {
     display: grid; 
     grid-template-columns: repeat(3, fit-content); 
     grid-template-rows: repeat(2, fit-content);
+    margin-bottom: .5rem;
     border-radius: 1em;
     border: .15rem #707070 solid;
     padding: .8rem;
