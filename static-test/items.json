@@ -25,3 +25,30 @@
    "price": "$14"}
  ]
  }
+{"dinners": [
+  {"name": "Combo Plate 1",
+   "description": "Meaningful Description. Main Ingredients and allergy factors.",
+   "price": "$19"},
+  {"name": "Combo Plate 2",
+   "description": "Meaningful Description. Main Ingredients and allergy factors.",
+   "price": "$19"},
+  {"name": "Combo Plate 3",
+   "description": "Meaningful Description. Main Ingredients and allergy factors.",
+   "price": "$19"},
+  {"name": "Combo Plate 4",
+   "description": "Meaningful Description. Main Ingredients and allergy factors.",
+   "price": "$19"},
+  {"name": "Combo Plate 5",
+   "description": "Meaningful Description. Main Ingredients and allergy factors.",
+   "price": "$19"},
+  {"name": "Combo Plate 6",
+   "description": "Meaningful Description. Main Ingredients and allergy factors.",
+   "price": "$19"},
+  {"name": "Combo Plate 7",
+   "description": "Meaningful Description. Main Ingredients and allergy factors.",
+   "price": "$19"},
+  {"name": "Combo Plate 8",
+   "description": "Meaningful Description. Main Ingredients and allergy factors.",
+   "price": "$19"}
+   ]
+ }
