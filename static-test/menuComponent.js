@@ -4,8 +4,7 @@ async function populate() {
   
   const request = new Request(requestURL, {
   headers: {
-    origin: 'https://github.com',
-    optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
+    origin: 'https://github.com/mitchangusdesign/mitchangusdesign.github.io',
   },
   body: JSON.stringify({ key: 'value' })
 });
