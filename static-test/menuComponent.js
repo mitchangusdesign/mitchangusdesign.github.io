@@ -1,12 +1,8 @@
 async function populate() {
 
-  const requestURL = "https://github.com/mitchangusdesign/mitchangusdesign.github.io/blob/6d2735ad3fc0c0f5cd432579e02aaf262c5c037a/static-test/items.json";
+  const requestURL = "https://mitchangus.design/static-test/items.json";
   
-  const request = new Request(requestURL, {
-  headers: {
-    origin: 'https://github.com',
-  },
-});
+  const request = new Request(requestURL);
 
   const response = await fetch(request);
   const menuItemsText = await response.text();
