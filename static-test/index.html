@@ -133,14 +133,14 @@
 </script>
 <script>
 
-    var tablinks = document.getElementsByClassName("menu-tab-links");
-    var tabcontents = document.getElementsByClassName("menu-tab-contents");
+    var mtablinks = document.getElementsByClassName("menu-tab-links");
+    var mtabcontents = document.getElementsByClassName("menu-tab-contents");
     
     function opentab(tabname){
-        for(tablink of tablinks){
+        for(tablink of mtablinks){
             tablink.classList.remove("active-link");
         }
-        for(tabcontent of tabcontents){
+        for(tabcontent of mtabcontents){
             tabcontent.classList.remove("active-tab");
         }
         event.currentTarget.classList.add("active-link");
