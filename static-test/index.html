@@ -137,11 +137,11 @@
     var mtabcontents = document.getElementsByClassName("menu-tab-contents");
     
     function opentab(tabname){
-        for(tablink of mtablinks){
-            tablink.classList.remove("active-link");
+        for(mtablink of mtablinks){
+            mtablink.classList.remove("active-link");
         }
-        for(tabcontent of mtabcontents){
-            tabcontent.classList.remove("active-tab");
+        for(mtabcontent of mtabcontents){
+            mtabcontent.classList.remove("active-tab");
         }
         event.currentTarget.classList.add("active-link");
         document.getElementById(tabname).classList.add("active-tab");
