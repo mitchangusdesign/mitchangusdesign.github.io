@@ -288,6 +288,7 @@ footer {
     display: grid; 
     grid-template-columns: repeat(3, fit-content); 
     grid-template-rows: repeat(2, fit-content);
+    justify-content: space-between;
     margin: 0 1% .5rem 1%;
     border-radius: 1em;
     border: 0px;
@@ -301,6 +302,7 @@ footer {
 }
 .description {
     display: inline-grid;
+    width: fit-content;
     vertical-align: middle;
     grid-column: span 2 / span 2;
     grid-row-start: 2;
@@ -308,6 +310,7 @@ footer {
 }
 .price {
     display: inline-block;
+    width: fit-content;
     vertical-align: middle;
     grid-column-start: 3; 
     grid-row-start: 2;
