@@ -1,3 +1,9 @@
+
+      
+
+// Old code to load menu items from a local JSON(items.json) file
+      
+
 async function populate() {
 
   const requestURL = "https://mitchangus.design/static-test/items.json";
@@ -65,3 +71,4 @@ function populateFood(obj) {
   }
 }
 populate();
+

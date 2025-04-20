@@ -55,27 +55,41 @@
             <p class="tab-links" onclick="opentab('location')">Location</p>
         </div>
         <div class="tab-contents active-tab" id="menu">
+            <div class="menu-tab-titles">
+                <p class="menu-tab-links active-link" onclick="opentab('apps')">Appetizers</p>
+                <p class="menu-tab-links" onclick="opentab('lunch')">Lunch</p>
+                <p class="menu-tab-links" onclick="opentab('dinner')">Dinner</p>
+                <p class="menu-tab-links" onclick="opentab('softdrinks')">Soft Drinks</p>
+                <p class="menu-tab-links" onclick="opentab('cocktails')">Cocktails</p>
+            </div>
+            <div class="menu-tab-contents active-tab" id="apps"></div>
             <ul>
-<li><h2 class="page-title">Cocktails</h1></li>
-    <div class="item-wrapper">
-        <h3 class="name">Mai Tai</h3>
-        <p class="description">Original Trader Vic's 1944 recipe. Rum, Triple Sec, Lime. No pineapple juice!</p>
-        <p class="price">14</p>
-    </div>
-    <section id="menulist" class="menulist"></section>
-
-                <li><h2>Food</h2></li>
-<section id="menulistfood" class="menulistfood"></section>
-        
-                <li><h2>Drinks</h2></li>
-                <li><span>Drink 1</span><br>Meaningful Description of main Ingredients and serving vessel.</li>
-                <li><span>Drink 2</span><br>Meaningful Description of main Ingredients and serving vessel.</li>
-                <li><span>Drink 3</span><br>Meaningful Description of main Ingredients and serving vessel.</li>
-                <li><span>Drink 4</span><br>Meaningful Description of main Ingredients and serving vessel.</li>
-                <li><span>Drink 5</span><br>Meaningful Description of main Ingredients and serving vessel.</li>
-                <li><span>Drink 6</span><br>Meaningful Description of main Ingredients and serving vessel.</li>
-                <li><span>Drink 7</span><br>Meaningful Description of main Ingredients and serving vessel.</li>
+                <li><h2 class="page-title">Appetizers</h1></li>
+                <section id="menulistApps" class="menulistApps"></section>
             </ul>
+            <div class="menu-tab-contents active-tab" id="lunch"></div>
+            <ul>
+                <li><h2 class="page-title">Lunch</h1></li>
+                <section id="menulistLunch" class="menulistLunch"></section>
+            </ul>
+            <div class="menu-tab-contents active-tab" id="dinner"></div>
+            <ul>
+                <li><h2 class="page-title">Dinner</h1></li>
+                <section id="menulistDinner" class="menulistDinner"></section>
+            </ul>
+            <div class="menu-tab-contents active-tab" id="softdrinks"></div>
+            <ul>
+                <li><h2 class="page-title">Soft Drinks</h1></li>
+                <section id="menulistSodas" class="menulistSodas"></section>
+            </ul>
+            <div class="menu-tab-contents active-tab" id="cocktails"></div>
+            <ul>
+                <li><h2 class="page-title">Cocktails</h1></li>
+                <section id="menulistCocktails" class="menulistCocktails"></section>
+            </ul>
+           
+        
+            
         </div>
         <div class="tab-contents" id="hours">
             <ul>
@@ -99,7 +113,7 @@
     <footer>
         <div><h3>Hm. Just a footer.</h3></div>
     </footer>
- <script src="./menuComponent.js"></script>       
+      
 <script>
 
     var tablinks = document.getElementsByClassName("tab-links");
@@ -117,5 +131,42 @@
     }
     
 </script>
+<script>
+
+    var tablinks = document.getElementsByClassName("menu-tab-links");
+    var tabcontents = document.getElementsByClassName("menu-tab-contents");
+    
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+    
+</script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.49.4/dist/umd/supabase.min.js"></script>
+<script src="./supabaseComponent.js"></script> 
+
+<!-- <script>
+    const supabasePublicClient = supabase.createClient("https://smwkypyopkqyrzqwfoyq.supabase.co",
+     "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNtd2t5cHlvcGtxeXJ6cXdmb3lxIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDI2MDUwMDgsImV4cCI6MjA1ODE4MTAwOH0.WLto0_jltEz4jUER2nkTJvnAudfTRYlgj5InEDnP30w", {
+        db: {
+            schema: "public"
+        }
+    });
+
+    (async () => {
+        const response = await supabasePublicClient
+        .from("menu")
+        .select("id, name, description, price")
+        .eq("category","cocktails")
+
+        console.log(response)
+    })()
+</script> -->
 </body>
 </html>
