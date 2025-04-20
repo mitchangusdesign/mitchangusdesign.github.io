@@ -302,7 +302,7 @@ footer {
 .description {
     display: inline-grid;
     vertical-align: middle;
-    grid-column: span 3 / span 3; 
+    grid-column: span 2 / span 2;
     grid-row-start: 2;
     padding: .5rem 0;
 }
