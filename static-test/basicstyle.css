@@ -179,7 +179,7 @@ body {
     z-index: 5;
 }
 .tab-titles{
-	display: flex;
+        display: flex;
     justify-content: space-around;
     background-color: rgb(205, 193, 179);
     z-index: -20;
@@ -193,49 +193,74 @@ body {
 .tab-links{
     width: 100%;
     text-align: center;
-	font-size: 18px;
-	font-weight: 500;
-	cursor: pointer;
-	position: relative;
+        font-size: 18px;
+        font-weight: 500;
+        cursor: pointer;
+        position: relative;
     padding: 10px 0;
     z-index: 1;
 }
 .tab-links::after{
-	content: '';
+        content: '';
     width: 100%;
-	height: 0%;
-	background: var(--brandBg);
-	position: absolute;
-	left: 0;
-	bottom: 0;
+        height: 0%;
+        background: var(--brandBg);
+        position: absolute;
+        left: 0;
+        bottom: 0;
     z-index: -1;
-	transition: 0.2s ease-in-out;
+        transition: 0.2s ease-in-out;
 }
 .tab-links.active-link::after{
-	height: 100%;
+        height: 100%;
 }
 .tab-contents{
-	display: none;
+        display: none;
 }
 .tab-contents.active-tab{
-	display: block;
+        display: block;
+}
+
+.menu-tab-links{
+    width: 100%;
+    text-align: center;
+        font-size: 18px;
+        font-weight: 500;
+        cursor: pointer;
+        position: relative;
+    padding: 10px 0;
+    z-index: 1;
+}
+.menu-tab-links::after{
+        content: '';
+    width: 100%;
+        height: 0%;
+        background: var(--brandBg);
+        position: absolute;
+        left: 0;
+        bottom: 0;
+    z-index: -1;
+        transition: 0.2s ease-in-out;
+}
+.menu-tab-links.active-link::after{
+        height: 100%;
 }
 .menu-tab-contents{
-	display: none;
+        display: none;
 }
 .menu-tab-contents.active-tab{
-	display: block;
+        display: block;
 }
 
 /* Menu Formatting */
 
 .tab-contents ul li{
-	list-style: none;
-	margin: 10px 10%;
+        list-style: none;
+        margin: 10px 10%;
 }
 .tab-contents ul li span{
-	color: #961B3A;
-	font-size: 14px;
+        color: #961B3A;
+        font-size: 14px;
     font-weight: 700;
     line-height: 2rem;
 }
@@ -245,6 +270,7 @@ body {
     text-align: center;
     margin-top: 2rem;
 }
+
 #hours {
     font-size: larger;
     text-align: center;
