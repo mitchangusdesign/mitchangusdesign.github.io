@@ -224,8 +224,8 @@ body {
 .menu-tab-links{
     width: 100%;
     text-align: center;
-        font-size: 18px;
-        font-weight: 500;
+        font-size: 16px;
+        font-weight: 400;
         cursor: pointer;
         position: relative;
     padding: 10px 0;
