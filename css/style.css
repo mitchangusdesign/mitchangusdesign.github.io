@@ -6,6 +6,10 @@
     box-sizing: border-box;
 }
 
+body .uwy.userway_p3 .userway_buttons_wrapper {
+    top: auto !important;
+    bottom: 13px !important;
+
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
