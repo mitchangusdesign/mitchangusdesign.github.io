@@ -472,6 +472,9 @@ li {
     display: none;
 }
 
+.preview {
+    z-index: 20;
+}
 .preview ul {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
