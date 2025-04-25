@@ -956,7 +956,9 @@ form > p {
     .project-title h1 {
         margin-top: 5vh;
     }
-
+    .project img {
+        cursor: pointer;
+    }
     .preview > ul > li > figure {
         display: flex;
         justify-content: center;
