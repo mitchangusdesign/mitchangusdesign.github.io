@@ -472,9 +472,6 @@ li {
     display: none;
 }
 
-.preview {
-    z-index: 20;
-}
 .preview ul {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -850,8 +847,6 @@ form > p {
         padding: 60px 0 0 0 ;
     }
 
-
-
     #hero {
         /*max-width: 1000px;*/
         display: flex;
@@ -870,8 +865,7 @@ form > p {
     }
     #blurb {
         width: clamp(500px, 80vw, 1150px);
-        /* max-width: 1150px; */
-        height: 60vh;
+        max-height: fit-content;
         margin-top: 30vh;
         padding: 0;
         font-size: 1.5em;
