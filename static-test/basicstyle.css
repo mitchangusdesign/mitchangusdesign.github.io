@@ -303,7 +303,6 @@ footer {
 .name {
     margin: 0 0 .5rem 0;
     grid-column: span 3 / span 3;
-    border: 1px green solid;
 }
 .description {
     display: inline-block;
@@ -311,7 +310,6 @@ footer {
     grid-row-start: 2;
     grid-column: span 2;
     padding: 1rem 0;
-    border: 1px blue solid;
 }
 .price {
     display: inline-block;
@@ -322,7 +320,6 @@ footer {
     font-size: 1.2rem;
     text-align: right;
     padding: .5rem;
-    border: 1px red solid;
 }
 
 @media only screen and (min-width: 600px) {
