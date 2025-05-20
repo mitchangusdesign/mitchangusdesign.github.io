@@ -325,32 +325,36 @@ footer {
 }
 
 @media only screen and (min-width: 600px) {
-  body {
-    background-color: lightblue;
-  }
-  .item-wrapper {
-    display: flex; 
-    flex-direction: row;
-    justify-content: space-between;
-    border-radius: 1em;
-    border: 0px;
-    box-shadow: 3px 5px 10px #77a5bb;
-    padding: .8rem;
-    background-image: repeating-linear-gradient(white, white 3px, #fafafa 3px, #fafafa 6px);
+    body {
+        max-width: 1400px;
     }
-.name {
-    margin: 0 auto auto;
-    padding: .5rem;
-}
-.description {
-    width: 75%;
-    margin: auto;
-    padding: .5rem 0;
-}
-.price {
-    font-weight: 600;
-    font-size: 1.2rem;
-    margin: auto;
-    padding: .5rem;
-}
+    .item-wrapper {
+        display: flex; 
+        flex-direction: row;
+        justify-content: space-between;
+        max-width: 75%;
+        margin: 1rem auto;
+        border-radius: 1em;
+        border: 0px;
+        box-shadow: 3px 5px 10px #d2d2d2;
+        padding: .8rem;
+        background-image: repeating-linear-gradient(white, white 3px, #fafafa 3px, #fafafa 6px);
+    }
+    .name {
+        padding: .5rem;
+        text-align: left;
+        width: 25%;
+    }
+    .description {
+        width: 50%;
+        margin: auto;
+        padding: .5rem 0;
+    }
+    .price {
+        font-weight: 600;
+        font-size: 1.2rem;
+        text-align: right;
+        width: 25%;
+        padding: .5rem;
+    }
 }
