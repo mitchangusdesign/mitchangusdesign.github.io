@@ -291,7 +291,6 @@ footer {
 .item-wrapper {
     font-family: "Domine", serif;
     display: grid; 
-    grid-template-columns: repeat(3, fit-content); 
     grid-template-rows: repeat(2, fit-content);
     justify-content: space-between;
     margin: 0 1% .5rem 1%;
@@ -304,24 +303,26 @@ footer {
 .name {
     margin: 0 0 .5rem 0;
     grid-column: span 3 / span 3;
+    border: 1px green solid;
 }
 .description {
-    display: inline-grid;
-    width: fit-content;
+    display: inline-block;
     vertical-align: middle;
-    grid-column: span 2 / span 2;
     grid-row-start: 2;
-    padding: .5rem 0;
+    grid-column: span 2;
+    padding: 1rem 0;
+    border: 1px blue solid;
 }
 .price {
     display: inline-block;
-    width: fit-content;
     vertical-align: middle;
-    grid-column-start: 3; 
     grid-row-start: 2;
+    grid-column: span 1;
     font-weight: 600;
     font-size: 1.2rem;
+    text-align: right;
     padding: .5rem;
+    border: 1px red solid;
 }
 
 @media only screen and (min-width: 600px) {
@@ -333,7 +334,7 @@ footer {
         flex-direction: row;
         justify-content: space-between;
         max-width: 75%;
-        margin: 1rem auto;
+        margin: .6rem auto;
         border-radius: 1em;
         border: 0px;
         box-shadow: 3px 5px 10px #d2d2d2;
