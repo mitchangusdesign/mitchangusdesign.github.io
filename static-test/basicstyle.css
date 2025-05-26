@@ -337,6 +337,10 @@ footer {
         box-shadow: 3px 5px 10px #d2d2d2;
         padding: .8rem;
         background-image: repeating-linear-gradient(white, white 3px, #fafafa 3px, #fafafa 6px);
+        transition:all .3s ease-in-out;
+    }
+    .item-wrapper:hover {
+        max-width: 76%;
     }
     .name {
         padding: .5rem;
