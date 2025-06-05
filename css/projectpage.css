@@ -43,9 +43,9 @@
 }
 
 .project h2 {
-    font-size: 1.5em;
+    font-size: 1.3em;
     line-height: 1.3em;
-    font-weight: 600;
+    font-weight: 700;
     max-width: 90%;
     margin: 0 auto .5em auto;
 }
@@ -340,9 +340,16 @@
         margin: 20px 0 0 0;
     }
     
+    h1 {
+        font-size: 2.5em;
+        line-height: 1.2em;
+        font-weight: 800;
+        margin: 0 auto 20px auto;
+        max-width: 90%;
+    }
     .project h2 {
         max-width: 100%;
-        font-size: 1.2em;
+        font-size: 1.8em;
     }
     .project img {
         margin-top: 0px;
