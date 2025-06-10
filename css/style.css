@@ -186,7 +186,7 @@ li {
 }
 
 .page-title {
-    letter-spacing:-2px;
+    letter-spacing:-1px;
     opacity: 1;
     -webkit-animation: letterspace 2s ease-in-out, fadein 2s ease-in-out;
     animation: letterspace 2s ease-in-out, fadein 2s ease-in-out;
@@ -194,11 +194,11 @@ li {
 
 @-webkit-keyframes letterspace {
   0%   { letter-spacing: 1px; }
-  100% { letter-spacing:-2px; }
+  100% { letter-spacing:-1px; }
 }
 @keyframes letterspace {
   0%   { letter-spacing: 1px; }
-  100% { letter-spacing:-2px; }
+  100% { letter-spacing:-1px; }
 }
 @-webkit-keyframes fadein {
     0%   { opacity: 0; }
