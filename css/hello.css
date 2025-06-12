@@ -216,7 +216,7 @@ li {
     color: #0C2144;
     /*background-image: linear-gradient(#0957a4,#0e6ece);*/
     background: #ffffff;
-    /*border: solid 1px #0c2144;*/
+    /* border: solid 1px #0c2144; */
 }
 .profile-intro {
     display: block;
@@ -237,7 +237,7 @@ li {
     align-items: center;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 1.8rem;
-    margin: 70px auto;
+    margin: 70px auto 0 auto;
 }
   
 .hello-card img {

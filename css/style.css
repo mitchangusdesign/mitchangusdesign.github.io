@@ -580,7 +580,8 @@ li {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 60px 0 60px 0;
+    margin: 8em 0;   
+    gap: 8em;
 } 
 .social-links > ul {
     display: flex;
@@ -805,6 +806,10 @@ form > p {
 }
 #optoutbtn:hover {
     background-color: #0071e2;
+}
+
+.tagline-box {
+    display:none;
 }
 
                                         /* Responsiveness */
@@ -1212,4 +1217,63 @@ form > p {
         padding-top: 0px;
         /*padding-left: 50px;*/
     } 
+
+    /* Hover Flyout Tagline Button for Desktop Only */
+    .tagline-box {
+        text-transform: uppercase; 
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        margin:auto auto;
+        width:160px;
+        aspect-ratio:1 / 1;
+        border:5px #0c2144ff solid;
+        border-radius:3px;
+        background-color:#ffffff;
+        box-shadow:0px 0px 0px 0px rgba(255, 255, 255, 1), 0px 0px 0px 0px rgba(255, 255, 255, 1),0px 0px 0px 0px rgba(0, 0, 0, 0.1), 0px 0px 0px 0px rgba(0, 0, 0, 0.1);
+        color:#0c2144;
+        font-size:2rem;
+        font-weight:600;
+        font-family:poppins;
+        line-height:1.3;
+        text-align: left;
+        text-decoration:none;
+        transition:all .5s cubic-bezier(.17,.8,.3,1);
+    }
+    .tagline-box #link {
+        position:absolute;
+        width:inherit;
+        aspect-ratio:1 /1 ;
+    }
+    #first-item {
+        width:fit-content;
+        margin: 0 auto;
+        letter-spacing:2.5px;
+        transition:all .5s cubic-bezier(.17,.07,.19,1);
+    }
+    #second-item {
+        width:fit-content;
+        margin:0 auto;
+        transition:all .5s cubic-bezier(.17,.07,.19,1);
+    }
+    #third-item {
+        width:fit-content;
+        margin:0 auto;
+        transition:all .5s cubic-bezier(.17,.07,.19,1);
+    }
+    .tagline-box:hover #first-item, .tagline-box:hover #third-item {
+        letter-spacing:0px;
+        transform:translateX(-65px);
+    }
+    .tagline-box:hover #second-item {
+        transform:translateX(65px)
+    }
+    .tagline-box:hover {
+        border:2px #0c214400 solid;
+        background-color:#ffffff;
+        box-shadow:-2px -2px 2px 2px rgb(242, 242, 242), -8px -8px 10px 8px rgba(242, 242, 242, 0.6), 5px 5px 8px 2px rgba(0, 0, 0, 0.1),  10px 10px 16px 4px rgba(0, 0, 0, 0.1);
+    }
+    .tagline-box:active {
+        box-shadow:0px 0px 0px 0px rgba(255, 255, 255, 1), 0px 0px 0px 0px rgba(255, 255, 255, 1),0px 0px 0px 0px rgba(0, 0, 0, 0.1), 0px 0px 0px 0px rgba(0, 0, 0, 0.1);
+    }
 }
