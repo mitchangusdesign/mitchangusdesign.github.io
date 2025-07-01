@@ -1218,6 +1218,9 @@ form > p {
     } 
 
     /* Hover Flyout Tagline Button for Desktop Only */
+    .tagline-box span {
+        user-select: none;
+    }
     .tagline-box {
         text-transform: uppercase; 
         display:flex;
