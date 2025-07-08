@@ -176,15 +176,15 @@
     </script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            const element = document.querySelector('.orange-image'); // Select your target element
+            const element = document.querySelector('.grape-image'); // Select your target element
 
             if (element) {
                 // Add the class to simulate hover
-                element.classList.add('hover-active');
+                element.classList.add('grape-image-preload');
 
                 // Remove the class after a short delay (e.g., 2 seconds)
                 setTimeout(() => {
-                element.classList.remove('hover-active');
+                element.classList.remove('grape-image-preload');
                 }, 2000); // 2000 milliseconds = 2 seconds
             }
         });
