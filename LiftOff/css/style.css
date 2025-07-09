@@ -398,6 +398,9 @@ h1, h2, h3, h4 {
     content: url(../img/grape_anim/0001.png);
     animation: grape-hover-out .2s ease-in-out reverse;
 }
+.grape-image-preload > img {
+        animation: grape-hover-in .2s ease-in-out forwards;
+}
 .orange-image img {
     width: clamp(100px, 20vw, 200px);
     height: auto;
