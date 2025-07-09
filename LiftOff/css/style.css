@@ -425,7 +425,7 @@ h1, h2, h3, h4 {
 }
 .info-content {
     margin: auto;
-    padding: 2rem;
+    padding: 2rem 1rem;
 }
 .info-content h2 {
     color:#642d96;
