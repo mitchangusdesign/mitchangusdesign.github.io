@@ -1,0 +1,178 @@
+
+/* The Modal (background) */
+.modal {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    position: fixed;
+    touch-action: none;
+    z-index: 20;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(1px);
+
+}
+  
+  /* Modal Content */
+.modal-content {
+    overflow-y: hidden;
+    touch-action: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    z-index: 30;
+    margin: auto;
+    width: clamp(300px, 100%, 600px);
+    height: auto;
+}
+
+/* The Close Button */
+.close {
+    color: #0c122f;
+    position: absolute;
+    z-index: 50;
+    top: 10px;
+    right: 25px;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #999;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.mySlides {
+    display: none;
+    justify-content: center;
+}
+           
+.scrolling-wrapper {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    touch-action: none;
+    touch-action: none;
+    white-space: nowrap;
+    scroll-snap-type: x mandatory;
+    scrollbar-width:none;
+    font-family: 'poppins', sans-serif;
+}
+
+.modal-card {
+    display: inline-flex;
+    flex-direction: column;
+    vertical-align: middle;
+    text-align:center;
+    width:fit-content;
+    height:fit-content;
+    scroll-snap-align:center;
+    box-sizing: border-box;
+}
+.modal-card img {
+    position: relative;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.scrolling-wrapper {
+    -webkit-overflow-scrolling: touch;
+}
+
+ /* Modal Window */
+
+.modal-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-wrap: wrap;
+    margin:auto;
+    width: 90%;
+    max-width: 600px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    z-index: 1001;
+    overflow: hidden;
+}
+.modal-head {
+    width: 100%;
+    color: #ffffff;
+    padding: 30px;
+    font-size: 1.6rem;
+    text-align: left;
+    text-shadow: #333333 0px 1px 2px;
+    background-image: url(../img/LiftOffImageBG.jpg);
+    background-size: cover;
+    background-position: top;
+}
+.modal-body {
+    display: flex;
+    padding: 30px;
+    text-align: center;
+    font-size: 1.2rem;
+    color: #333333;
+}
+.modal-body p {
+    margin: 0;
+    text-align: left;
+    line-height: 1.5;
+}
+.modal-button {
+    background-color: #ff6f00;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    margin-bottom: 2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: background-color .3s ease-in-out;
+}
+
+/* Floating Nav Buttons in Modal */
+#nav-l {
+    left:0;
+    margin-left:2%;
+}
+#nav-r {
+    right:0;
+    margin-right:2%;
+}
+.nav-btn {
+    position:absolute;
+    top:40%;
+    z-index: 300;
+    height: auto;
+    width: auto;
+    padding: 15px;
+    border-radius: 2rem;
+    border:none;
+    font-family:poppins;
+    font-weight:bold;
+    font-size:xx-large;
+    color:#808080;
+    background-color:#d0d0d088;
+    cursor:pointer;
+}
+.nav-btn:active {
+    background-color:#e0e0e0;
+}
+
+/* Heavy Wallbanger Page Comic Book Cover Section */
+#comic-covers {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
+.card-container {
+    width: 50%;
+}
+  

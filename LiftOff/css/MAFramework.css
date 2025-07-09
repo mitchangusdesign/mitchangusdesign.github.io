@@ -43,6 +43,15 @@
       to { scale: 100%; opacity: 1;}
     }
 
+.grow-in-bounce {
+    opacity: 0;
+    animation: grow-in-bounce .8s forwards cubic-bezier(.4,1.5,.5,1);
+}
+    @keyframes grow-in-bounce {
+      from { scale: 80%; opacity: 0;}
+      to { scale: 100%; opacity: 1;}
+    }
+
 .fade-in {
     opacity: 0;
     animation: fade-in .5s forwards cubic-bezier(.4,1.3,.5,1);
@@ -67,16 +76,18 @@
 }
     @keyframes shake {
         0% { transform: translateX(0) rotate(0); }
-        25% { transform: translateX(-3px) rotate(-1deg); }
-        50% { transform: translateX(5px) rotate(2deg); }
-        75% { transform: translateX(-3px) rotate(-1deg); }
+        25% { transform: translateX(-3px) rotate(-.5deg); }
+        50% { transform: translateX(5px) rotate(1deg); }
+        75% { transform: translateX(-3px) rotate(-.5deg); }
         100% { transform: translateX(0) rotate(0); }
     }
 .grow {
     transition: all 0.2s ease-in-out;
 }
-.grow:hover {
-    scale: 1.1;
+@media (min-width: 1150px) {
+    .grow:hover {
+        scale: 1.1;
+    }
 }
 
 .rise-up {
@@ -84,11 +95,12 @@
     /* box-shadow: 0 0 8px rgba(0, 0, 0, 0.2); */
     transition: all .2s cubic-bezier(.4,1.3,.5,1);
 }
-.rise-up:hover {
-    transform: translateY(-1rem) ;
-    /* box-shadow: 0 2rem 8px rgba(0, 0, 0, 0.2); */
+@media (min-width: 1150px) {
+    .rise-up:hover {
+        transform: translateY(-1rem) ;
+        /* box-shadow: 0 2rem 8px rgba(0, 0, 0, 0.2); */
+    }
 }
-
 
 .delay-1s {
     animation-delay: 1s;

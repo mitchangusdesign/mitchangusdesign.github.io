@@ -53,19 +53,21 @@
             </div>
         </section>
         <section>
-            <h2 class="section-title">CHOOSE YOUR VESSEL</h2>
-            <div class="three-card-row">
-                <div class="product-card grape-image">
-                    <img src="img/grape_anim/0001.png" alt="Grape Energy Drink"/>
-                    <h3>Jazbay<br>GRAPE</h3>
-                </div>
-                <div class="product-card orange-image">
-                    <img alt="Grape Energy Drink"/>
-                    <h3>Orange<br>Zone</h3>
-                </div>
-                <div class="product-card punch-image">
-                    <img alt="Grape Energy Drink"/>
-                    <h3>Death<br>Punch</h3>
+            <div class="products">
+                <h2 class="section-title">CHOOSE YOUR VESSEL</h2>
+                <div class="three-card-row">
+                    <div class="product-card grape-image" onclick="openModal();openToSlide('slide-1')">
+                        <img src="img/grape_anim/0001.png" alt="Grape Energy Drink"/>
+                        <h3>Jazbay<br>GRAPE</h3>
+                    </div>
+                    <div class="product-card orange-image" onclick="openModal();openToSlide('slide-2')">
+                        <img alt="Grape Energy Drink"/>
+                        <h3>Orange<br>Zone</h3>
+                    </div>
+                    <div class="product-card punch-image" onclick="openModal();openToSlide('slide-3')">
+                        <img alt="Grape Energy Drink"/>
+                        <h3>Death<br>Punch</h3>
+                    </div>
                 </div>
             </div>
         </section>
@@ -176,7 +178,7 @@
     </script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            const element = document.querySelector('.orange-image'); // Select your target element
+            const element = document.querySelector('.orange-image > img'); // Select your target element
 
             if (element) {
                 // Add the class to simulate hover
@@ -189,5 +191,86 @@
             }
         });
     </script>
+    
+<!-- Start Modal -->
+<link rel="stylesheet" href="css/modal.css">
+<div id="myModal" class="modal">
+  <span class="close cursor" onclick="closeModal()">&times;</span>
+  <div class="modal-content grow-in-bounce">
+    <div id="scroll-wrap" class="scrolling-wrapper">
+      <div id="slide-1" class="modal-card">
+        <div class="modal-container">
+            <div class="modal-head"><h3>Jazbay Grape</h3></div>
+            <div class="modal-body">
+                <p>The Jazbay [JAZZ-bay] Grape flavor is a fictional ingredient from an RPG videogame called, Elderscrolls V: Skyrim. I initially used it as a placeholder when I was developing the brand identity. After some time and a few iterations, I grew to like it and opted to keep it.</p>  
+            </div>
+            <div class="modal-foot">
+                <button class="modal-button" onclick="closeModal()">Close</button>
+            </div>
+        </div>
+      </div>
+      <div id="slide-2" class="modal-card">
+        <div class="modal-container">
+            <div class="modal-head"><h3>Orange Zone</h3></div>
+            <div class="modal-body">
+                <p>I chose ORANGE ZONE for this flavor for the element of danger the orange cones on the highway evoke. Orange Zone sounds cool and makes one imagine that big things like heavy construction or inclement conditions are happening around them when you "Enter the Orange Zone".</p>  
+            </div>
+            <div class="modal-foot">
+                <button class="modal-button" onclick="closeModal()">Close</button>
+            </div>
+        </div>
+      </div>
+      <div id="slide-3" class="modal-card">
+        <div class="modal-container">
+            <div class="modal-head"><h3>Death Punch</h3></div>
+            <div class="modal-body">
+                <p>While it seemed risky at first, to give the punch flavor such an edgy name, after seeing the success of Liquid Death brand sparkling water, I think that the energy drink demographic can handle Death Punch.</p>  
+            </div>
+            <div class="modal-foot">
+                <button class="modal-button" onclick="closeModal()">Close</button>
+            </div>
+        </div>
+      </div>    
+    </div>
+  </div>
+</div>
+
+<script>
+  function openModal() {
+    document.getElementById("myModal").style.display = "flex";
+}
+  
+  function closeModal() {
+    document.getElementById("myModal").style.display = "none";
+  }
+  
+  function openToSlide(x) {
+  let element = document.getElementById(x)
+      element.scrollIntoView({ behavior: 'instant' })
+  }
+
+  // Modal Nav Button Horizontal Scroll Mechanism
+  let w = document.documentElement.clientWidth;
+  function scrollNext(x, y) {
+    document.getElementById('scroll-wrap').scrollBy({
+    top: y,
+    left:w * x,
+    behavior: "smooth",
+  });
+  }
+
+  // Get the modal
+  const modal = document.getElementById('myModal');
+
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+}
+
+  </script>
+
+    <script src="./js/hideNavOnScroll.js"></script>
 </body>
 </html>
