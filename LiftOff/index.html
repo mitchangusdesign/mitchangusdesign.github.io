@@ -182,12 +182,12 @@
 
             if (element) {
                 // Add the class to simulate hover
-                element.classList.add('grape-image-preload');
+                element.classList.add('hover-active');
 
                 // Remove the class after a short delay (e.g., 2 seconds)
                 setTimeout(() => {
-                element.classList.remove('grape-image-preload');
-                }, 100); // 100 milliseconds = .1 seconds
+                element.classList.remove('hover-active');
+                }, 2000); // 2000 milliseconds = 2 seconds
             }
         });
     </script>
