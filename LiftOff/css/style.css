@@ -425,7 +425,7 @@ h1, h2, h3, h4 {
 }
 .info-content {
     margin: auto;
-    padding: 2%;
+    padding: 2rem;
 }
 .info-content h2 {
     color:#642d96;
@@ -435,7 +435,8 @@ h1, h2, h3, h4 {
 }
 
 .good-stuff {
-    display: block;
+    display: flex;
+    flex-direction: column;
     padding: 1rem 1rem;
     background-image: url(../img/LiftOffImageBG.jpg);
     background-size: cover;
@@ -749,6 +750,7 @@ h1, h2, h3, h4 {
         margin: auto;
     }
     .info-content {
+        padding: 1rem;
         margin: auto;
         width: 80%;
     }
@@ -769,7 +771,8 @@ h1, h2, h3, h4 {
         order: 3;
     }
     .good-stuff {
-        padding: 2rem auto;
+        padding: 1rem 0;
+        
     }
 
     .footer-content {
