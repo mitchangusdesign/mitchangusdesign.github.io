@@ -196,7 +196,7 @@
 <link rel="stylesheet" href="css/modal.css">
 <div id="myModal" class="modal">
   <span class="close cursor" onclick="closeModal()">&times;</span>
-  <div class="modal-content grow-in-bounce">
+  <div id="modal-content" class="modal-content grow-in-bounce">
     <div id="scroll-wrap" class="scrolling-wrapper">
       <div id="slide-1" class="modal-card">
         <div class="modal-container">
@@ -238,25 +238,25 @@
 <script>
   function openModal() {
     document.getElementById("myModal").style.display = "flex";
-}
+    document.getElementById("myModal").style.animation = "fade-in 0.2s ease-in-out"; // Add fade-in animation
+  }
   
   function closeModal() {
+    document.getElementById("myModal").style.animation = "fade-out 0.2s ease-in-out"; // Add fade-out animation
+    setTimeout(() => {
     document.getElementById("myModal").style.display = "none";
+    }, 200); 
+    // Add pop-out class to modal-content for animation
+    document.getElementById("modal-content").classList.add("pop-out");
+    // Remove pop-out class after animation completes
+    setTimeout(() => {
+      document.getElementById("modal-content").classList.remove("pop-out");
+    }, 300); // Match this duration with the CSS animation duration 
   }
   
   function openToSlide(x) {
   let element = document.getElementById(x)
       element.scrollIntoView({ behavior: 'instant' })
-  }
-
-  // Modal Nav Button Horizontal Scroll Mechanism
-  let w = document.documentElement.clientWidth;
-  function scrollNext(x, y) {
-    document.getElementById('scroll-wrap').scrollBy({
-    top: y,
-    left:w * x,
-    behavior: "smooth",
-  });
   }
 
   // Get the modal
@@ -265,10 +265,9 @@
   // When the user clicks anywhere outside of the modal, close it
   window.onclick = function(event) {
     if (event.target == modal) {
-      modal.style.display = "none";
+      closeModal();
     }
-}
-
+  }
   </script>
 
     <script src="./js/hideNavOnScroll.js"></script>
