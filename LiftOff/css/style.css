@@ -466,6 +466,8 @@ h1, h2, h3, h4 {
     height: clamp(100px, 20vw, 150px);
     width: auto;
     margin: 1rem auto;
+    filter: drop-shadow(0 0 0px rgba(255, 255, 255, 0.5));
+    transition: all .5s ease-out;
 }
 .footer-content {
     display: flex;
@@ -623,29 +625,37 @@ h1, h2, h3, h4 {
     .hover-active {
         animation: orange-hover-in .2s reverse;
     }
-    .product-card:hover {
+    .grape-card:hover > .grape-image {
         transform: translateY(-20px);
         box-shadow: 0 24px 8px rgba(0, 0, 0, 0.1);
     }
     
-    .grape-image:hover > img {
-            animation: grape-hover-in .2s ease-in-out forwards;
+    .grape-card:hover > .grape-image > img {
+        animation: grape-hover-in .2s ease-in-out forwards;
     }
-    .grape-image:hover {
+    .grape-card:hover {
         color: #8934d9;
         text-shadow: 0 0 10px rgba(181, 121, 237, 0.3);
     }
-    .orange-image:hover > img {
+    .orange-card:hover > .orange-image {
+        transform: translateY(-20px);
+        box-shadow: 0 24px 8px rgba(0, 0, 0, 0.1);
+    }
+    .orange-card:hover .orange-image > img {
             animation: orange-hover-in .2s ease-in-out forwards;
     }
-    .orange-image:hover {
+    .orange-card:hover {
         color: #ff6f00;
         text-shadow: 0 0 10px rgba(255, 111, 0, 0.3);
     }
-    .punch-image:hover > img {
+    .punch-card:hover > .punch-image {
+        transform: translateY(-20px);
+        box-shadow: 0 24px 8px rgba(0, 0, 0, 0.1);
+    }
+    .punch-card:hover .punch-image > img {
             animation: punch-hover-in .2s ease-in-out forwards;
     }
-    .punch-image:hover {
+    .punch-card:hover {
         color: #fa4be0;
         text-shadow: 0 0 10px rgba(250, 75, 224, 0.3);
     }
@@ -772,7 +782,10 @@ h1, h2, h3, h4 {
     }
     .good-stuff {
         padding: 1rem 0;
-        
+    }
+
+    .good-stuff-card:hover img {
+        filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.5)) drop-shadow(0 0 20px rgba(255, 255, 255, 0.2)); 
     }
 
     .footer-content {

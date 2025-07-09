@@ -57,17 +57,23 @@
             <div class="products">
                 <h2 class="section-title">CHOOSE YOUR VESSEL</h2>
                 <div class="three-card-row">
-                    <div class="product-card grape-image" onclick="openModal();openToSlide('slide-1')">
-                        <img src="img/grape_anim/0001.png" alt="Grape Energy Drink"/>
-                        <h3>Jazbay<br>GRAPE</h3>
+                    <div class="grape-card">
+                        <div class="product-card grape-image" onclick="openModal();openToSlide('slide-1')">
+                            <img src="img/grape_anim/0001.png" alt="Grape Energy Drink"/>
+                            <h3>Jazbay<br>GRAPE</h3>
+                        </div>
                     </div>
-                    <div class="product-card orange-image" onclick="openModal();openToSlide('slide-2')">
-                        <img alt="Grape Energy Drink"/>
-                        <h3>Orange<br>Zone</h3>
+                    <div class="orange-card">
+                        <div class="product-card orange-image" onclick="openModal();openToSlide('slide-2')">
+                            <img alt="Grape Energy Drink"/>
+                            <h3>Orange<br>Zone</h3>
+                        </div>
                     </div>
-                    <div class="product-card punch-image" onclick="openModal();openToSlide('slide-3')">
-                        <img alt="Grape Energy Drink"/>
-                        <h3>Death<br>Punch</h3>
+                    <div class="punch-card">
+                        <div class="product-card punch-image" onclick="openModal();openToSlide('slide-3')">
+                            <img alt="Grape Energy Drink"/>
+                            <h3>Death<br>Punch</h3>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -246,7 +252,7 @@
     document.getElementById("myModal").style.animation = "fade-out 0.2s ease-in-out"; // Add fade-out animation
     setTimeout(() => {
     document.getElementById("myModal").style.display = "none";
-    }, 200); 
+    }, 300); 
     // Add pop-out class to modal-content for animation
     document.getElementById("modal-content").classList.add("pop-out");
     // Remove pop-out class after animation completes
