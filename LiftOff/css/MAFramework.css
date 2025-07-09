@@ -102,6 +102,19 @@
     }
 }
 
+.pop-out {
+    animation: pop-out .2s ease-out forwards;
+}
+    @keyframes pop-out {
+        from { 
+            transform: scale(1);
+            opacity: 1; }
+        to {
+            transform: scale(.8);
+            opacity: 0;
+        }
+    }
+
 .delay-1s {
     animation-delay: 1s;
 }
