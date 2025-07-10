@@ -139,12 +139,12 @@
     </footer>
     <script>
         (async () => {
+            // await loadImageShape(tsParticles);
             await loadStarsPreset(tsParticles);
 
             await tsParticles.load({
                 id: "tsparticles",
                 options: {
-                preset: "stars",
                 fullScreen: {
                     enable: false
                 }, 
@@ -162,10 +162,23 @@
                     opacity: {
                         value: 0.9
                     },
+                    shape: {"close":true,"fill":true,"options":{"image":[{"name":"apple"}]}},
+                    key: "images",
+                    name: "Images",
+                    preload: [
+                        {
+                        src: "https://particles.js.org/images/fruits/apple.png",
+                        gif: false,
+                        height: 32,
+                        name: "apple",
+                        width: 32
+                        }
+                        
+                ],
                     // shape: {
                     //     type: "image",
-                    //     options: {
-                    //         image: [ 
+                    //     options: {  
+                    //         image: [
                     //         {
                     //             src: "https://mitchangusdesign.github.io/img/particle_star.svg",                            
                     //             width: 32,
@@ -175,9 +188,10 @@
                     //     },
                     // },
                     size: {
-                        value: { min: 1, max: 5 }
+                        value: { min: 1, max: 4 }
                     },
                 },
+                
                 },
                  
             });
