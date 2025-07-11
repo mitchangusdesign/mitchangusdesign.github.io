@@ -379,6 +379,7 @@ h1, h2, h3, h4 {
     gap: 2rem;
 }
 .product-card {
+    /* cursor: pointer; */
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -398,9 +399,6 @@ h1, h2, h3, h4 {
     content: url(../img/grape_anim/0001.png);
     animation: grape-hover-out .2s ease-in-out reverse;
 }
-.grape-image-preload > img {
-        animation: grape-hover-in .2s ease-in-out forwards;
-}
 .orange-image img {
     width: clamp(100px, 20vw, 200px);
     height: auto;
@@ -413,6 +411,101 @@ h1, h2, h3, h4 {
     content: url(../img/punch_anim/0001.png);
     animation: punch-hover-out .2s reverse;
 }
+.grape-card:hover .grape-image > img {
+    animation: grape-hover-in .2s ease-in-out forwards;
+}
+.orange-card:hover .orange-image > img {
+    animation: orange-hover-in .2s ease-in-out forwards;
+}
+.punch-card:hover .punch-image > img {
+    animation: punch-hover-in .2s ease-in-out forwards;
+}
+
+@keyframes grape-hover-in {
+        0% { content: url(../img/grape_anim/0001.png); }
+        8.33% { content: url(../img/grape_anim/0002.png); }
+        16.66% { content: url(../img/grape_anim/0003.png); }
+        25% { content: url(../img/grape_anim/0004.png); }
+        33.33% { content: url(../img/grape_anim/0005.png); }
+        41.66% { content: url(../img/grape_anim/0006.png); }
+        50% { content: url(../img/grape_anim/0007.png); }
+        58.33% { content: url(../img/grape_anim/0008.png); }
+        66.66% { content: url(../img/grape_anim/0009.png); }
+        75% { content: url(../img/grape_anim/0010.png); }
+        83.33% { content: url(../img/grape_anim/0011.png); }
+        100% { content: url(../img/grape_anim/0012.png); }
+    }
+    @keyframes grape-hover-out {
+        0% { content: url(../img/grape_anim/0001.png); }
+        8.33% { content: url(../img/grape_anim/0002.png); }
+        16.66% { content: url(../img/grape_anim/0003.png); }
+        25% { content: url(../img/grape_anim/0004.png); }
+        33.33% { content: url(../img/grape_anim/0005.png); }
+        41.66% { content: url(../img/grape_anim/0006.png); }
+        50% { content: url(../img/grape_anim/0007.png); }
+        58.33% { content: url(../img/grape_anim/0008.png); }
+        66.66% { content: url(../img/grape_anim/0009.png); }
+        75% { content: url(../img/grape_anim/0010.png); }
+        83.33% { content: url(../img/grape_anim/0011.png); }
+        100% { content: url(../img/grape_anim/0012.png); }
+    }
+    @keyframes orange-hover-in {
+        0% { content: url(../img/orange_anim/0001.png); }
+        8.33% { content: url(../img/orange_anim/0002.png); }
+        16.66% { content: url(../img/orange_anim/0003.png); }
+        25% { content: url(../img/orange_anim/0004.png); }
+        33.33% { content: url(../img/orange_anim/0005.png); }
+        41.66% { content: url(../img/orange_anim/0006.png); }
+        50% { content: url(../img/orange_anim/0007.png); }
+        58.33% { content: url(../img/orange_anim/0008.png); }
+        66.66% { content: url(../img/orange_anim/0009.png); }
+        75% { content: url(../img/orange_anim/0010.png); }
+        83.33% { content: url(../img/orange_anim/0011.png); }
+        100% { content: url(../img/orange_anim/0012.png); }
+    }
+    @keyframes orange-hover-out {
+        0% { content: url(../img/orange_anim/0001.png); }
+        8.33% { content: url(../img/orange_anim/0002.png); }
+        16.66% { content: url(../img/orange_anim/0003.png); }
+        25% { content: url(../img/orange_anim/0004.png); }
+        33.33% { content: url(../img/orange_anim/0005.png); }
+        41.66% { content: url(../img/orange_anim/0006.png); }
+        50% { content: url(../img/orange_anim/0007.png); }
+        58.33% { content: url(../img/orange_anim/0008.png); }
+        66.66% { content: url(../img/orange_anim/0009.png); }
+        75% { content: url(../img/orange_anim/0010.png); }
+        83.33% { content: url(../img/orange_anim/0011.png); }
+        100% { content: url(../img/orange_anim/0012.png); }
+    }
+    @keyframes punch-hover-in {
+        0% { content: url(../img/punch_anim/0001.png); }
+        8.33% { content: url(../img/punch_anim/0002.png); }
+        16.66% { content: url(../img/punch_anim/0003.png); }
+        25% { content: url(../img/punch_anim/0004.png); }
+        33.33% { content: url(../img/punch_anim/0005.png); }
+        41.66% { content: url(../img/punch_anim/0006.png); }
+        50% { content: url(../img/punch_anim/0007.png); }
+        58.33% { content: url(../img/punch_anim/0008.png); }
+        66.66% { content: url(../img/punch_anim/0009.png); }
+        75% { content: url(../img/punch_anim/0010.png); }
+        83.33% { content: url(../img/punch_anim/0011.png); }
+        100% { content: url(../img/punch_anim/0012.png); }
+    }
+    @keyframes punch-hover-out {
+        0% { content: url(../img/punch_anim/0001.png); }
+        8.33% { content: url(../img/punch_anim/0002.png); }
+        16.66% { content: url(../img/punch_anim/0003.png); }
+        25% { content: url(../img/punch_anim/0004.png); }
+        33.33% { content: url(../img/punch_anim/0005.png); }
+        41.66% { content: url(../img/punch_anim/0006.png); }
+        50% { content: url(../img/punch_anim/0007.png); }
+        58.33% { content: url(../img/punch_anim/0008.png); }
+        66.66% { content: url(../img/punch_anim/0009.png); }
+        75% { content: url(../img/punch_anim/0010.png); }
+        83.33% { content: url(../img/punch_anim/0011.png); }
+        100% { content: url(../img/punch_anim/0012.png); }
+    }
+    
 .info-block {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
@@ -443,7 +536,7 @@ h1, h2, h3, h4 {
     background-position: center;
 }
 .good-stuff h2 {
-    color: white;
+    color: #ffffff;
 }
 .good-stuff p {
     font-size: 1.2rem;
@@ -468,6 +561,9 @@ h1, h2, h3, h4 {
     margin: 1rem auto;
     filter: drop-shadow(0 0 0px rgba(255, 255, 255, 0.5));
     transition: all .5s ease-out;
+}
+.good-stuff-card:hover img {
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.5)) drop-shadow(0 0 20px rgba(255, 255, 255, 0.2)); 
 }
 
 .cta {
@@ -666,7 +762,7 @@ h1, h2, h3, h4 {
         box-shadow: 0 24px 8px rgba(0, 0, 0, 0.1);
     }
     
-    .grape-card:hover > .grape-image > img {
+    .grape-card:hover .grape-image > img {
         animation: grape-hover-in .2s ease-in-out forwards;
     }
     .grape-card:hover {
@@ -699,90 +795,7 @@ h1, h2, h3, h4 {
         animation: orange-hover-in .2s ease-in-out ;
     } */
 
-    @keyframes grape-hover-in {
-        0% { content: url(../img/grape_anim/0001.png); }
-        8.33% { content: url(../img/grape_anim/0002.png); }
-        16.66% { content: url(../img/grape_anim/0003.png); }
-        25% { content: url(../img/grape_anim/0004.png); }
-        33.33% { content: url(../img/grape_anim/0005.png); }
-        41.66% { content: url(../img/grape_anim/0006.png); }
-        50% { content: url(../img/grape_anim/0007.png); }
-        58.33% { content: url(../img/grape_anim/0008.png); }
-        66.66% { content: url(../img/grape_anim/0009.png); }
-        75% { content: url(../img/grape_anim/0010.png); }
-        83.33% { content: url(../img/grape_anim/0011.png); }
-        100% { content: url(../img/grape_anim/0012.png); }
-    }
-    @keyframes grape-hover-out {
-        0% { content: url(../img/grape_anim/0001.png); }
-        8.33% { content: url(../img/grape_anim/0002.png); }
-        16.66% { content: url(../img/grape_anim/0003.png); }
-        25% { content: url(../img/grape_anim/0004.png); }
-        33.33% { content: url(../img/grape_anim/0005.png); }
-        41.66% { content: url(../img/grape_anim/0006.png); }
-        50% { content: url(../img/grape_anim/0007.png); }
-        58.33% { content: url(../img/grape_anim/0008.png); }
-        66.66% { content: url(../img/grape_anim/0009.png); }
-        75% { content: url(../img/grape_anim/0010.png); }
-        83.33% { content: url(../img/grape_anim/0011.png); }
-        100% { content: url(../img/grape_anim/0012.png); }
-    }
-    @keyframes orange-hover-in {
-        0% { content: url(../img/orange_anim/0001.png); }
-        8.33% { content: url(../img/orange_anim/0002.png); }
-        16.66% { content: url(../img/orange_anim/0003.png); }
-        25% { content: url(../img/orange_anim/0004.png); }
-        33.33% { content: url(../img/orange_anim/0005.png); }
-        41.66% { content: url(../img/orange_anim/0006.png); }
-        50% { content: url(../img/orange_anim/0007.png); }
-        58.33% { content: url(../img/orange_anim/0008.png); }
-        66.66% { content: url(../img/orange_anim/0009.png); }
-        75% { content: url(../img/orange_anim/0010.png); }
-        83.33% { content: url(../img/orange_anim/0011.png); }
-        100% { content: url(../img/orange_anim/0012.png); }
-    }
-    @keyframes orange-hover-out {
-        0% { content: url(../img/orange_anim/0001.png); }
-        8.33% { content: url(../img/orange_anim/0002.png); }
-        16.66% { content: url(../img/orange_anim/0003.png); }
-        25% { content: url(../img/orange_anim/0004.png); }
-        33.33% { content: url(../img/orange_anim/0005.png); }
-        41.66% { content: url(../img/orange_anim/0006.png); }
-        50% { content: url(../img/orange_anim/0007.png); }
-        58.33% { content: url(../img/orange_anim/0008.png); }
-        66.66% { content: url(../img/orange_anim/0009.png); }
-        75% { content: url(../img/orange_anim/0010.png); }
-        83.33% { content: url(../img/orange_anim/0011.png); }
-        100% { content: url(../img/orange_anim/0012.png); }
-    }
-    @keyframes punch-hover-in {
-        0% { content: url(../img/punch_anim/0001.png); }
-        8.33% { content: url(../img/punch_anim/0002.png); }
-        16.66% { content: url(../img/punch_anim/0003.png); }
-        25% { content: url(../img/punch_anim/0004.png); }
-        33.33% { content: url(../img/punch_anim/0005.png); }
-        41.66% { content: url(../img/punch_anim/0006.png); }
-        50% { content: url(../img/punch_anim/0007.png); }
-        58.33% { content: url(../img/punch_anim/0008.png); }
-        66.66% { content: url(../img/punch_anim/0009.png); }
-        75% { content: url(../img/punch_anim/0010.png); }
-        83.33% { content: url(../img/punch_anim/0011.png); }
-        100% { content: url(../img/punch_anim/0012.png); }
-    }
-    @keyframes punch-hover-out {
-        0% { content: url(../img/punch_anim/0001.png); }
-        8.33% { content: url(../img/punch_anim/0002.png); }
-        16.66% { content: url(../img/punch_anim/0003.png); }
-        25% { content: url(../img/punch_anim/0004.png); }
-        33.33% { content: url(../img/punch_anim/0005.png); }
-        41.66% { content: url(../img/punch_anim/0006.png); }
-        50% { content: url(../img/punch_anim/0007.png); }
-        58.33% { content: url(../img/punch_anim/0008.png); }
-        66.66% { content: url(../img/punch_anim/0009.png); }
-        75% { content: url(../img/punch_anim/0010.png); }
-        83.33% { content: url(../img/punch_anim/0011.png); }
-        100% { content: url(../img/punch_anim/0012.png); }
-    }
+    
 
     .info-block {
         display: grid;
