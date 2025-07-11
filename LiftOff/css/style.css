@@ -473,8 +473,7 @@ h1, h2, h3, h4 {
 .cta {
     display: flex;
     flex-direction: column;
-    height: 75vh;
-    max-height: 700px;
+    height: 600px;
     padding: 1rem;
     background-image: url(../img/ignite_bg.jpg);
     background-size: cover;
