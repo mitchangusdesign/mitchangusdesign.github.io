@@ -631,6 +631,10 @@ h1, h2, h3, h4 {
     justify-content: center;
     padding: 2rem 1rem 5rem 1rem;
     text-transform: uppercase;
+    background-image: url(../img/LiftOffImageBG.jpg);
+    background-blend-mode: overlay;
+    background-position: center center;
+    background-size: cover;
     background-color: #200237;
 }
 .footer-content > div {
