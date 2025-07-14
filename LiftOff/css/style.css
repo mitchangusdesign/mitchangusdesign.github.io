@@ -920,6 +920,10 @@ h1, h2, h3, h4 {
         flex-direction: row;
         padding: 1rem;
         text-transform: uppercase;
+        background-image: url(../img/LiftOffImageBG.jpg);
+        background-blend-mode: overlay;
+        background-position: center center;
+        background-size: cover;
         background-color: #200237;
     }
     .footer-content > div {

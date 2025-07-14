@@ -229,10 +229,28 @@
             });
         })();
     </script>
-    
+    <!-- <script>
+        function preloadImages(){
+
+        var images = ["https://mitchangus.design/LiftOff/img/grape_anim/0001.png","https://mitchangus.design/LiftOff/img/grape_anim/0002.png","https://mitchangus.design/LiftOff/img/grape_anim/0003.png","https://mitchangus.design/LiftOff/img/grape_anim/0004.png","https://mitchangus.design/LiftOff/img/grape_anim/0005.png","https://mitchangus.design/LiftOff/img/grape_anim/0006.png","https://mitchangus.design/LiftOff/img/grape_anim/0007.png","https://mitchangus.design/LiftOff/img/grape_anim/0008.png","https://mitchangus.design/LiftOff/img/grape_anim/0009.png","https://mitchangus.design/LiftOff/img/grape_anim/0010.png","https://mitchangus.design/LiftOff/img/grape_anim/0011.png","https://mitchangus.design/LiftOff/img/grape_anim/0012.png",
+            "img/orange_anim/0001.png","img/orange_anim/0002.png","img/orange_anim/0003.png","img/orange_anim/0004.png","img/orange_anim/0005.png","img/orange_anim/0006.png","img/orange_anim/0007.png","img/orange_anim/0008.png","img/orange_anim/0009.png","img/orange_anim/0010.png","img/orange_anim/0011.png","img/orange_anim/0012.png",
+        ];
+        var preloadedImages = [];
+
+        for(i=0;i<images.length;i++){
+
+        preloadedImages[i] = new Image();
+        preloadedImages[i].src = images[i];
+        console.log(preloadedImages[i].src)
+        }
+
+        }
+
+        preloadImages();
+    </script> -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            const element = document.querySelector('.orange-image > img'); // Select your target element
+            const element = document.querySelector('.grape-image > img'); // Select your target element
 
             if (element) {
                 // Add the class to simulate hover
