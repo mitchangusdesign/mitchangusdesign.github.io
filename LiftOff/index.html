@@ -310,9 +310,11 @@
 <script>
   function openModal() {
     document.getElementById("myModal").style.display = "flex";
+    // document.getElementById("myModal").style.animation = "fade-in 0.2s ease-in-out"; // Add fade-in animation
   }
   
   function closeModal() {
+    // document.getElementById("myModal").style.animation = "fade-out 0.2s ease-in-out"; // Add fade-out animation
     setTimeout(() => {
     document.getElementById("myModal").style.display = "none";
     }, 300); 
