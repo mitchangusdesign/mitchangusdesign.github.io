@@ -187,8 +187,8 @@ main {
     display: block;
     height: 100%;
     position: absolute;
-    transition: all .2s ease-out;
-    -webkit-transition: all .2s ease-out;
+    transition: transform .2s ease-out;
+    -webkit-transition: transform .2s ease-out;
     width: 100%;
 }
 .hamb-line::before {
@@ -391,7 +391,10 @@ h1, h2, h3, h4 {
     text-align: center;
     text-shadow: 0 0 0px rgba(255, 255, 255, 0.5);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: all .2s ease-in-out;
+    transition-property: color, text-shadow, box-shadow, transform;
+    transition-duration: .2s;
+    transition-timing-function: cubic-bezier(.17,.07,.19,1);
+    /* transition: transform .2s ease-in-out; */
 }
 .grape-image img {
     width: clamp(100px, 20vw, 200px);
@@ -560,7 +563,7 @@ h1, h2, h3, h4 {
     width: auto;
     margin: 1rem auto;
     filter: drop-shadow(0 0 0px rgba(255, 255, 255, 0.5));
-    transition: all .5s ease-out;
+    transition: filter .4s ease-out;
 }
 .good-stuff-card:hover img {
     filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.5)) drop-shadow(0 0 20px rgba(255, 255, 255, 0.2)); 

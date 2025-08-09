@@ -126,8 +126,9 @@
     color: #0c122f;
     border-radius: .5em;
     border-width: 0px;
-
-    transition: all .2s ease-in-out;
+    transition-property: background-color, color, transform;
+    transition-duration: .2s;
+    transition-timing-function: ease-in-out;
 }
 
 #home-button {
@@ -142,7 +143,9 @@
     background-color: white;
     border-radius: .5em;
     border: 1px lightgray solid;
-    transition: all .2s ease-in-out;
+    transition-property: background-color, color, transform;
+    transition-duration: .2s;
+    transition-timing-function: ease-in-out;
 }
 .back-next-button:hover {
     background-color: #0c122f;
@@ -376,10 +379,9 @@
         width: 100%;
         height: auto;
         filter: drop-shadow(30px 8px 10px rgba(0,0,0,.3));
-        transition: all .3s ease-in-out;
+        transition: transform .3s ease-in-out;
     }
     .card-container:nth-child(1) > img:hover, .card-container:nth-child(1) > img:focus-within {
-        
         transform: scale(105%);
     }
     .card-container:not(:nth-child(1)) > img:hover, .card-container:not(:nth-child(1)) > img:focus-within {
@@ -420,7 +422,7 @@
         color:#808080;
         background-color:#e0e0ffaa;
         cursor:pointer;
-        transition: all .2s;
+        transition: background-color .2s;
     }
     .nav-btn:hover {
         background-color:#f0f0f0;
