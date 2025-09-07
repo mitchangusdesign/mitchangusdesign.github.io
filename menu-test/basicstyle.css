@@ -261,12 +261,12 @@ body {
 /* Menu Formatting */
 
 .tab-contents ul li{
-        list-style: none;
-        margin: 10px 10%;
+    list-style: none;
+    margin: 10px 10%;
 }
 .tab-contents ul li span{
-        color: #961B3A;
-        font-size: 14px;
+    color: #961B3A;
+    font-size: 14px;
     font-weight: 700;
     line-height: 2rem;
 }
@@ -274,12 +274,19 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #961B3A;
     text-align: center;
-    margin-top: 2rem;
+    margin: 2rem;
 }
 #hours {
     font-size: larger;
-    text-align: center;
+    max-width: 350px;
+    margin-left: auto;
+    margin-right: auto;
 }
+#hours ul li{
+    display: flex;
+    justify-content: space-between;
+}
+
 footer {
     height: 200px;
     margin-top: 40px;
