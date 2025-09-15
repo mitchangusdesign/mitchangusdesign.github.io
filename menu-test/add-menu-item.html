@@ -24,22 +24,22 @@
             <h2>Navigation</h2>
             <ul>
                 <li>
-                <a href="#menu">
+                <a href="../menu-test/">
                 <input class="nav-item" type="button" popovertarget="nav-panel" popovertargetaction="hide" value="See Menu" onclick="opentab('menu')">
                 </a>
                 </li>
                 <li>
-                <a href="#hours">
+                <a href="../menu-test/#hours">
                 <input class="nav-item" type="button" popovertarget="nav-panel" popovertargetaction="hide" value="See Hours" onclick="opentab('hours')">
                 </a>
                 </li>
                 <li>
-                <a href="#location">
+                <a href="../menu-test/#location">
                 <input class="nav-item" type="button" popovertarget="nav-panel" popovertargetaction="hide" value="See Location" onclick="opentab('location')">
                 </a>
                 </li>
                 <li>
-                <a href="#">
+                <a href="../menu-test/#">
                 <input class="nav-item" type="button" popovertarget="nav-panel" popovertargetaction="hide" value="See Reviews">
                 </a>
                 </li>
@@ -77,15 +77,15 @@
                     <label >Price:</label>
                     <input placeholder="14"  name="price">
                 </div>
-                    <button  type="submit">Add Item</button>
+                    <button type="submit" id="menuAdd">Add Item</button>
             </form>
-            
             <div id="message"></div> 
         </div>
     </section>
     <footer>
         <div>
             <h3>Hm. Just a footer.</h3>
+            <button id="logout">Log Out</button>
         </div>
     </footer>
 
@@ -124,8 +124,8 @@
 
 </script>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-
 <script type="module" src="./checkAuth.js"></script>
+<script type="module" src="./logOut.js"></script>
 
 </body>
 </html>
