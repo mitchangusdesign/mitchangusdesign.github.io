@@ -326,7 +326,7 @@ footer {
 }
 
 section:has(.item-wrapper:hover) .item-wrapper:not(:hover) {
-    background-image: repeating-liner-gradient(white, white 3px,  #fafafa 3px, #fafafa 6px);
+    background-image: repeating-linear-gradient(white, white 3px,  #fafafa 3px, #fafafa 6px);
 }
 .item-wrapper {
     font-family: "Domine", serif;
@@ -378,9 +378,6 @@ section:has(.item-wrapper:hover) .item-wrapper:not(:hover) {
         padding: .8rem;
         transition:all .1s ease-in-out;
     }
-    section:has(.item-wrapper:hover) .item-wrapper:not(:hover) {
-        background-image: repeating-linear-gradient(white, white 3px,  #fafafa 3px, #fafafa 6px);
-}
     .item-wrapper:hover {
         transform: translatex(-5px);
     }
