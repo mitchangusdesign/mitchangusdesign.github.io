@@ -1,4 +1,4 @@
-import { supabase } from './modules/sb-client.js';
+import { supabase } from './utils/sb-client.js';
 
 async function signOutUser() {
   try {

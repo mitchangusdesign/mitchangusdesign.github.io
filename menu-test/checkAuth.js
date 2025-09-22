@@ -1,4 +1,4 @@
-import { supabase } from './modules/sb-client.js';
+import { supabase } from './utils/sb-client.js';
 
 const { data, error } = await supabase.auth.getSession();
 const { session } = data; // Destructure session from data

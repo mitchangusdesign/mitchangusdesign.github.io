@@ -17,7 +17,9 @@
             <h1>Restaurant Name</h1>
             <p>"Tagline or Motto here."</p>
         </div>
-        <button id="nav-open" popovertarget="nav-panel" popovertargetaction="show" type="button"></button>
+        <button id="nav-open-container" popovertarget="nav-panel" popovertargetaction="show" type="button">
+            <div id="nav-open"</div>
+        </button>
         <div id="nav-panel" popover data-placement="bottom">
             <!-- <button id="nav-close" popopvertarget="nav-panel" popovertargetaction="hide" type="button" >&times;</button> -->
             <input id="nav-close" type="button" popovertarget="nav-panel" popovertargetaction="hide" value="&times;" href="#info">
@@ -56,41 +58,43 @@
         </div>
         <div class="tab-contents active-tab" id="menu">
             <div class="menu-tab-titles">
-                <p class="menu-tab-links active-link" onclick="menuopentab('apps')">Apps</p>
-                <p class="menu-tab-links" onclick="menuopentab('lunch')">Lunch</p>
-                <p class="menu-tab-links" onclick="menuopentab('dinner')">Dinner</p>
-                <p class="menu-tab-links" onclick="menuopentab('softdrinks')">Soft Drinks</p>
-                <p class="menu-tab-links" onclick="menuopentab('cocktails')">Cocktails</p>
+                <p class="menu-tab-links active-link" id="apps-title" onclick="menuopentab('apps')">Apps</p>
+                <p class="menu-tab-links" id="lunch-title" onclick="menuopentab('lunch')">Lunch</p>
+                <p class="menu-tab-links" id="dinner-title" onclick="menuopentab('dinner')">Dinner</p>
+                <p class="menu-tab-links" id="softdrinks-title" onclick="menuopentab('softdrinks')">Soft Drinks</p>
+                <p class="menu-tab-links" id="cocktails-title" onclick="menuopentab('cocktails')">Cocktails</p>
             </div>
-            <div class="menu-tab-contents active-tab" id="apps">
-            <ul>
-                <li><h2 class="page-title">Appetizers</h1></li>
-                <section id="menulistApps" class="menulistApps"></section>
-            </ul>
-            </div>
-            <div class="menu-tab-contents" id="lunch">
-            <ul>
-                <li><h2 class="page-title">Lunch</h1></li>
-                <section id="menulistLunch" class="menulistLunch"></section>
-            </ul>
-            </div>
-            <div class="menu-tab-contents" id="dinner">
-            <ul>
-                <li><h2 class="page-title">Dinner</h1></li>
-                <section id="menulistDinner" class="menulistDinner"></section>
-            </ul>
-            </div>
-            <div class="menu-tab-contents" id="softdrinks">
-            <ul>
-                <li><h2 class="page-title">Soft Drinks</h1></li>
-                <section id="menulistSodas" class="menulistSodas"></section>
-            </ul>
-            </div>
-            <div class="menu-tab-contents" id="cocktails">
-            <ul>
-                <li><h2 class="page-title">Cocktails</h1></li>
-                <section id="menulistCocktails" class="menulistCocktails"></section>
-            </ul>
+            <div class="menu-container">
+                <div class="menu-tab-contents active-tab" id="apps">
+                <ul>
+                    <li><h2 class="page-title">Appetizers</h1></li>
+                    <section id="menulistApps" class="menulistApps"></section>
+                </ul>
+                </div>
+                <div class="menu-tab-contents" id="lunch">
+                <ul>
+                    <li><h2 class="page-title">Lunch</h1></li>
+                    <section id="menulistLunch" class="menulistLunch"></section>
+                </ul>
+                </div>
+                <div class="menu-tab-contents" id="dinner">
+                <ul>
+                    <li><h2 class="page-title">Dinner</h1></li>
+                    <section id="menulistDinner" class="menulistDinner"></section>
+                </ul>
+                </div>
+                <div class="menu-tab-contents" id="softdrinks">
+                <ul>
+                    <li><h2 class="page-title">Soft Drinks</h1></li>
+                    <section id="menulistSodas" class="menulistSodas"></section>
+                </ul>
+                </div>
+                <div class="menu-tab-contents" id="cocktails">
+                <ul>
+                    <li><h2 class="page-title">Cocktails</h1></li>
+                    <section id="menulistCocktails" class="menulistCocktails"></section>
+                </ul>
+                </div>
             </div>
         </div>
         <div class="tab-contents" id="hours">
@@ -151,7 +155,7 @@
 
 </script>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
-<script src="./supabaseMenuComponent.js"></script> 
-
+<script type="module" src="./modules/supabaseMenuComponent.js"></script> 
+<script src="./swipeNav.js"></script>
 </body>
 </html>
