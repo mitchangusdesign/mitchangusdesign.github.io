@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const tabsContent = document.querySelectorAll('.menu-tab-contents');
     let startX = 0;
     let dist = 0;
-    const threshold = 60; // Minimum distance for a swipe to be registered
+    const threshold = 80; // Minimum distance for a swipe to be registered
 
     function next() {
         let mtablinks = document.querySelector(".menu-tab-links.active-link");

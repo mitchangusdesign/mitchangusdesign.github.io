@@ -193,6 +193,11 @@ body {
     background-color: rgb(205, 193, 179);
     z-index: -20;
 }
+
+.essential-info a {
+    text-decoration: none;
+    color: black;
+}
 .tab-links{
     width: 100%;
     text-align: center;
@@ -320,6 +325,9 @@ footer {
     color: bisque;
 }
 
+section:has(.item-wrapper:hover) .item-wrapper:not(:hover) {
+    background-image: repeating-liner-gradient(white, white 3px,  #fafafa 3px, #fafafa 6px);
+}
 .item-wrapper {
     font-family: "Domine", serif;
     display: grid; 
@@ -330,7 +338,7 @@ footer {
     border: 0px;
     box-shadow: 3px 5px 10px lightgray;
     padding: .8rem;
-    background-image: repeating-linear-gradient(white, white 3px, #fafafa 3px, #fafafa 6px);
+    background-color: white;
 }
 .name {
     margin: 0 0 .5rem 0;
@@ -368,12 +376,13 @@ footer {
         border: 0px;
         box-shadow: 3px 5px 10px #d2d2d2;
         padding: .8rem;
-        background-image: repeating-linear-gradient(white, white 3px, #fafafa 3px, #fafafa 6px);
         transition:all .1s ease-in-out;
     }
+    section:has(.item-wrapper:hover) .item-wrapper:not(:hover) {
+        background-image: repeating-linear-gradient(white, white 3px,  #fafafa 3px, #fafafa 6px);
+}
     .item-wrapper:hover {
         transform: translatex(-5px);
-        background-image: linear-gradient(to bottom, #fefefe, #ffffff);
     }
     .name {
         padding: .5rem;
