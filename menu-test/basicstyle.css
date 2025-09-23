@@ -1,8 +1,11 @@
 :root {
   --brndClrOne: #710c77;
   --brandBg: #fefefe;
-  --tabBg: #9fc992;
+  --tabBg: #376c40;
+  --tabText: #ffdf5f;
+  --tabTextActive: #15381b;
   --mobileHeroNavHeight: 60vh;
+  --heroNavHeight: 80vh;
   --navXClr: #ffffff;
   --navText: #ffffff;
   --navBg: rgba(0,0,0,.5);
@@ -201,7 +204,7 @@ body {
     font-family: var(--displayFont);
     padding: 12px 16px;
     border-radius: .5rem;
-    color: white;
+    color: #ffdf5f;
     background-color: rgba(0, 0, 0, .5);
     z-index: 5;
 }
@@ -220,7 +223,6 @@ body {
 
 .essential-info a {
     text-decoration: none;
-    color: black;
 }
 .tab-links{
     width: 100%;
@@ -229,6 +231,7 @@ body {
     font-size: 20px;
     font-weight: 500;
     letter-spacing: var(--displaySpacing);
+    color: var(--tabText);
     cursor: pointer;
     position: relative;
     padding: 10px 0;
@@ -244,6 +247,9 @@ body {
     bottom: 0;
     z-index: -1;
     transition: 0.2s ease-in-out;
+}
+.tab-links.active-link {
+    color: var(--tabTextActive);
 }
 .tab-links.active-link::after{
     height: 100%;
@@ -262,10 +268,14 @@ body {
     font-family: var(--bodyFont);
     font-size: 16px;
     font-weight: 500;
+    color: var(--tabText);
     cursor: pointer;
     position: relative;
     padding: 10px 0;
     z-index: 1;
+}
+.menu-tab-links.active-link {
+    color: var(--tabTextActive);
 }
 .menu-tab-links::after{
     content: '';
@@ -280,6 +290,7 @@ body {
 }
 .menu-tab-links.active-link::after{
     height: 100%;
+    color: var(--tabTextActive);
 }
 .menu-tab-contents{
     display: none;
@@ -322,6 +333,11 @@ body {
 #hours ul li{
     display: flex;
     justify-content: space-between;
+    font-family: var(--bodyFont);    
+}
+#hours span {
+    font-family: var(--displayFont);
+    font-size: larger;
 }
 /* Menu Login Page */
 .login-container, .add-item-container {
@@ -352,7 +368,7 @@ footer {
     padding: 20%;
     background-color: var(--tabBg);
     font-family: var(--bodyFont);
-    color: rgb(33, 57, 47);
+    color: var(--tabText);
 }
 
 section:has(.item-wrapper:hover) .item-wrapper:not(:hover) {
@@ -400,11 +416,14 @@ section:has(.item-wrapper:hover) .item-wrapper:not(:hover) {
     body {
         max-width: 1400px;
     }
+    #nav-panel[popover] {
+        height: var(--heroNavHeight);
+    }
     .hero {
         display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 80vh;
+        justify-content: left;
+        align-items: baseline;
+        height: var(--heroNavHeight);
         position: relative;
         overflow: hidden;
         background-image: url(./img/sunset_hero_bg.jpg);
@@ -434,6 +453,16 @@ section:has(.item-wrapper:hover) .item-wrapper:not(:hover) {
     @keyframes grow-in {
         from { transform: scale(1) translateY(5%);}
         to { transform: scale(1.05) translateY(0%);}
+    }
+    .hero-info h1{
+        font-size: 3rem;
+    }
+    .hero-info p {
+        font-size: 1.5rem;
+    }
+    .menu-tab-links{
+        font-size: 16px;
+        font-weight: 600;
     }
     .item-wrapper {
         display: flex; 
