@@ -361,6 +361,10 @@ body {
     border: #d2d2d2 1px solid;
     box-shadow: inset 0px 1px 3px lightgray;
 }
+button {
+    padding: 1rem;
+    border-radius: .5rem;
+}
 
 footer {
     height: 200px;
