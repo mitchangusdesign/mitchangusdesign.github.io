@@ -356,6 +356,7 @@ body {
     margin: 0;
 }
 .login-container > input, .add-item-container input, .add-item-container select, .add-item-container textarea {
+    width: 100%;
     padding: 1rem;
     border-radius: .5rem;
     border: #d2d2d2 1px solid;
