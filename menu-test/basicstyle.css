@@ -364,6 +364,7 @@ body {
 button {
     padding: 1rem;
     border-radius: .5rem;
+    border: #d2d2d2 1px solid;
 }
 
 footer {
