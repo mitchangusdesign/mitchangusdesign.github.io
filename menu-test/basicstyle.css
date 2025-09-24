@@ -31,8 +31,8 @@ body {
     position: absolute;
     width: 31px;
     height:31px; 
-    top: 13px;
-    right: 14px;
+    top: 1rem;
+    right: 1rem;
     border: none;
     background: rgba(0,0,0,0);
     z-index: 19;
@@ -42,8 +42,8 @@ body {
     position: relative;
     width: 22px;
     height: 3px; 
-    top: 10px;
-    left: 3px;
+    top: 5px;
+    right: 10px;
     z-index: 20;
     border: none;
     background-color: var(--navXClr);
@@ -424,6 +424,29 @@ section:has(.item-wrapper:hover) .item-wrapper:not(:hover) {
     body {
         max-width: 1400px;
     }
+    #nav-open {
+        width: 25px;
+        height: 5px;
+        right: 12px;
+    }
+    #nav-open::before {
+        content: '';
+        display: block;
+        position: absolute; 
+        width: 25px;
+        height: 5px;
+        background-color: var(--navXClr);
+        transform: translateY(-18px);
+    }
+    #nav-open::after {
+        content: '';
+        display: block;
+        position: absolute; 
+        width: 25px;
+        height: 5px;
+        background-color: var(--navXClr);
+        transform: translateY(-9px);
+    }
     #nav-panel[popover] {
         height: var(--heroNavHeight);
     }
@@ -467,6 +490,7 @@ section:has(.item-wrapper:hover) .item-wrapper:not(:hover) {
     }
     .hero-info h1{
         font-size: 3rem;
+        text-transform: uppercase;
     }
     .hero-info p {
         font-size: 1.5rem;
