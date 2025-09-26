@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     const tabsWrapper = document.querySelector('.menu-container');
-    const tabButtons = document.querySelectorAll('.menu-tab-titles');
-    const tabsContent = document.querySelectorAll('.menu-tab-contents');
+    const tabButtons = document.querySelectorAll('.no-buttons-made'); //keeping in case I add buttons later
     let startX = 0;
     let dist = 0;
     const threshold = 80; // Minimum distance for a swipe to be registered
