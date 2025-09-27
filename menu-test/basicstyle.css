@@ -160,7 +160,7 @@ body {
     background-image: url(./img/sunset_hero_bg.jpg);
     background-size: cover;
     background-attachment: fixed;
-    background-position: right;
+    background-position: bottom right;
 }
 .hero img {
     position: absolute;
@@ -455,15 +455,9 @@ section:has(.item-wrapper:hover) .item-wrapper:not(:hover) {
         height: var(--heroNavHeight);
     }
     .hero {
-        display: flex;
         justify-content: left;
         align-items: baseline;
         height: var(--heroNavHeight);
-        position: relative;
-        overflow: hidden;
-        background-image: url(./img/sunset_hero_bg.jpg);
-        background-size: cover;
-        background-attachment: fixed;
     }
     #slide-1 {
     height: auto;
