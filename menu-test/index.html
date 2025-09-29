@@ -32,17 +32,17 @@
             <ul>
                 <li>
                 <a href="#essential-info">
-                <input class="nav-item" type="button" popovertarget="nav-panel" popovertargetaction="hide" value="See Menu" onclick="opentab('menu')">
+                <input class="nav-item" type="button" popovertarget="nav-panel" popovertargetaction="hide" value="See Menu" onclick="opentab('menu','menu-link')">
                 </a>
                 </li>
                 <li>
                 <a href="#essential-info">
-                <input class="nav-item" type="button" popovertarget="nav-panel" popovertargetaction="hide" value="See Hours" onclick="opentab('hours')">
+                <input class="nav-item" type="button" popovertarget="nav-panel" popovertargetaction="hide" value="See Hours" onclick="opentab('hours','hours-link')">
                 </a>
                 </li>
                 <li>
                 <a href="#essential-info">
-                <input class="nav-item" type="button" popovertarget="nav-panel" popovertargetaction="hide" value="See Location" onclick="opentab('location')">
+                <input class="nav-item" type="button" popovertarget="nav-panel" popovertargetaction="hide" value="See Location" onclick="opentab('location','location-link')">
                 </a>
                 </li>
                 <li>
@@ -57,17 +57,17 @@
     <div id="info"></div>
     <section class="essential-info" id="essential-info">
         <div class="tab-titles">
-            <a href="#essential-info" class="tab-links active-link" onclick="opentab('menu')" tabindex="0">Menu</a>
-            <a href="#essential-info" class="tab-links" onclick="opentab('hours')" tabindex="0">Hours</a>
-            <a href="#essential-info" class="tab-links" onclick="opentab('location')" tabindex="0">Location</a>
+            <a href="#essential-info" class="tab-links active-link" id="menu-link" onclick="opentab('menu','menu-link')">Menu</a>
+            <a href="#essential-info" class="tab-links" id="hours-link" onclick="opentab('hours','hours-link')">Hours</a>
+            <a href="#essential-info" class="tab-links" id="location-link" onclick="opentab('location','location-link')">Location</a>
         </div>
         <div class="tab-contents active-tab" id="menu">
             <div class="menu-tab-titles">
-                <a href="#essential-info" class="menu-tab-links active-link" id="apps-title" onclick="menuopentab('apps')" tabindex="0">Apps</a>
-                <a href="#essential-info" class="menu-tab-links" id="lunch-title" onclick="menuopentab('lunch')" tabindex="0">Lunch</a>
-                <a href="#essential-info" class="menu-tab-links" id="dinner-title" onclick="menuopentab('dinner')" tabindex="0">Dinner</a>
-                <a href="#essential-info" class="menu-tab-links" id="softdrinks-title" onclick="menuopentab('softdrinks')" tabindex="0">Soft Drinks</a>
-                <a href="#essential-info" class="menu-tab-links" id="cocktails-title" onclick="menuopentab('cocktails')" tabindex="0">Cocktails</a>
+                <a href="#essential-info" class="menu-tab-links active-link" id="apps-title" onclick="menuopentab('apps')">Apps</a>
+                <a href="#essential-info" class="menu-tab-links" id="lunch-title" onclick="menuopentab('lunch')">Lunch</a>
+                <a href="#essential-info" class="menu-tab-links" id="dinner-title" onclick="menuopentab('dinner')">Dinner</a>
+                <a href="#essential-info" class="menu-tab-links" id="softdrinks-title" onclick="menuopentab('softdrinks')">Soft Drinks</a>
+                <a href="#essential-info" class="menu-tab-links" id="cocktails-title" onclick="menuopentab('cocktails')">Cocktails</a>
             </div>
             <div class="menu-container">
                 <div class="menu-tab-contents active-tab" id="apps">
@@ -131,14 +131,14 @@
     var tablinks = document.getElementsByClassName("tab-links");
     var tabcontents = document.getElementsByClassName("tab-contents");
 
-    function opentab(tabname){
+    function opentab(tabname,linkname){
         for(tablink of tablinks){
             tablink.classList.remove("active-link");
         }
         for(tabcontent of tabcontents){
             tabcontent.classList.remove("active-tab");
         }
-        event.currentTarget.classList.add("active-link");
+        document.getElementById(linkname).classList.add("active-link");
         document.getElementById(tabname).classList.add("active-tab");
     }
 
