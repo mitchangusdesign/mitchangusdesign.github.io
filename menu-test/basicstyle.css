@@ -158,7 +158,7 @@ body {
     position: relative;
     overflow: hidden;
     background-image: url(./img/sunset_hero_bg.jpg);
-    background-size: cover;
+    background-size: 200%;
     background-attachment: fixed;
     background-position: bottom right;
 }
@@ -458,6 +458,7 @@ section:has(.item-wrapper:hover) .item-wrapper:not(:hover) {
         justify-content: left;
         align-items: baseline;
         height: var(--heroNavHeight);
+        background-size: cover;
     }
     #slide-1 {
     height: auto;
