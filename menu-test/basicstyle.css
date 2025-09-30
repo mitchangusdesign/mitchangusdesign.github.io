@@ -173,7 +173,6 @@ body {
     z-index: 3;
 }
 #slide-2 {
-    position: relative;
     width: 80vw;
     height: auto;
     z-index: 2;
@@ -189,7 +188,7 @@ body {
     animation: grow-in 4s cubic-bezier(0, 0, 0, 1) forwards;
 }
 #hero-bg-img {
-    position: fixed;
+    position: sticky;
     right: 0;
     bottom: 0;
     width: auto;
