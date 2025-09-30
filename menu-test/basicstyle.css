@@ -4,7 +4,7 @@
   --tabBg: #1a4634;
   --tabText: #ffdf5f;
   --tabTextActive: #103630;
-  --mobileHeroNavHeight: 70svh;
+  --mobileHeroNavHeight: 500px;
   --heroNavHeight: 80vh;
   --navXClr: #ffffff;
   --navText: #ffffff;
@@ -157,10 +157,10 @@ body {
     height: var(--mobileHeroNavHeight);
     position: relative;
     overflow: hidden;
-    background-image: url(./img/sunset_hero_bg.jpg);
+    /*background-image: url(./img/sunset_hero_bg.jpg);
     background-size: cover;
     background-attachment: fixed;
-    background-position: bottom right;
+    background-position: bottom right;*/
 }
 .hero img {
     position: absolute;
@@ -186,6 +186,14 @@ body {
     height: auto;
     width: 200%;
     animation: grow-in 4s cubic-bezier(0, 0, 0, 1) forwards;
+}
+#hero-bg-img {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: auto;
+    height: var(--mobileHeroNavHeight);
+    z-index: -200;
 }
 @keyframes grow-in {
     from { transform: scale(1) translateY(5%);}
@@ -225,6 +233,9 @@ body {
     z-index: -20;
 }
 
+.essential-info {
+    background-color: var(--brandBg);
+}
 .essential-info a {
     text-decoration: none;
 }
@@ -263,6 +274,7 @@ body {
 }
 .tab-contents.active-tab{
     display: block;
+    padding-bottom: 3rem;
 }
 
 .menu-tab-links{
@@ -374,7 +386,6 @@ button {
 
 footer {
     height: 200px;
-    margin-top: 40px;
     padding: 20%;
     background-color: var(--tabBg);
     font-family: var(--bodyFont);
@@ -479,6 +490,14 @@ section:has(.item-wrapper:hover) .item-wrapper:not(:hover) {
         width: 100%;
         animation: grow-in 4s cubic-bezier(0, 0, 0, 1) forwards;
     }
+    #hero-bg-img {
+    position: fixed;
+    right: 0;
+    bottom: 30vh;
+    width: 100%;
+    height: auto;
+    z-index: -200;
+}
     @keyframes grow-in {
         from { transform: scale(1) translateY(5%);}
         to { transform: scale(1.05) translateY(0%);}
