@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const tabButtons = document.querySelectorAll('.no-buttons-made'); //keeping in case I add buttons later
     let startX = 0;
     let dist = 0;
-    const threshold = 80; // Minimum distance for a swipe to be registered
+    const threshold = 90; // Minimum distance for a swipe to be registered
 
     function next() {
         let mtablinks = document.querySelector(".menu-tab-links.active-link");
