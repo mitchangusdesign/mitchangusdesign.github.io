@@ -233,6 +233,9 @@ body {
     z-index: -20;
 }
 
+.essential-info {
+    background-color: var(--brandBg);
+}
 .essential-info a {
     text-decoration: none;
 }
@@ -272,7 +275,6 @@ body {
 .tab-contents.active-tab{
     display: block;
     padding-bottom: 3rem;
-    background-color: var(--brandBg)
 }
 
 .menu-tab-links{
