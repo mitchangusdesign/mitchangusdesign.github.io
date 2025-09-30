@@ -488,6 +488,14 @@ section:has(.item-wrapper:hover) .item-wrapper:not(:hover) {
         width: 100%;
         animation: grow-in 4s cubic-bezier(0, 0, 0, 1) forwards;
     }
+    #hero-bg-img {
+    position: fixed;
+    right: 0;
+    bottom: 30vh;
+    width: 100%;
+    height: auto;
+    z-index: -200;
+}
     @keyframes grow-in {
         from { transform: scale(1) translateY(5%);}
         to { transform: scale(1.05) translateY(0%);}
