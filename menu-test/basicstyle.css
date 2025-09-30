@@ -4,7 +4,7 @@
   --tabBg: #1a4634;
   --tabText: #ffdf5f;
   --tabTextActive: #103630;
-  --mobileHeroNavHeight: 70svh;
+  --mobileHeroNavHeight: 500px;
   --heroNavHeight: 80vh;
   --navXClr: #ffffff;
   --navText: #ffffff;
@@ -186,6 +186,14 @@ body {
     height: auto;
     width: 200%;
     animation: grow-in 4s cubic-bezier(0, 0, 0, 1) forwards;
+}
+#hero-bg-img {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: auto;
+    height: var(--mobileHeroNavHeight);
+    z-index: -200;
 }
 @keyframes grow-in {
     from { transform: scale(1) translateY(5%);}
