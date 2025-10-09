@@ -10,7 +10,7 @@ async function populateApps()  {
     const menu = document.querySelector('.menulistApps');
     const { data: items } = await supabasePublicClient
     .from('menu')
-    .select('id, name, description, price')
+    .select('id, name, description, price, photo')
     .eq('category', 'appetizers')
     .order('id', { ascending: true });
 
@@ -29,14 +29,18 @@ async function populateApps()  {
           description.classList.add('description');
     const price = document.createElement('p');
           price.classList.add('price');
+    const photo = document.createElement('photo');
+          photo.classList.add('photo');
           
     name.textContent = item.name;
     description.textContent = item.description;
     price.textContent = item.price;
+    photo.textContent = item.photo;
 
     row.appendChild(name); 
     row.appendChild(description);
-    row.appendChild(price); 
+    row.appendChild(price);
+    row.appendChild(photo); 
           
     menu.appendChild(row);      
     };
