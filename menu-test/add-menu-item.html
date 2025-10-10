@@ -15,6 +15,7 @@
         <img src="./img/leafy_fg.png" id="slide-1" class="hero-image"/>
         <img src="./img/skrimshaw_mg.png" id="slide-2" class="hero-image"/>
         <img src="./img/leafy_bg.png" id="slide-3" class="hero-image"/>
+        <img src="./img/sunset_hero_bg.jpg" id="hero-bg-img" class="hero-image"/>
         <div class="hero-info">
             <a href="./">
             <h1>Cap'n Skrimshaw's</h1>
@@ -30,25 +31,15 @@
             <h2>Navigation</h2>
             <ul>
                 <li>
-                <a href="../menu-test/">
-                <input class="nav-item" type="button" popovertarget="nav-panel" popovertargetaction="hide" value="See Menu" onclick="opentab('menu')">
+                <a href="../">
+                <input class="nav-item" type="button" popovertarget="nav-panel" popovertargetaction="hide" value="Home" onclick="opentab('menu')">
                 </a>
                 </li>
-                <li>
-                <a href="../menu-test/#hours">
-                <input class="nav-item" type="button" popovertarget="nav-panel" popovertargetaction="hide" value="See Hours" onclick="opentab('hours')">
+                <!-- <li>
+                <a href="../">
+                <input class="nav-item" type="submit" popovertarget="nav-panel" popovertargetaction="hide" value="Log Out">
                 </a>
-                </li>
-                <li>
-                <a href="../menu-test/#location">
-                <input class="nav-item" type="button" popovertarget="nav-panel" popovertargetaction="hide" value="See Location" onclick="opentab('location')">
-                </a>
-                </li>
-                <li>
-                <a href="../menu-test/#">
-                <input class="nav-item" type="button" popovertarget="nav-panel" popovertargetaction="hide" value="See Reviews">
-                </a>
-                </li>
+                </li> -->
             </ul>
             <input class="menu-goaway" type="button" popovertarget="nav-panel" popovertargetaction="hide">
         </div>
@@ -100,14 +91,14 @@
     var tablinks = document.getElementsByClassName("tab-links");
     var tabcontents = document.getElementsByClassName("tab-contents");
 
-    function opentab(tabname){
+    function opentab(tabname,linkname){
         for(tablink of tablinks){
             tablink.classList.remove("active-link");
         }
         for(tabcontent of tabcontents){
             tabcontent.classList.remove("active-tab");
         }
-        event.currentTarget.classList.add("active-link");
+        document.getElementById(linkname).classList.add("active-link");
         document.getElementById(tabname).classList.add("active-tab");
     }
 

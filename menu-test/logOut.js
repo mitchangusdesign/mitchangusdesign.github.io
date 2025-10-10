@@ -10,7 +10,7 @@ async function signOutUser() {
     } else {
       console.log('User signed out successfully.');
       // Perform actions after successful sign-out (e.g., redirect to login page)
-      window.location.href = '/menu-test';
+      window.location.href = '/';
     }
   } catch (err) {
     console.error('An unexpected error occurred during sign-out:', err);
@@ -21,4 +21,3 @@ async function signOutUser() {
 document.getElementById("logout").addEventListener("click", function (){
     signOutUser();
 });
-

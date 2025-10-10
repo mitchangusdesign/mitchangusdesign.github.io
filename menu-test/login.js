@@ -30,7 +30,7 @@ loginForm.addEventListener('submit', async (event) => {
     messageDiv.textContent = 'Login successful! Redirecting...';
     messageDiv.style.color = 'green';
     // Redirect to a dashboard or private page after successful login
-    window.location.href = '/menu-test/add-menu-item.html';
+    window.location.href = '/add-menu-item';
   }
 });
 
