@@ -700,13 +700,13 @@ form > p {
     transition-property: background-color, border, transform;
     transition-duration: .2s;
     transition-timing-function: ease-in-out;
+    transform-origin: center center;
     font-size: 16px;
     font-weight: 600;
     color: #ffffff;
 }
 .front-page-button:hover {
     background-color: #24b4fb;
-    border: 0px solid #0c2144;
     transform: scale(1.05);
 }
 

@@ -179,43 +179,7 @@
     </div>
   </div>
 
-  <script>
-    function openModal() {
-      document.getElementById("myModal").style.display = "flex";
-    }
-    
-    function closeModal() {
-      document.getElementById("myModal").style.display = "none";
-    }
-
-    function openToSlide(x) {
-    var element = document.getElementById(x)
-        element.scrollIntoView({ behavior: 'instant' })
-    }
-
-    // Modal Nav Button Horizontal Scroll Mechanism
-    // Get the width of the viewport
-    var w = document.documentElement.clientWidth; 
-
-    // Take the value of the left or right button and multiply by the width/1.5 and scroll page by the result 
-    function scrollNext(x, y) {
-      document.getElementById('scroll-wrap').scrollBy({
-      top: y,
-      left:w / 1.5 * x,
-      behavior: "smooth",
-    });
-    }
-
-    // Get the modal
-    var modal = document.getElementById('myModal');
-
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function(event) {
-      if (event.target == modal) {
-        modal.style.display = "none";
-      }
-    }
-    </script>
+  <script src="../js/caseStudyModal.js"></script>
 
 </body>
 </html>
