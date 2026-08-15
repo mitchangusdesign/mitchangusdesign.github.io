@@ -827,9 +827,9 @@ function checkOpenStatus(data) {
 
         // Check if the status is "Closed"
         if (dayStatus === "Closed") {
-            status.innerHTML = `<a onclick="opentab('hours','hours-link'); return false;"><p>We are closed today!</p><button style="padding:.5rem 1rem; margin:1rem; color:var(--tabText); background-color: var(--tabBg)">See Our Menu</button></a>`;
+            status.innerHTML = `<a onclick="opentab('hours','hours-link'); return false;"><p>We are closed today!</p><button style="padding:.5rem 1rem; margin-top:1rem; color:var(--tabText); background-color: var(--tabBg)">See Our Menu</button></a>`;
         } else {
-            status.innerHTML = `<a onclick="opentab('menu','menu-link'); return false;"><p>We are open today from 11am to 8pm!</p><button style="padding:.5rem 1rem; margin:1rem; color:var(--tabText); background-color: var(--tabBg)">See Our Menu</button></a>`;
+            status.innerHTML = `<a onclick="opentab('menu','menu-link'); return false;"><p>We are open today from 11am to 8pm!</p><button style="padding:.5rem 1rem; margin-top:1rem; color:var(--tabText); background-color: var(--tabBg)">See Our Menu</button></a>`;
         }
     }
 }
