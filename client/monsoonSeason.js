@@ -234,6 +234,19 @@ class GalleryManager {
       closeBtn.addEventListener('click', () => this.closeLightbox());
     }
 
+    // Close lightbox on Escape key
+    const parentDialog = document.querySelector('#gallery-lightbox');
+
+    parentDialog.addEventListener('cancel', (event) => {
+      // Find all open child dialogs inside the parent
+      const childDialogs = parentDialog.querySelectorAll('dialog[open]');
+      
+      // Close each child dialog
+      childDialogs.forEach((child) => {
+        child.close();
+      });
+    });
+
     // Next/Prev buttons
     const nextBtn = document.getElementById('lightbox-next');
     const prevBtn = document.getElementById('lightbox-prev');
