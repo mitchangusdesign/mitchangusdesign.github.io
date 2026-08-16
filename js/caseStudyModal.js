@@ -33,3 +33,5 @@ window.onclick = function(event) {
     modal.close();
   }
 }
+
+modal.addEventListener('escape', (event) => close())
