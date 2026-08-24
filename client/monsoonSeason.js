@@ -827,7 +827,7 @@ function checkOpenStatus(data) {
 
         // Check if the status is "Closed"
         if (dayStatus === "Closed") {
-            status.innerHTML = `<a onclick="opentab('hours','hours-link'); return false;"><p>We are closed today!</p><button class="homepage-btn">See Our Menu</button></a>`;
+            status.innerHTML = `<a onclick="opentab('hours','hours-link'); return false;"><p>We are closed today!</p><button class="homepage-btn">See Our Hours</button></a>`;
         } else {
             status.innerHTML = `<a onclick="opentab('menu','menu-link'); return false;"><p>We are open today from 11am to 8pm!</p><button class="homepage-btn">See Our Menu</button></a>`;
         }
